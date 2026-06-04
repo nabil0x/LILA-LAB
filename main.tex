@@ -1,0 +1,395 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\onehalfspacing
+\pagestyle{fancy}
+\lhead{Economic Narrative Indices}
+\rhead{\thepage}
+\cfoot{}
+
+\title{Economic Narrative Indices and Media-Based Sentiment Measures: \\
+A Systematic Review of Methodologies and Applications}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This systematic review of 50 studies (2007--2025) examines how sentiment extracted from news, corporate communications, social media, and search behavior informs economic analysis. The literature demonstrates that narrative-based indices provide significant predictive power for financial markets, macroeconomic conditions, and inflation expectations—improving forecast accuracy by 10--30\% over traditional benchmarks. We trace methodological evolution from dictionary-based approaches through machine learning to Large Language Models, identify domain-specific performance patterns, highlight geographic and linguistic gaps, and outline promising research directions. Key finding: sentiment matters most for real-time signaling and medium-term (6--12 month) horizons, with heterogeneous effects across outcomes and populations. We emphasize the need for formalized causality testing, expanded global coverage, and stronger theoretical integration.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Economic analysis has been transformed by the ability to quantify sentiment from vast textual sources: financial news, corporate filings, central bank communications, social media, and internet search patterns. These narrative indices capture information unavailable in traditional statistics—the collective mood of market participants, the media framing of events, and emerging economic anxieties—often in real time.
+
+The foundational insight is straightforward: \textit{what people say about the economy influences how they behave}. News that triggers fear drives portfolio rebalancing. Inflation narratives shape wage-setting expectations. Policy uncertainty discourages investment. Yet translating this intuition into rigorous forecasting tools requires navigating substantial methodological challenges: how to extract meaning from millions of documents, validate causal mechanisms, and adapt methods across geographies and languages.
+
+This review synthesizes evidence from 50 papers spanning 2007--2025, documenting remarkable methodological evolution. Early work relied on hand-coded dictionaries and simple word counts (Tetlock, 2007). The field now deploys transformer models, topic decomposition, Large Language Models, and hybrid ensembles. Simultaneously, applications have expanded: from predicting stock returns to nowcasting GDP, from quantifying inflation expectations to measuring policy uncertainty and geopolitical risk.
+
+We organize the literature around five questions:
+\begin{enumerate}
+\item \textbf{What methods extract economic narratives from text?} (Methods)
+\item \textbf{Where does sentiment-based forecasting add value?} (Applications)
+\item \textbf{How robust are these measures?} (Validation)
+\item \textbf{What critical gaps remain?} (Limitations)
+\item \textbf{What are the most promising research directions?} (Future Work)
+\end{enumerate}
+
+We find that sentiment analysis has matured significantly, with consistent evidence of predictive power across financial and macroeconomic domains. However, the field exhibits Western, English-language, and data-rich-country bias. Causality remains contested. Theoretical micro-foundations are weak. And methodological trade-offs—between interpretability and performance, between generalizability and context-specificity—remain unresolved. This review identifies these challenges not as reasons to dismiss sentiment analysis, but as concrete opportunities for future research.
+
+\section{Methods and Data}
+\label{sec:methods}
+
+\subsection{Sentiment Analysis Techniques}
+\label{subsec:sentiment_techniques}
+
+The literature employs a spectrum of approaches, each with distinct trade-offs. We organize them by increasing complexity and data requirements.
+
+\subsubsection{Dictionary-Based Sentiment Analysis}
+
+Lexicon-based methods assign predetermined sentiment scores to words, then aggregate to document level. These methods are simple, interpretable, and require no labeled training data—major advantages for researchers with limited resources.
+
+\textbf{General-Purpose Dictionaries:} Tetlock (2007) pioneered this approach using the Harvard IV-4 psychosocial dictionary via the General Inquirer program on Wall Street Journal columns. The method is straightforward: count negative words, count positive words, form a sentiment score. However, general lexicons systematically misclassify financial language. ``High interest rates'' registers as positive (high is good), but signals economic headwinds. ``Dividend cuts'' and ``layoffs'' are misclassified or missed entirely.
+
+\textbf{Domain-Specific Dictionaries:} Recognizing these failures, Loughran and McDonald (2011) developed a finance-specific dictionary. Subsequent work (Hájek \& Olej, 2013; Kräussl \& Mirgorodskaya, 2016; Shapiro et al., 2020) confirmed 15--25\% accuracy improvements over general lexicons. Shapiro et al.\ created a ``news PMI lexicon'' using Pointwise Mutual Information, optimized for economic news. The trade-off: domain dictionaries require expert construction and validation.
+
+\textbf{Context-Aware Extensions:} The VADER (Valence Aware Dictionary and sEntiment Reasoner) tool handles negation, amplification, and contextual polarity—``not good'' correctly receives negative score. Studies by Ren et al.\ (2018), Gite et al.\ (2021), and Kaczmarek et al.\ (2025) show VADER improves performance on financial social media and news.
+
+\subsubsection{Topic Modeling and Narrative Extraction}
+
+Topic models decompose large corpora into interpretable themes, enabling researchers to track \textit{which narratives} drive outcomes—not just overall sentiment.
+
+Latent Dirichlet Allocation (LDA) dominates the literature:
+\begin{itemize}
+\item Hansen \& McMahon (2016): 15 topics from FOMC statements, 5 labeled as economic
+\item Thorsrud (2016): 80 topics from Norwegian newspapers, constructed daily business cycle index
+\item Gavaldon (2017): 30 topics, automated EPU index construction
+\item Jiang et al.\ (2023), Hong et al.\ (2023): 180 topics from Wall Street Journal, inflation and growth forecasting
+\item Weinig \& Fritsche (2025): Keyword-assisted topic modeling (keyATM), 14 predefined inflation-related topics
+\end{itemize}
+
+\textbf{Topic Model Variants:} The Correlated Topic Model (CTM) of Adämmer \& Schüssler (2020) captures topic dependencies, improving equity premium forecasting. Fixed models assume stable narratives; dynamic topic models track narrative evolution but at computational cost.
+
+\textbf{Choice of K (number of topics):} Studies range from 15 to 180 topics. The trade-off: too few topics oversimplify (lumping together geopolitics and recession fears); too many produce noise and redundancy. Optimal K appears context-dependent, typically 80--150 for large diverse corpora.
+
+\subsubsection{Machine Learning Approaches}
+
+Traditional ML methods learn sentiment classifiers from labeled data. They capture non-linearities and interactions unavailable to dictionaries.
+
+\textbf{Shallow Methods:} Support Vector Machines (SVM), Random Forests, and Elastic Net with text features. Random Forests showed particular strength for inflation forecasting (Hong et al., 2023), capturing non-linear relationships. Ardia et al.\ (2019) and Barbaglia et al.\ (2024) applied LASSO for high-dimensional variable selection on millions of articles.
+
+\textbf{Deep Learning:} LSTM networks handle time-series dependencies (Gite et al., 2021; Li et al., 2020). CNNs extract features from headlines (Gite et al., 2021). Supervised autoencoders (Großklaussmann, 2024) combine reconstruction loss with financial prediction tasks, balancing interpretability and accuracy.
+
+\textbf{Transformer Models:} BERT and variants (FinBERT, RoBERTa, DistilBERT) achieve state-of-the-art performance. Mishev et al.\ (2020) report Matthews Correlation Coefficient of 0.895. Lukauskas et al.\ (2022) used an ensemble of four models to capture diverse sentiment facets. InflaBERT (Talazadeh \& Peraković, 2024) fine-tunes BERT specifically for inflation language. The cost: computational resources and need for large labeled training sets (800--5,000 articles typical; rare to exceed 50,000).
+
+\subsubsection{Large Language Models}
+
+Recent studies apply GPT-4.1 mini, GPT-5 mini, and FinGPT for end-to-end sentiment extraction and decomposition. Kwon et al.\ (2025) decomposed 200,000 WSJ articles into demand vs.\ supply drivers of macroeconomic sentiment with 92\% accuracy. Korinek (2023) surveyed LLM applications across data extraction, forecasting, and policy analysis.
+
+\textbf{Advantages:} LLMs understand context, sarcasm, and complex semantics. No fine-tuning required for basic sentiment tasks.
+
+\textbf{Concerns:} Hallucination, validation requirements, opacity, and computational cost. Most studies validate LLM outputs against human annotation or established dictionaries.
+
+\subsubsection{Hybrid and Multi-Modal Approaches}
+
+Many studies combine methods. Barbaglia et al.\ (2024) merge aspect-based sentiment with custom dictionaries. Hansen \& McMahon (2016) pair LDA topic modeling with dictionary-based tone scores. Seo (2025) integrates Theme Frequency Indices with dynamic factor models. Evidence suggests ensembles often outperform single methods.
+
+\subsection{Data Sources}
+\label{subsec:data_sources}
+
+\subsubsection{Textual Sources}
+
+\textbf{News Media:} Wall Street Journal (most common), Financial Times, New York Times, European newspapers. Datasets range from 1,600 articles (Tetlock, 2007) to 27 million (Barbaglia et al., 2024) and 18.7 million (Seo, 2025).
+
+\textbf{Corporate Disclosures:} SEC filings, 10-K reports, earnings call transcripts (Hassan et al., 2019).
+
+\textbf{Central Bank Communications:} FOMC statements, Bank of England Inflation Reports, ECB communications.
+
+\textbf{Social Media:} Twitter/X (Ren et al., 2018; Rogmann et al., 2024), Reddit, Instagram, online forums.
+
+\textbf{Alternative Data:} Google Trends (Da et al., 2015), RavenPack, Refinitiv News Analytics, MarketPsych.
+
+\subsubsection{Geographic and Temporal Coverage}
+
+Geographic: 28 studies on US, 13 on Europe, 7 on Asia, 6 multi-country. Severe gaps: Africa (essentially zero coverage), Latin America (minimal), Middle East (only geopolitical work), Southeast Asia (Malaysia, Philippines, but not Indonesia/Thailand/Vietnam).
+
+Temporal: Historical depth varies. Long-run studies (1900--2019 for geopolitical risk, 1980--2019 for news PMI) enable business cycle analysis. Crisis-focused studies (2008 financial crisis, 2020--2023 COVID-19, 2021--2024 inflation) provide case studies but may not represent normal-times sentiment dynamics.
+
+\subsubsection{Frequency Mismatch and Aggregation}
+
+Daily sentiment vs.\ quarterly GDP creates information loss during aggregation. MIDAS (mixed-data sampling) and other techniques help. Optimal aggregation method unclear. Kwon et al.\ (2025) flag this as critical for causal inference.
+
+\section{Applications and Domain-Specific Findings}
+\label{sec:applications}
+
+We organize applications by economic domain, integrating findings and validation evidence.
+
+\subsection{Financial Markets}
+\label{subsec:financial}
+
+\subsubsection{Stock Market Returns and Volatility}
+
+\textbf{Predictive Power:} Tetlock (2007) found high media pessimism predicts downward price pressure and reversals. Da et al.\ (2015) showed the FEARS index (constructed from Google Trends) predicts 30\% lower forecast errors for market returns and strong return reversals. Ren et al.\ (2018) and Li et al.\ (2020) replicated findings across multiple periods and markets (S\&P 500, NASDAQ).
+
+\textbf{Mechanism:} Sentiment appears to proxy behavioral trading (noise trading), with stronger effects on hard-to-arbitrage stocks. During COVID-19 (Aharon et al., 2022), sentiment-driven price moves were unprecedented.
+
+\textbf{Medium-Term Horizon:} Most effective for 1--6 month returns. Beyond 1 year, predictive power attenuates. Reversals suggest short-term overreaction, supporting behavioral interpretations.
+
+\subsubsection{Volatility and Risk Premia}
+
+News-based sentiment predicts equity volatility and term structure of risk. Audrino \& Offner (2024) and others show sentiment captures time-varying risk appetite. RavenPack sentiment (Aharon et al., 2022) exhibited extreme variation during COVID-19, with unusual correlations across asset classes.
+
+\subsubsection{Fixed Income and Currency Markets}
+
+Treasury yield forecasting shows modest improvements from sentiment (Lange et al., 2022). Currency forward returns (Großklaussmann, 2024) show sentiment effects via risk premium channel. Commodity prices (oil, natural gas) respond to energy-specific sentiment (Rogmann et al., 2024), with negative news driving sharp price declines.
+
+\subsection{Macroeconomic Forecasting}
+\label{subsec:macro}
+
+\subsubsection{GDP and Industrial Production}
+
+\textbf{Nowcasting and Forecasting:} Thorsrud (2016) constructed a daily coincident business cycle index from LDA-extracted topics in Norwegian newspapers, improving nowcasting accuracy. Bortoli et al.\ (2018) show French newspapers sentiment predict quarterly GDP 10--20\% better than benchmarks. Barbaglia et al.\ (2024) achieve similar improvements across G-7 countries.
+
+\textbf{Real-Time Availability:} News publishes daily; official GDP releases monthly (for industrial production) or quarterly. This timeliness advantage proves critical during downturns and crises. Ellingsen et al.\ (2022) and Seo (2025) highlight how sentiment captures turning points weeks ahead of official data.
+
+\textbf{Variable-Specific Results:} Strong predictive power for investment (Ho et al., 2021 shows consistent outperformance), modest for consumption, weak for unemployment (Section \ref{subsec:limitations_unemployment}).
+
+\subsubsection{Inflation}
+
+Inflation represents perhaps the highest-profile application. Hong et al.\ (2023) extracted 180 topics from 15 years of Wall Street Journal articles, achieving 20--30\% accuracy improvements for medium-term CPI forecasting vs.\ traditional models. Eugster \& Uhl (2024) report 30\% lower RMSE with sentiment vs.\ benchmarks.
+
+\textbf{Narrative Heterogeneity:} Andre et al.\ (2024) show households and experts hold systematically different inflation narratives. Households emphasize supply-side factors (energy, corporate profits: 85\% mention rate) while experts provide balanced views. Lower-income households disproportionately respond to energy/profit narratives. Education inversely predicts sentiment responsiveness.
+
+\textbf{Expectation Formation Channel:} Weinig \& Fritsche (2025) trace mechanism: narratives shape inflation expectations $\to$ expectations drive wage-setting $\to$ actual inflation responds. This Phillips curve channel was ''broken'' post-pandemic; sentiment analysis recovered the relationship by identifying which narratives matter for expectations.
+
+\textbf{Crisis Period:} COVID-19 brought unprecedented supply-chain disruption narratives; 2021--2024 inflation surge featured corporate profit and energy dominant themes. Sentiment models captured these shifts; traditional models (trained on stable-inflation regimes) failed.
+
+\subsubsection{Labor Markets and Consumer Sentiment}
+
+\textbf{Unemployment:} Limited predictive improvements (Ho et al., 2021; Beiranvand et al., 2024). Labor market appears less sensitive to media narratives, possibly because employment is less discretionary than investment or asset allocation.
+
+\textbf{Consumer Confidence:} Strong results. Bortoli et al.\ (2018) and Aguilar et al.\ (2021) show news-based sentiment nowcasts consumer confidence indices. Bieri (2025) finds regional divergence: German vs.\ French Swiss regions respond differently to same narratives. Cummins et al.\ (2024) documents strong partisan effects post-2016 (Republicans 2.5× more pessimistic about economic fundamentals).
+
+\subsection{Policy and Uncertainty}
+\label{subsec:policy}
+
+\subsubsection{Economic Policy Uncertainty}
+
+Baker et al.\ (2016) constructed the EPU index by counting articles mentioning economic policy uncertainty. The index predicts investment, hiring, and credit market stress. Gavaldon (2017) automated EPU construction via LDA. Policy uncertainty shows strong effects during elections and crisis periods.
+
+\textbf{Firm-Level Political Risk:} Hassan et al.\ (2019) extracted firm-specific policy risk from earnings call transcripts. Finding: 90\%+ is idiosyncratic, not systematic. Political risk reduces investment, hiring, and capital expenditure at firm level.
+
+\textbf{Geopolitical Risk:} Caldara \& Iacoviello (2022) constructed a geopolitical risk (GPR) index from 1900--2019 using newspaper coverage. GPR predicts reduced firm investment and hiring; effect pronounced in defense-exposed sectors. Events transmit rapidly across borders (Aharon et al., 2022).
+
+\subsubsection{Forward Guidance and Monetary Policy}
+
+Central bank communications shape expectations and markets. Hansen \& McMahon (2016) showed FOMC forward guidance language predicts professional forecasters' expectations better than current economic conditions. Gardner et al.\ (2022) find Fed communication effectiveness varies with clarity and audience. Text-based sentiment (tone, language uncertainty) predicts policy decisions (Ashwin et al., 2021).
+
+\subsection{Recession Prediction}
+\label{subsec:recession}
+
+News-based sentiment shows strong recession-prediction power. Huang et al.\ (2018) achieve 80\%+ accuracy predicting 2007--2008 recession 1--6 months ahead. Aguilar et al.\ (2021) show sentiment models remained robust during COVID-19, where traditional models failed. Business cycle turning points detectable 4--8 weeks ahead (Kräussl \& Mirgorodskaya, 2016; Thorsrud, 2016).
+
+\section{Validation Methods and Performance Metrics}
+\label{sec:validation}
+
+\subsection{Out-of-Sample Forecasting}
+
+The literature employs rigorous standards. Rolling window, recursive, and real-time forecasting are standard (Ardia et al., 2019; Adämmer \& Schüssler, 2020; Beiranvand et al., 2024). Real-time means using only data available at forecast time—eliminating lookahead bias.
+
+\subsection{Statistical Tests}
+
+\textbf{Forecast Accuracy:} Diebold-Mariano tests standard. Clark-West MSPE-adjusted test accounts for nested models (Da et al., 2015; Hong et al., 2023). Giacomini-White test for multiple forecast horizons (Allard et al., 2024; Ashwin et al., 2021).
+
+\textbf{Model Comparison:} Hansen's Superior Predictive Ability (SPA) test and Model Confidence Sets procedure allow ranking of multiple models (Huang et al., 2018; AdÄmmer \& Schüssler, 2020; Seo, 2025).
+
+\textbf{Causality:} Granger causality, cointegration, and directed acyclic graphs (DAGs) explored. True causality remains elusive (endogeneity concerns in Section \ref{subsec:limitations_causality}).
+
+\subsection{Performance Metrics}
+
+Forecast accuracy: RMSE, MAE, MAPE, $R^2$. Classification (recession prediction): Accuracy, Precision, Recall, F1-score, ROC-AUC. Economic metrics: Sharpe ratios for sentiment-based trading strategies, information ratios (GroßKlaussmann, 2024).
+
+\subsection{Benchmark Comparisons}
+
+Studies compare against naive models (random walk, AR), traditional indicators (survey-based consumer confidence), official indices (VIX, EPU), hard data, and alternative methodologies. Consistent finding: sentiment-enhanced models outperform benchmarks by 10--30\% across major applications.
+
+\section{Limitations and Critical Gaps}
+\label{sec:limitations}
+
+\subsection{Methodological Constraints}
+\label{subsec:limitations_method}
+
+\subsubsection{Dictionary Limitations}
+
+Dictionary methods cannot handle negation, sarcasm, or domain-specific meanings. ``Good unemployment'' and ``low inflation expectations'' are context-sensitive; word lists fail. Language evolves; dictionaries become stale. Domain-specific lexicons (Loughran-McDonald) address finance but miss emerging jargon (``meme stocks,'' ``supplychain,'' sectoral neologisms).
+
+\subsubsection{Machine Learning Trade-Offs}
+
+Deep learning models achieve state-of-the-art accuracy but require large labeled datasets (800--50,000 articles typical). BERT fine-tuning is computationally expensive. Most critically: \textit{interpretability suffers}. Why does a transformer predict negative sentiment? Attention mechanisms and SHAP values help (Großklaussmann, 2024) but do not fully resolve the black-box problem. This limits practitioner adoption.
+
+\subsubsection{Topic Modeling Arbitrariness}
+
+Choice of K is subjective. Studies range 15--180 topics. Different K can yield different economic interpretations. Topic interpretation requires expert judgment (is topic X inflation? Stagflation?). Temporal stability unclear: do topics remain meaningful over decades?
+
+\subsection{Data Limitations}
+\label{subsec:data_lim}
+
+\subsubsection{Media Bias and Selection Bias}
+
+News exhibits negative bias (Cummins et al., 2024). Coverage is pro-business in some outlets, politicized post-2016 (Gentzko\-w et al., 2019). English-language dominance limits global scope. Major economies and newspapers overrepresented; small firms, emerging markets, Africa underrepresented.
+
+\subsubsection{Geographic and Linguistic Gaps}
+
+The field is starkly Western-centric:
+\begin{itemize}
+\item \textbf{Severely Underrepresented:} Africa (zero dedicated studies), Latin America (minimal), Middle East (geopolitical work only), Southeast Asia (only Malaysia, Philippines, not Indonesia/Thailand/Vietnam)
+\item \textbf{Language Coverage:} English dominates. German, French, Spanish appear in 5--6 studies each. Arabic, Hindi, Portuguese, Turkish, Russian, Japanese: essentially zero
+\item \textbf{Data Infrastructure:} Digital news archives limited before 1990s, especially outside North America/Europe. Non-English archives often scarce and poor-quality
+\end{itemize}
+
+Machine translation improves accessibility (Ashwin et al., 2021; Barbaglia et al., 2024 acknowledge this) but introduces errors. Transformer models (mBERT, XLM-RoBERTa) enable multilingual work but underperform English-tuned models. Finance-specific dictionaries exist only for English (Loughran-McDonald).
+
+\subsubsection{Temporal Coverage Gaps}
+
+Many studies concentrate on post-2000 period. COVID-19 (2020--2023) and inflation surge (2021--2024) receive heavy focus, potentially not representative of normal times. Multiple business cycles needed for robust validation.
+
+\subsubsection{Frequency Mismatch}
+
+Daily sentiment aggregated to monthly/quarterly creates information loss. Optimal aggregation method unclear. Temporal causality harder to establish with mismatched frequencies.
+
+\subsection{Causality and Endogeneity}
+\label{subsec:limitations_causality}
+
+\textbf{Core Problem:} News may respond to economic conditions rather than predict them. Reverse causality difficult to definitively rule out. Sentiment and fundamentals may be jointly determined.
+
+\textbf{Proposed Solutions:} Natural experiments (media blackouts, regulatory changes, platform disruptions), instrumental variables, regression discontinuity exploiting exogenous narrative shocks. Few studies employ these; most rely on Granger causality or time-lag arguments.
+
+\textbf{Example Issue:} Does higher inflation news predict inflation, or does actual inflation (via data releases) trigger news coverage? Studies attempt separation via timing and lead-lag analysis, but the issue persists.
+
+\subsection{Variable-Specific Gaps}
+\label{subsec:limitations_unemployment}
+
+Unemployment: Sentiment shows weak predictive power (Ho et al., 2021; Beiranvand et al., 2024). Likely explanation: employment less discretionary than investment. News may describe labor market outcomes rather than driving them.
+
+Some monthly indicators show limited gains even with sentiment (Jiang et al., 2023). Suggests sentiment captures medium-term narrative shifts, not month-to-month noise.
+
+\subsection{Validation and Generalizability}
+
+\textbf{Short Evaluation Windows:} Many studies evaluate over single business cycle. Insufficient for robust out-of-sample testing.
+
+\textbf{Benchmark Selection:} Choice of benchmark affects perceived improvement. Random walk easy to beat in-sample, harder out-of-sample.
+
+\textbf{Cross-Country Generalization:} Models trained on US may not transfer to emerging markets. Institutional context, media systems, and cultural communication styles differ.
+
+\section{Future Directions and Research Opportunities}
+\label{sec:future}
+
+\subsection{Methodological Innovation}
+
+\subsubsection{Advanced NLP and LLMs}
+
+Develop domain-specific economic LLMs trained on large financial corpus. Address hallucination via validation frameworks. Multimodal analysis (text + charts/images + audio from earnings calls, podcasts) promises richer signal.
+
+Causal inference advances: instrumental variable approaches for sentiment shocks, natural experiments (media disruptions), DAGs formalizing narrative structure (Andre et al., 2024).
+
+\subsubsection{Improved Topic Modeling}
+
+Dynamic topic models tracking narrative evolution. Hierarchical models capturing topic dependencies. Supervised topic models integrating economic theory. Keyword-assisted variants (keyATM) improving interpretability.
+
+\subsubsection{Hybrid Approaches}
+
+Ensemble methods combining dictionary, ML, and LLM sentiment. Theory-guided ML incorporating economic constraints. Causal forests and other heterogeneous treatment effect methods for context-dependent sentiment impact.
+
+\subsection{Data and Measurement}
+
+\subsubsection{Expanding Geographic Coverage}
+
+Priority regions: Africa, Latin America, Middle East, Southeast Asia. Requires partnerships with local institutions, capacity building, open-access data platforms. Funding support for emerging market research.
+
+\subsubsection{Multilingual Resources}
+
+Develop finance-specific dictionaries for major languages (Mandarin, Spanish, Hindi, Arabic, Portuguese, Russian). Labeled datasets for non-English sentiment classification. Language-specific topic models and transformer variants.
+
+Cross-lingual transfer learning and zero-shot/few-shot learning can leverage English models. Local experts essential for cultural validation.
+
+\subsubsection{Alternative and Higher-Frequency Data}
+
+Platform-specific sentiment models (Reddit, LinkedIn). Audio and video content (earnings call tone, financial TV, YouTube, podcasts). Non-traditional text (customer reviews, employee reviews, supply chain narratives, patent disclosures). Intraday sentiment tracking.
+
+\subsection{Theoretical Development}
+
+\subsubsection{Formal Models of Narrative Economics}
+
+Integrate narratives into DSGE models with sentient agents. Agent-based models with narrative transmission. Heterogeneous-agent models with sentiment. Network models of narrative contagion (Shiller 2017 foundations need formalization).
+
+\subsubsection{Micro-Foundations}
+
+How do individuals form economic narratives? Role of media, social influence, experience. Belief updating under uncertainty. Cognitive biases in narrative processing. Aggregate implications of heterogeneous narratives.
+
+\subsubsection{Rational vs.\ Behavioral Interpretation}
+
+When do narratives reflect fundamental information vs.\ noise? When is sentiment-driven trading behavior rational vs.\ behavioral? Context-dependent distinction: perhaps sentiment contains information in some regimes, noise in others.
+
+\subsection{Applications and Standards}
+
+\subsubsection{Policy Applications}
+
+Central banks: Optimize forward guidance using real-time sentiment analysis. Measure communication effectiveness. Fiscal policy: predict public sentiment on taxes/spending, evaluate feasibility. Financial stability: early warning systems for crises via narrative monitoring.
+
+\subsubsection{Corporate Finance}
+
+M\&A prediction, IPO timing, credit risk assessment, covenant violation forecasting. Firm-level investment and hiring decisions.
+
+\subsubsection{Reproducibility and Standards}
+
+Pre-registration of studies, open-source code, standardized datasets, benchmark competitions. Best-practices guidelines for textual economic analysis. Ethics frameworks for data collection and algorithmic bias mitigation.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Economic narrative indices have matured from a niche research area to a credible forecasting tool. The evolution is unmistakable: from Tetlock's 1,600 Wall Street Journal columns (2007) to Barbaglia et al.'s 27 million articles and Kwon et al.'s GPT-4 decomposition of macroeconomic sentiment (2025). The pandemic and inflation surge highlighted both strengths (real-time crisis detection, narrative-expectation links) and weaknesses (geographic bias, causality ambiguity, theoretical gaps).
+
+\textbf{Key Accomplishments:}
+\begin{itemize}
+\item Robust evidence that sentiment improves forecast accuracy by 10--30\% for GDP, inflation, market returns, and volatility
+\item Methodological sophistication: domain-specific lexicons, topic decomposition, transformers, LLMs
+\item Demonstrated timeliness advantage: daily sentiment vs.\ monthly/quarterly official data
+\item Documented heterogeneity: households vs.\ experts, partisan effects, socioeconomic differences
+\end{itemize}
+
+\textbf{Persistent Challenges:}
+\begin{itemize}
+\item Western, English, data-rich-country bias dominates literature
+\item Causality remains contested; endogeneity concerns unresolved
+\item Weak theoretical foundations; mechanisms of narrative influence underspecified
+\item Black-box models (BERT, LLMs) sacrifice interpretability for accuracy
+\item Methodological trade-offs unresolved: dictionary vs.\ ML vs.\ LLM; generalizability vs.\ context-specificity
+\end{itemize}
+
+\textbf{Priority Research Directions:}
+\begin{itemize}
+\item Expand to underrepresented regions and languages; build local capacity
+\item Formalize causality testing via natural experiments and instrumental variables
+\item Develop domain-specific economic theory integrating narratives
+\item Create reproducibility standards and benchmark datasets
+\item Deploy sentiment analysis in policy institutions for real-time monitoring
+\end{itemize}
+
+The next decade will determine whether narrative analysis becomes standard in economic forecasting or remains a specialized tool. Realizing its potential requires addressing geographic equity, theoretical rigor, and methodological transparency. The foundation is solid; the work now is deepening understanding and broadening reach.
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
