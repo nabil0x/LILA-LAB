@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.27)  5 JUN 2026 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.27)  5 JUN 2026 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -694,33 +694,56 @@ File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
+))) (/usr/share/texmf-dist/tex/latex/orcidlink/orcidlink.sty
+Package: orcidlink 2024/06/26 v1.1.0 Support ORCID's three different ID formats
+.
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+svg.path.code.tex
+File: tikzlibrarysvg.path.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarysvg.path.code.tex
+File: pgflibrarysvg.path.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleparser.code.tex
+File: pgfmoduleparser.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfparserdef@arg@count=\count344
+)
+\pgf@lib@svg@last@x=\dimen306
+\pgf@lib@svg@last@y=\dimen307
+\pgf@lib@svg@last@c@x=\dimen308
+\pgf@lib@svg@last@c@y=\dimen309
+\pgf@lib@svg@count=\count345
+\pgf@lib@svg@max@num=\count346
+))
+\@curXheight=\skip71
+)
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.statistics
 .code.tex) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count344
+\l__color_backend_stack_int=\count347
 )
 (./systematic_review_66papers.aux)
 \openout1 = `systematic_review_66papers.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -758,16 +781,16 @@ LaTeX Font Info:    ... okay on input line 54.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count345
-\scratchdimen=\dimen306
+\scratchcounter=\count348
+\scratchdimen=\dimen310
 \scratchbox=\box69
-\nofMPsegments=\count346
-\nofMParguments=\count347
+\nofMPsegments=\count349
+\nofMParguments=\count350
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count348
-\MPscratchDim=\dimen307
-\MPnumerator=\count349
-\makeMPintoPDFobject=\count350
+\MPscratchCnt=\count351
+\MPscratchDim=\dimen311
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
 \everyMPtoPDFconversion=\toks46
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -778,7 +801,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 54.
+Package hyperref Info: Link coloring OFF on input line 55.
 
 (./systematic_review_66papers.out) (./systematic_review_66papers.out)
 \@outlinefile=\write4
@@ -788,12 +811,12 @@ Package hyperref Info: Link coloring OFF on input line 54.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -805,37 +828,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 5388) in paragraph at lines 114--114
+Underfull \hbox (badness 5388) in paragraph at lines 115--115
 []\T1/cmr/bx/n/14.4 Theoretical Foun-da-tions of
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 116--117
+Underfull \hbox (badness 2012) in paragraph at lines 117--118
 \T1/cmr/m/n/10 Why do nar-ra-tives move mar-kets and macroe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--118
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
 []\T1/cmr/bx/n/12 Why Do Nar-ra-tives Mat-ter?
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 122--123
+Underfull \hbox (badness 2368) in paragraph at lines 123--124
 []\T1/cmr/m/n/10 Behavioral fi-nance em-pha-sizes how nar-ra-tives
  []
 
 [2] [3]
-Underfull \hbox (badness 1210) in paragraph at lines 140--141
+Underfull \hbox (badness 1210) in paragraph at lines 141--142
 \T1/cmr/m/n/10 ing cri-sis pe-ri-ods (2008--2009, COVID-19 March
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 148--149
+Underfull \hbox (badness 1163) in paragraph at lines 149--150
 \T1/cmr/m/n/10 ploy Granger causal-ity, tem-po-ral prece-dence, or
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 150--151
+Underfull \hbox (badness 1132) in paragraph at lines 151--152
 \T1/cmr/m/n/10 does not es-tab-lish whether that in-for-ma-tion re-
  []
 
@@ -843,17 +866,17 @@ Underfull \hbox (badness 1132) in paragraph at lines 150--151
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-Underfull \hbox (badness 1748) in paragraph at lines 159--160
+Underfull \hbox (badness 1748) in paragraph at lines 160--161
 \T1/cmr/m/n/10 pol-icy com-mu-ni-ca-tion) shape agent ex-pec-ta-tions
  []
 
 
-Underfull \hbox (badness 6658) in paragraph at lines 235--236
+Underfull \hbox (badness 6658) in paragraph at lines 236--237
 \T1/cmr/m/n/10 Four pri-mary sen-ti-ment ex-trac-tion ap-proaches
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 235--236
+Underfull \hbox (badness 1062) in paragraph at lines 236--237
 \T1/cmr/m/n/10 emerge from the lit-er-a-ture. \T1/cmr/bx/n/10 Dictionary-based
  []
 
@@ -867,12 +890,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3861) has occurred while \output is active []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 249--250
+Underfull \hbox (badness 3930) in paragraph at lines 250--251
 \T1/cmr/m/n/10 dictionary-based meth-ods dom-i-nated 2007--2018,
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 249--250
+Underfull \hbox (badness 1496) in paragraph at lines 250--251
 \T1/cmr/m/n/10 BERT adop-tion ac-cel-er-ated post-2019, re-flect-ing
  []
 
@@ -880,7 +903,7 @@ Underfull \hbox (badness 1496) in paragraph at lines 249--250
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 319--320
+Underfull \hbox (badness 1642) in paragraph at lines 320--321
 []\T1/cmr/bx/n/10 Pooled per-for-mance es-ti-mate\T1/cmr/m/n/10 : Across all
  []
 
@@ -891,7 +914,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Underfull \hbox (badness 1609) in paragraph at lines 381--381
+Underfull \hbox (badness 1609) in paragraph at lines 382--382
 []\T1/cmr/bx/n/12 Validation Prac-tices and Rigor
  []
 
@@ -899,37 +922,37 @@ Underfull \hbox (badness 1609) in paragraph at lines 381--381
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-Underfull \hbox (badness 1077) in paragraph at lines 433--434
+Underfull \hbox (badness 1077) in paragraph at lines 434--435
 \T1/cmr/m/n/10.95 ti-ment fore-cast-ing. How-ever, emerg-ing and
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 433--434
+Underfull \hbox (badness 2818) in paragraph at lines 434--435
 \T1/cmr/m/n/10.95 rep-re-sented, lim-it-ing ev-i-dence on sen-ti-ment
  []
 
 
-Underfull \hbox (badness 4739) in paragraph at lines 443--444
+Underfull \hbox (badness 4739) in paragraph at lines 444--445
 \T1/cmr/m/n/10.95 Tetlock (2007) pi-o-neered lexicon-based ap-
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 443--444
+Underfull \hbox (badness 1603) in paragraph at lines 444--445
 \T1/cmr/m/n/10.95 proaches us-ing the Har-vard IV-4 dic-tio-nary
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 443--444
+Underfull \hbox (badness 1052) in paragraph at lines 444--445
 \T1/cmr/m/n/10.95 clas-sify fi-nan-cial lan-guage (``li-a-bil-ity'' marked
  []
 
 
-Underfull \hbox (badness 4479) in paragraph at lines 447--447
+Underfull \hbox (badness 4479) in paragraph at lines 448--448
 []\T1/cmr/bx/n/12 Machine Learn-ing Era (2016--
  []
 
 [11]
-Underfull \hbox (badness 1102) in paragraph at lines 455--455
+Underfull \hbox (badness 1102) in paragraph at lines 456--456
 []\T1/cmr/bx/n/12 Large Lan-guage Mod-els (2023--
  []
 
@@ -937,12 +960,12 @@ Underfull \hbox (badness 1102) in paragraph at lines 455--455
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 []\T1/cmr/bx/n/10.95 Key In-sight: \T1/cmr/m/n/10.95 Pro-gres-sion shows
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 459--460
+Underfull \hbox (badness 1668) in paragraph at lines 460--461
 \T1/cmr/m/n/10.95 interpretability-performance trade-off: dic-tio-
  []
 
@@ -950,32 +973,32 @@ Underfull \hbox (badness 1668) in paragraph at lines 459--460
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 486--486
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
 []\T1/cmr/bx/n/14.4 Geographic and Lin-guis-tic
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 514--514
+Underfull \hbox (badness 2469) in paragraph at lines 515--515
 []\T1/cmr/bx/n/14.4 Validation Frame-works and
  []
 
 
-Underfull \hbox (badness 2103) in paragraph at lines 522--523
+Underfull \hbox (badness 2103) in paragraph at lines 523--524
 []\T1/cmr/m/n/10.95 OOS test-ing ad-mits im-por-tant vari-a-tions.
  []
 
 [13]
-Underfull \hbox (badness 1082) in paragraph at lines 528--529
+Underfull \hbox (badness 1082) in paragraph at lines 529--530
 \T1/cmr/m/n/10.95 mea-sures, fea-ture com-bi-na-tions) oc-curred on
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 528--529
+Underfull \hbox (badness 1087) in paragraph at lines 529--530
 \T1/cmr/m/n/10.95 and se-lect-ing the best in-creases train-ing R-
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 528--529
+Underfull \hbox (badness 2772) in paragraph at lines 529--530
 \T1/cmr/m/n/10.95 squared but de-te-ri-o-rates OOS per-for-mance.
  []
 
@@ -983,7 +1006,7 @@ Underfull \hbox (badness 2772) in paragraph at lines 528--529
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Underfull \hbox (badness 3219) in paragraph at lines 542--542
+Underfull \hbox (badness 3219) in paragraph at lines 543--543
 []\T1/cmr/bx/n/12 Performance Met-rics: Be-yond
  []
 
@@ -991,7 +1014,7 @@ Underfull \hbox (badness 3219) in paragraph at lines 542--542
 Underfull \vbox (badness 3088) has occurred while \output is active []
 
  [15]
-Underfull \hbox (badness 4713) in paragraph at lines 560--561
+Underfull \hbox (badness 4713) in paragraph at lines 561--562
 []\T1/cmr/bx/n/10.95 Hyperparameter sen-si-tiv-ity\T1/cmr/m/n/10.95 : Ma-chine
  []
 
@@ -999,22 +1022,22 @@ Underfull \hbox (badness 4713) in paragraph at lines 560--561
 Underfull \vbox (badness 3088) has occurred while \output is active []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 570--571
+Underfull \hbox (badness 2970) in paragraph at lines 571--572
 \T1/cmr/m/n/10.95 win-dow val-i-da-tion, real-time data pro-to-col,
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 572--573
+Underfull \hbox (badness 1371) in paragraph at lines 573--574
 \T1/cmr/m/n/10.95 bust-ness (2+ pe-ri-ods), al-ter-na-tive sen-ti-ment
  []
 
 [16]
-Underfull \hbox (badness 1354) in paragraph at lines 585--587
+Underfull \hbox (badness 1354) in paragraph at lines 586--588
 \T1/cmr/m/n/10.95 Search-ing many spec-i-fi-ca-tions with-out cross-
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 594--596
+Underfull \hbox (badness 1648) in paragraph at lines 595--597
 \T1/cmr/bx/n/10.95 search\T1/cmr/m/n/10.95 : In LLM-based work, try-ing many
  []
 
@@ -1022,17 +1045,17 @@ Underfull \hbox (badness 1648) in paragraph at lines 594--596
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 621--622
+Underfull \hbox (badness 3098) in paragraph at lines 622--623
 []\T1/cmr/m/n/10.95 Data: 8--10 ma-jor Bangla news-pa-pers
  []
 
 [17]
-Underfull \hbox (badness 3029) in paragraph at lines 625--626
+Underfull \hbox (badness 3029) in paragraph at lines 626--627
 []\T1/cmr/m/n/10.95 Validation: Lead-lag anal-y-sis, Granger
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 636--637
+Underfull \hbox (badness 3601) in paragraph at lines 637--638
 []\T1/cmr/m/n/10.95 Micro-foundations: how do in-di-vid-u-als
  []
 
@@ -1043,12 +1066,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 7308) has occurred while \output is active []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 676--677
+Underfull \hbox (badness 2213) in paragraph at lines 677--678
 \T1/cmr/m/n/10.95 li-a-bil-ity. Fi-nally, our re-view spans 2007--
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 678--679
+Underfull \hbox (badness 2020) in paragraph at lines 679--680
 \T1/cmr/m/n/10.95 de-vel-oped mul-ti-lin-gual NLP tools (mBERT,
  []
 
@@ -1056,17 +1079,17 @@ Underfull \hbox (badness 2020) in paragraph at lines 678--679
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
 \T1/cmr/m/n/10.95 The com-plete lit-er-a-ture ma-trix (``lit-er-a-
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 696--697
+Underfull \hbox (badness 8075) in paragraph at lines 697--698
 \T1/cmr/m/n/10.95 ture_matrix.xlsx'') and qual-ity as-sess-ments
  []
 
 
-Underfull \hbox (badness 7777) in paragraph at lines 696--697
+Underfull \hbox (badness 7777) in paragraph at lines 697--698
 \T1/cmr/m/n/10.95 (``qual-ity_assessment.xlsx'') are avail-able as
  []
 
@@ -1074,65 +1097,65 @@ Underfull \hbox (badness 7777) in paragraph at lines 696--697
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
-Underfull \hbox (badness 1057) in paragraph at lines 726--727
+Underfull \hbox (badness 1057) in paragraph at lines 727--728
 []\T1/cmr/m/n/10.95 Baker, S. R., Bloom, N., & Davis, S.
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 730--731
+Underfull \hbox (badness 1655) in paragraph at lines 731--732
 \T1/cmr/m/n/10.95 ing News-pa-pers. \T1/cmr/m/it/10.95 Jour-nal of Fore-cast-in
 g\T1/cmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 736--737
+Underfull \hbox (badness 1728) in paragraph at lines 737--738
 []\T1/cmr/m/n/10.95 Ardia, D., Bluteau, K., & Boudt, K.
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 736--737
+Underfull \hbox (badness 1127) in paragraph at lines 737--738
 \T1/cmr/m/n/10.95 nomic growth: Sparse fore-cast-ing us-ing
  []
 
 [22]
-Underfull \hbox (badness 1132) in paragraph at lines 744--745
+Underfull \hbox (badness 1132) in paragraph at lines 745--746
 \T1/cmr/m/n/10.95 nance: From Lex-i-cons to Trans-form-ers.
  []
 
 [23]
-Underfull \hbox (badness 1430) in paragraph at lines 796--797
+Underfull \hbox (badness 1430) in paragraph at lines 797--798
 []\T1/cmr/m/n/10.95 Allard, M.-A., Teiletche, P., & Zinebi,
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 802--803
+Underfull \hbox (badness 6625) in paragraph at lines 803--804
 \T1/cmr/m/n/10.95 finance. \T1/cmr/m/it/10.95 Jour-nal of In-ter-na-tional Eco-
 
  []
 
 [24]
-Underfull \hbox (badness 4872) in paragraph at lines 810--811
+Underfull \hbox (badness 4872) in paragraph at lines 811--812
 \T1/cmr/m/it/10.95 Emerg-ing Mar-kets Fi-nance and Trade\T1/cmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 812--813
+Underfull \hbox (badness 1242) in paragraph at lines 813--814
 []\T1/cmr/m/n/10.95 Talazadeh, S., & Per-akovi¢, D. (2024).
  []
 
 
-Underfull \hbox (badness 2846) in paragraph at lines 824--825
+Underfull \hbox (badness 2846) in paragraph at lines 825--826
 \T1/cmr/m/n/10.95 fac-tor model. \T1/cmr/m/it/10.95 Jour-nal of Econo-met-rics\
 T1/cmr/m/n/10.95 ,
  []
 
 [25]
-Underfull \hbox (badness 1527) in paragraph at lines 844--845
+Underfull \hbox (badness 1527) in paragraph at lines 845--846
 \T1/cmr/m/n/10.95 E., Agrawal, D., Liska, A., Terzi, F.,
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 848--849
+Underfull \hbox (badness 2134) in paragraph at lines 849--850
 []\T1/cmr/m/n/10.95 Bhattacharjee, A., Hasan, T., Ah-mad,
  []
 
@@ -1148,10 +1171,10 @@ ged.
 (rerunfilecheck)             Checksum: 3C13CE9A7091F8DE4AC1BFA4371F7BA9;9190.
  ) 
 Here is how much of TeX's memory you used:
- 32532 strings out of 469515
- 755523 string characters out of 5470807
- 1295907 words of memory out of 5000000
- 60531 multiletter control sequences out of 15000+600000
+ 32932 strings out of 469515
+ 767829 string characters out of 5470807
+ 1301942 words of memory out of 5000000
+ 60918 multiletter control sequences out of 15000+600000
  648289 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  84i,19n,104p,1895b,2389s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1174,10 +1197,10 @@ jfour/jknappen/ec/ecbx1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
 pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on systematic_review_66papers.pdf (26 pages, 337486 bytes).
+Output written on systematic_review_66papers.pdf (26 pages, 338007 bytes).
 PDF statistics:
- 1159 PDF objects out of 1200 (max. 8388607)
- 461 compressed objects within 5 object streams
+ 1160 PDF objects out of 1200 (max. 8388607)
+ 462 compressed objects within 5 object streams
  157 named destinations out of 1000 (max. 500000)
  349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
