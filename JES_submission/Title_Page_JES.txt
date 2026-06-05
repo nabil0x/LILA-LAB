@@ -9,10 +9,13 @@ A Systematic Review of Methodologies, Applications, and Research
 Gaps (2007--2025)
 
 AUTHORS:
-[Ann Naser Nabil]
+Ann Naser Nabil
+Department of Economics, Jahangirnagar University, Savar, Dhaka, Bangladesh
 
 CORRESPONDING AUTHOR:
-[ann.n.nabil@gmail.com]
+Ann Naser Nabil
+Email: ann.n.nabil@gmail.com
+Department of Economics, Jahangirnagar University, Savar, Dhaka, Bangladesh
 
 KEYWORDS:
 Sentiment analysis; Economic narratives; Natural language processing;
