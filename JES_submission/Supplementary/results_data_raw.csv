@@ -1,0 +1,688 @@
+ID,Author_Year,Year,Country,Domain,Method,Target,Validation,Performance_Value
+1,"Tetlock, P. C. (2007). Giving content to",2007,United States,"Financial Economics, Behavioral Finance, Computational Social Science (specifically text analysis in finance).","*   **Method:** Quantitative content analysis using the General Inquirer (GI) program.
+*   **Process:** The GI program systematically counts words in each day's column that fall within 77 predetermined categories from the Harvard IV-4 psychosocial dictionary.
+*   **Feature Extraction:** Principal Components Analysis (PCA) is applied to these 77 word categories to construct a single ""pessimism factor,"" which captures the maximum variance in the GI categories. The study also uses two specific GI categories, ""Negative words"" and ""Weak words,"" directly as alternative measures of pessimism/sentiment.
+*   **Preprocessing:** GI categories are re-centered by day of the week to mitigate semantic and stylistic noise. Factor loadings are estimated yearly to avoid look-ahead bias.","*   Future daily U.S. stock market returns (Dow Jones Industrial Average, Fama-French SMB factor).
+*   Future daily U.S. stock market trading volume (detrended log of NYSE volume).
+*   Future media pessimism (predicted by past market returns).","*   **Statistical Significance:** OLS estimates within a Vector Auto-Regressive (VAR) framework, using Newey-West robust standard errors to account for heteroskedasticity and auto-correlation.
+*   **Robustness Checks:**
+    *   Using alternative measures of pessimism (Negative words, Weak words).
+    *   Varying the return measurement window (e.g., 10 a.m. to market close, excluding opening hours).
+    *   Splitting the sample into sub-periods (1984-1991 vs. 1992-1999).
+    *   Employing semi-parametric (locally weighted regression or lowess) methods to check for non-linearities or asymmetries.
+    *   Winsorizing outliers in variables.
+    *   Controlling for known sources of predictability (lagged returns, volume, volatility, day-of-the-week, January effect, 1987 stock market crash dummy).
+*   **Economic Importance:** Assessing the magnitude of predicted return changes and constructing a hypothetical zero-cost trading strategy based on sentiment to evaluate potential profitability.",7.3
+2,"Hájek, P., & Olej, V. (2013). Evaluating",2013,Czech Republic,"Finance, Financial Distress Prediction, Corporate Finance, Machine Learning Applications in Finance.","*   **Sentiment Extraction:** Word categorization (rule-based/bag-of-words) approach using a specific financial dictionary developed by [14].
+*   **Pre-processing:** Tokenization and lemmatization.
+*   **Term Weighting:** tf.idf (term frequency-inverse document frequency) scheme.
+*   **Sentiment Categories:** Six categories were used: Negative, Positive, Uncertainty, Litigious, Modal strong, and Modal weak. The frequency of net positive words was also calculated.
+*   **Classification Models:**
+*   Neural Networks (NNs): Feed-Forward Neural Networks (FFNNs) and Radial Basis Function Neural Networks (RBF NNs).
+*   Support Vector Machines (SVMs): Trained by Sequential Minimal Optimization (SMO) and Stochastic Gradient Descent (SGD).
+*   **Baseline:** Logistic Regression (LR) was used as a representative of traditional statistical methods for comparison.","Financial distress prediction, specifically classifying U.S. companies into two classes: Investment Grade (IG) or Non-Investment Grade (NG), based on Standard & Poor’s ratings.","*   **Data Split:** Dataset divided into training and testing data in a 1:1 ratio, repeated five times.
+*   **Hyperparameter Tuning:** 10-fold cross-validation on the training data was used to optimize NN and SVM parameters and avoid overfitting.
+*   **Performance Metrics:** Classification accuracy (Acc), F-measure, and Matthews correlation coefficient (MCC) were recorded on the testing data.
+*   **Statistical Significance:** Paired t-test was used to determine if the improvement over non-sentiment models was statistically significant (at p = 0.01, p = 0.05, and p = 0.1).
+*   **Feature Selection:** Relief algorithm with 10-fold cross-validation was used to test the merits of input attributes.",
+3,"Angeletos, G.-M., & La’O, J. (2013). Sen",2013,U.S.A. ,"Macroeconomics, specifically business cycle theory, general equilibrium models, and the economics of information and expectations.","Not applicable. The paper *defines* ""sentiments"" as a theoretical construct (extrinsic shocks) within a macroeconomic model, rather than extracting sentiment from textual data using Natural Language Processing (NLP) or sentiment analysis methods.","The model aims to explain and quantitatively match the co-movement and cyclicality of key macroeconomic variables over the business cycle, including:
+*   Aggregate output (Yt)
+*   Employment (N)
+*   Consumption (C)
+*   Investment (I)
+*   Labor productivity (Y/N)
+*   Labor wedge (LW)
+It also focuses on the aggregate level of agents' expectations or ""average optimism/pessimism"" (Bt).","The primary validation method is quantitative simulation. A tractable variant of the RBC model, incorporating sentiment shocks, is calibrated using standard macroeconomic parameters. The model's simulated business-cycle statistics (standard deviations and correlations with output, after HP-filtering) are then compared against historical U.S. macroeconomic data.",
+4,"Kearney, C., & Liu, S. (2014). Textual s",2014,"Australia (Monash University, Melbourne) and Ireland (Trinity College Dublin, Dublin)","Behavioral Finance, Financial Markets, Natural Language Processing (NLP) applied to Finance, Content Analysis. (JEL classifications: D80, D82, G02, G10, G12, G14, G30, G34, G38, M41)","This paper *reviews* various NLP and sentiment analysis methods used in the literature, rather than applying them itself. The methods discussed include:
+*   **Dictionary-based approach:** Uses pre-defined dictionaries/word lists to classify words, phrases, or sentences into sentiment categories (e.g., General Inquirer/Harvard IV-4, DICTION, finance-specific word lists like Loughran and McDonald (L&M) lists, Henry's word lists). This often involves ""bag-of-words"" models and term weighting schemes.
+*   **Machine learning:** Relies on statistical techniques to infer content and classify documents based on a ""training set"" (manually classified text). Algorithms like Naïve Bayesian and neural networks (e.g., Reuters NewsScope Sentiment Engine) are discussed.","As a survey, the paper does not have its own forecast target. It *reviews* studies that aim to forecast:
+*   Future firm performance (e.g., earnings, cash flows, return on assets).
+*   Stock prices and returns (e.g., short-term returns, abnormal returns, IPO first-day returns).
+*   Market variables (e.g., trading volumes, volatility).
+*   Likelihood of specific events (e.g., accounting improprieties, IPO withdrawal).","The paper does not perform its own validation. It *reviews* validation methods used in the literature, which include:
+*   **Econometric models:** Linear regression models (including panel regressions and event studies), Vector Autoregression (VAR) models, Logistic and Probit regressions, and Volatility models (e.g., GARCH-type models, realized volatility).
+*   **Sentiment-based trading strategies:** Designing long-short portfolios based on textual sentiment and examining their abnormal returns.
+*   **Accuracy rates:** For machine learning approaches, comparing classification accuracy against human analysts or other methods.",
+5,"Da, Z., Engelberg, J., & Gao, P. (2015).",2015,United States,"Finance, Behavioral Finance, Financial Economics, Econometrics.","The paper constructs a custom sentiment index (FEARS) using a multi-step process:
+*   **Word Selection:** Starts with ""economic"" words from established dictionaries (Harvard IV-4, Lasswell Value) that have positive or negative sentiment tags. This list is expanded by including Google's ""top related searches"" for these primitive words.
+*   **Filtering:** Non-economic terms and terms with insufficient SVI data are removed, resulting in 118 search terms.
+*   **Data Preprocessing:** Daily log differences of SVI are calculated, then winsorized (at 5%), deseasonalized (regressing on weekday and month dummies), and standardized (scaled by time-series standard deviation).
+*   **Dynamic Term Selection:** Backward-looking rolling regressions (every six months) are used to identify the 30 search terms whose adjusted SVI changes are most negatively correlated (largest negative t-statistic) with contemporaneous market returns. This ensures an objective, data-driven selection of fear-revealing terms.
+*   **Index Aggregation:** The FEARS index is the average of the adjusted daily search volume changes for these dynamically selected 30 terms.","*   **Asset Returns:** Short-term (contemporaneous and 1-2 days ahead) returns for:
+    *   Aggregate equity indices (S&P 500, CRSP value-weighted/equally-weighted).
+    *   Equity ETFs (SPY, QQQQ, IWB, IWM).
+    *   Treasury securities.
+    *   Cross-section of stocks based on limits to arbitrage (high-beta vs. low-beta, high-volatility vs. low-volatility, high-downside beta vs. low-downside beta, high-downside sigma vs. low-downside sigma portfolios, and beta-neutral double-sorted portfolios).
+*   **Market Volatility:**
+    *   Contemporaneous and lagged effects on seasonal-adjusted log realized volatility (of SPY) and log VIX.
+    *   Contemporaneous and future returns (1-2 days ahead) of CBOE VIX futures contracts.
+*   **Mutual Fund Flows:** Daily fund flow innovations for equity and intermediate Treasury bond mutual funds (contemporaneous and 1-4 days ahead).","*   **Statistical Robustness:** Bootstrapped standard errors are used for statistical inference, and results are robust to heteroscedasticity and autocorrelations.
+*   **FEARS Index Construction Robustness:** Tested with alternative numbers of search terms (top 25, top 35) and without winsorization, showing similar results.
+*   **Control Variables:** Extensive controls are included in regressions, such as lagged returns, VIX, EPU, ADS index, news-based sentiment, market return decile dummies, holiday dummies, and S&P 500 turnover.
+*   **Subsample Analysis:** Results are robust when excluding days with macroeconomic announcements and when considering only the period after Google Trends data became publicly available (June 2006).
+*   **Cross-Sectional Analysis:** The findings are consistent with sentiment theories by showing stronger effects on hard-to-arbitrage stocks (high beta, high volatility, high downside risk), even after controlling for beta.
+*   **Real-time Predictability:** Demonstrated by predicting day t+2 open-to-close returns using day t search volume, ensuring predictive variables are strictly observable before the target return.",
+6,"Kräussl, R., & Mirgorodskaya, E. (2016).",2016,Europe and the USA,"Behavioral Finance, Financial Markets, Media Studies, Econometrics.","*   **Method:** Dictionary-based content analysis.
+*   **Process:** A monthly media pessimism indicator is constructed as the ratio of the number of newspaper articles containing predetermined negative words to the number of articles containing predetermined positive words. The search is limited to the headline and lead paragraph.
+*   **Dictionaries/Word Lists:** Negative words are primarily borrowed from the Loughran and McDonald (2011) Fin-Neg word list (adapted for financial press relevance), supplemented with additional negative words. Positive words are antonyms of negative words and other positive words from the McDonald dictionary.
+",Financial market returns (MSCI World and S&P 500 indices) and financial market volatility (squared demeaned residuals of MSCI World and S&P 500 log returns).,"*   **Statistical Models:** Vector Autoregressive (VAR) models and Granger causality tests.
+*   **Lag Structure:** Up to 36 monthly lags (three years) were included to capture long-term effects.
+*   **Robustness Checks:** Inclusion of extensive control variables (Fama and French factors, Carhart momentum, Pastor and Stambaugh liquidity, US macroeconomic variables, Baker and Wurgler investor sentiment index, VIX index).
+*   **Statistical Assumptions:** Augmented Dickey–Fuller Unit-Root Test for stationarity, Newey–West (1987) estimator for standard errors to control for heteroscedasticity.
+*   **Economic Significance:** Partial R^2 analysis for individual lagged media sentiment indicators.
+*   **Comparative Analysis:** Comparison of predictive power with the Baker and Wurgler (2006) investor sentiment index and the VIX index.",
+7,"Hansen, S., & McMahon, M. (2016). Shocki",2016,United States,"Macroeconomics, Monetary Policy, Financial Economics, Econometrics, Computational Linguistics.","Yes, computational linguistics methods are extensively used:
+*   **Topic Modeling:** Latent Dirichlet Allocation (LDA) is used to discover and measure ""economic topics"" within FOMC statements.
+*   **Sentiment/Tone Analysis:** Dictionary methods (word counting) are used to measure the ""tone"" (expansionary vs. contractionary) of sentences related to economic topics and the ""certainty"" or ""ambiguity"" of forward guidance statements.
+*   **Manual Identification:** A research assistant manually identified paragraphs related to forward guidance.","The paper does not aim to *forecast* future values of variables. Instead, it analyzes the *impact* (via Impulse Response Functions) and *contribution to forecast error variance* (via Forecast Error Variance Decompositions) of central bank communication shocks on a wide range of market and real economic variables, including:
+*   Yields (e.g., 3m, 1yr, 3yr, 5yr, 10yr Treasury yields, corporate bond yields)
+*   Market variables (e.g., VIX, S&P 500, NASDAQ, USD TWI)
+*   Real economic variables (e.g., Industrial Production, ISM indices, Unemployment Rate, Capacity Utilization, CPI).","*   **Econometric Model:** Factor-Augmented Vector Autoregression (FAVAR) model.
+*   **Analysis Techniques:** Impulse Response Functions (IRFs) to show dynamic effects of shocks, and Forecast Error Variance Decompositions (FEVD) to quantify the importance of different shocks.
+*   **Statistical Inference:** Bayesian methods (Gibbs Sampling with 20,000 draws, thinned to 400) are used to estimate the FAVAR and derive confidence bands (50th, 90th, and 10th percentiles) for the IRFs.",50.0
+8,"Thorsrud, L. A. (2016). *Words are the n",2016,"Norway (The study focuses on the Norwegian economy and uses a Norwegian business newspaper, Dagens Næringsliv (DN), and Norwegian GDP data).","Economics, Macroeconomics, Econometrics, Business Cycles, Financial Economics, Natural Language Processing (NLP) applications in economics.","*   **NLP Method:** Latent Dirichlet Allocation (LDA) model is used to decompose the newspaper corpus into time series representing newspaper topics.
+*   **Sentiment Method:** A sign-identified data set is constructed by counting positive and negative words in articles using the Harvard IV-4 Psychological Dictionary (translated to Norwegian) to determine the overall mood (positive/negative) of each topic.","The primary target is a **coincident index** of business cycles, specifically a daily index of Norwegian GDP growth, aimed at providing real-time assessment of the current state of the economy. The paper also notes that the NCI contains important leading information, suggesting its usefulness for **nowcasting** and **turning point predictions**.","*   **Receiver Operating Characteristic (ROC) curves and Area Under the Curve (AUROC) statistic:** Used to formally evaluate the NCI's ability to classify business cycle phases.
+*   **Reference Cycles:** Four different business cycle chronologies for the Norwegian economy (uni- and multivariate Bry-Boschan approaches, univariate Markov-switching model, and a Markov-Switching factor model) are used as benchmarks.
+*   **Comparison:** The NCI's performance is compared against traditional observable business cycle indicators (stock index, yield spreads, labour force survey, business confidence indicator) and alternative Dynamic Factor Model (DFM) specifications (e.g., without time-varying factor loadings, with additional monthly data, or using only conventional indicators).",
+9,"Gavaldon, A. A. (2017). Developing news-",2017,United States,"Economics, Econometrics, Financial Economics, Computational Social Science, Natural Language Processing (NLP).","Latent Dirichlet Allocation (LDA), an unsupervised machine learning algorithm for topic modeling. The paper does not use sentiment analysis.","Not applicable. The paper focuses on developing and validating a new EPU index, not on forecasting future economic variables or the index itself.","The newly developed EPU index (EPU'') is validated by comparing its time-series evolution and statistical correlation with the established EPU index (EPU) developed by Baker et al. (2016). Correlation coefficients are calculated for the overall series (0.94), the cyclical component (0.88), and the trend component (0.99).",
+10,"Castle, J. L., Hendry, D. F., & Martinez",2017,United Kingdom,"Econometrics, Macroeconomics, Monetary Policy, Forecasting, Time Series Analysis.","No, the paper itself does not employ NLP or sentiment analysis methods. It *discusses* the concept of ""derived forecasts"" from narratives, referencing other works (e.g., Ericsson (2016), Stekler and Symington (2016)) that use quantitative indexes from qualitative information. However, its core contribution is an econometric test of invariance, not a method for narrative extraction or sentiment analysis.","The forecast targets discussed and used in examples are economic policy variables, specifically:
+*   CPI inflation
+*   4-quarter real GDP growth
+*   Generic policy target `yt+1` (e.g., inflation) and an instrument-influenced variable `xt` (e.g., aggregate excess demand) in the theoretical model.","The proposed Step-Indicator Saturation (SIS) invariance test is validated using:
+*   **Monte Carlo simulations:** To assess the test's ""gauge"" (empirical null retention frequency of irrelevant indicators) and ""potency"" (average non-null retention frequency of relevant indicators/power) under various conditions (constant marginal process, location shifts, variance shifts, and failures of invariance).
+*   **Application to a small artificial-data policy model:** To demonstrate its practical application in detecting invariance failure in a simulated policy context.",
+11,"Shiller, R. J. (2017). Narrative economi",2017,United States,"Economics, specifically interdisciplinary, drawing from macroeconomics, behavioral economics, financial economics, economic history, psychology, sociology, epidemiology, and literary theory.","The paper primarily employs quantitative textual analysis methods such as:
+*   **Word and N-gram Counts:** Tracking the frequency of specific words and phrases (e.g., ""Laffer Curve,"" ""Profiteer,"" ""Stock market crash,"" ""Great Depression,"" ""Communist"") in large textual databases (ProQuest, Google Ngrams, JSTOR) over time.
+*   **Conceptual Identification of Narratives:** Manually identifying and describing the core elements and emotional valence of influential stories based on historical context and qualitative analysis of texts.
+*   **Future Directions:** The author suggests future improvements using semantic search, machine translation, and AI to better understand context and meaning, as well as manual classification by research assistants for ""essential emotional driving force.""","The primary forecast target is to understand and, in the future, potentially predict:
+*   **Economic Fluctuations:** Recessions, depressions, and other major economic events.
+*   **Aggregate Economic Behavior:** Changes in propensity to spend, invest, start new businesses, hire employees, and overall ""animal spirits"" as influenced by evolving narratives.","The paper's validation is primarily illustrative and conceptual:
+*   **Historical Case Studies:** It presents historical examples (1920-21 Depression, Great Depression, Great Recession) and shows how specific narratives were prevalent and coincided with these events.
+*   **Qualitative Comparison to Epidemic Models:** It compares the time-series patterns of word/n-gram frequencies (e.g., Laffer Curve, economic theories) to the bell-shaped curve of ""infectives"" in the Kermack-McKendrick SIR model, using this as a metaphor for narrative spread.
+*   **Empirical Evidence (Author's Own):** References to the author's own survey data showing how news stories (e.g., earthquakes) influence investor crash beliefs, providing some direct empirical support for narrative impact.
+*   **References to Other Fields:** Cites controlled experiments in marketing, journalism, education, health, and philanthropy that demonstrate people's strong responses to narratives.",
+12,"Ren, R., Wu, D. D., & Liu, T. (2018). Fo",2018,China,"Financial Markets, Stock Market Prediction, Behavioral Finance, Machine Learning Applications in Finance, Text Mining.","*   **Sentiment Analysis:** A sentence-based approach is used. Documents are segmented into sentences, then words. Words are projected onto a sentiment space, and positive/negative words are counted. Polarity and sentiment value for each sentence are determined using **HowNet** and **Chinese Sentiment Analysis Ontology Base**.
+*   **Daily Sentiment Index (St):** Calculated based on the number of positive (Mt_bull) and negative (Mt_bear) comments in a day, ranging from -1 to 1.
+*   **Modified Sentiment (Day-of-Week Effect):** The daily sentiment indexes are adjusted to account for the ""day-of-week effect"" (and national holidays) using an exponential time function, where sentiment from recent days (especially weekends/holidays) is weighted more heavily.
+*   **Sentiment Features:** Eight aggregated sentiment indicators are derived from the 51 individual stock sentiment indexes (e.g., average, highest, lowest, median, standard deviation of modified sentiment indexes, and their changes).","The movement direction (up or down) of the SSE 50 Index for the next day. (Label = 1 if Close_t > Close_t-1, and -1 if Close_t < Close_t-1).","*   **Model Training & Parameter Selection:** Five-fold cross-validation is used to select proper kernel functions and parameters for the SVM model.
+*   **Realistic Forecasting:** A rolling window approach is implemented to overcome look-ahead bias, where `n` previous days are used to forecast the next day's movement. The optimal window size is determined by achieving the highest accuracy.
+*   **Performance Metrics:** Classification accuracy (Acc), Accumulated Income (AI), Maximum Drawdown (MDD), Expected Maximum Drawdown (EMD), and Sharpe Ratio (SR).
+*   **Comparison:** The SVM model's performance is compared against Logistic Regression (LR).",89.93
+13,"Baker, S. R., Bloom, N., & Davis, S. J. ",2018,"Primarily United States, with extensions to 11 other major economies (including all G10 economies, China, Russia, India, and South Korea) and the United Kingdom for historical analysis.","Economics (specifically Macroeconomics, Financial Economics, and Economic History), Public Policy, and Quantitative Social Science (Text Analysis).","The method primarily involves **keyword frequency counting**. The EPU index is constructed by counting the frequency of articles containing a ""triple of words"":
+*   ""economic"" or ""economy""
+*   ""uncertain"" or ""uncertainty""
+*   One or more specific ""policy terms"" (e.g., ""congress"", ""deficit"", ""Federal Reserve"", ""legislation"", ""regulation"", ""White House"").
+The raw counts are then scaled, standardized, and normalized. No advanced NLP techniques like sentiment analysis, machine learning classification, or named entity recognition are explicitly mentioned for the automated index construction.","*   **Firm-level:** Stock price volatility, investment rates, employment growth.
+*   **Aggregate-level:** Investment, industrial production (output), employment, and unemployment rate.","*   **Human Audit Study:** An extensive audit of 12,000 newspaper articles by human readers, showing a high correlation (0.86 in quarterly data, 0.93 in annual data) between human-coded and computer-generated EPU indices. This also helped select policy terms and understand the nature of uncertainty.
+*   **Comparison with Other Uncertainty Measures:**
+    *   Correlation with the VIX (stock market implied volatility).
+    *   Correlation with the frequency of policy uncertainty mentions in the Federal Reserve System’s Beige Books.
+    *   Correlation with policy-related risk factors in firms' 10-K filings.
+    *   Correlation with the annual frequency of large daily stock market moves triggered by policy news.
+*   **Political Slant Check:** Comparison of EPU indices constructed from right-leaning and left-leaning newspapers, showing high correlation (0.92), suggesting political bias does not significantly distort the index.
+*   **Market Adoption:** Commercial data providers (Bloomberg, Haver, FRED, Reuters) carry the indices, indicating their perceived usefulness by market participants.",6.0
+14,"Huang, M. Y., Rojas, R. R., & Convery, P",2018,United States,"Economics, Econometrics, Financial Forecasting, Natural Language Processing (NLP), Data Science.","*   **Sentiment Scoring:** Lexicon-based approach (Liu, 2008). Each word in a document is scored +1 (positive), -1 (negative), or 0 (neutral). Document scores are summed, then divided by total words. Daily scores are summed to account for fluctuations in article volume.
+*   **Topic Modeling:** Latent Dirichlet Allocation (LDA) is used to estimate underlying topic distributions in monthly blocks of articles.
+*   **Topic Coherence/Relatedness:** Jensen-Shannon distance is computed between each pair of the 30 estimated topics. The standard deviation of these distances (`σdist_t`) serves as a proxy for the ""coherence"" or ""sparsity"" of topics in a given time period.
+*   **Combined News Sentiment Metric:** The coherence measure is weighted with the positive/negative sentiment scores: `sent_t = σdist_t * score_t`.
+*   **Relative News Sentiment:** A 2-year rolling window z-score (`zsent_t`) of the combined sentiment metric is calculated to normalize for inherent changes in overall news sentiment trends over time.","A binary indicator series (`rec_t`) representing US recession periods, where `1` denotes a recession period and `0` otherwise, consistent with the National Bureau of Economic Research (NBER)’s classification. The model forecasts this target at four different horizons: one month ahead (h=1), three months ahead (h=3), six months ahead (h=6), and one year ahead (h=12).","*   **Model:** Standard probit model.
+*   **Benchmarks:**
+    1.  Model with only 15 common factors.
+    2.  Model with 15 common factors + MICS + PMI.
+*   **Statistical Tests:** F-tests (to assess statistical significance of adding factors), Diebold-Mariano tests (for out-of-sample error significance).
+*   **Information Criteria:** Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) for model selection.
+*   **Performance Metrics:**
+    *   **F1-score:** Used due to unbalanced data (more non-recession periods than recession periods), combining precision and recall. A threshold of C*=0.5 is applied to estimated probabilities.
+    *   **Receiver Operating Characteristic (ROC) curve:** Plots true positive rate against false positive rate across varying probability thresholds.
+    *   **Area Under the ROC Curve (AUROC):** A single metric summarizing overall model performance across all thresholds.
+*   **Evaluation Strategy:**
+    *   In-sample performance analysis.
+    *   Out-of-sample performance: Data partitioned into 2/3 training and 1/3 testing.
+    *   Backtesting: Data partitioned into three periods (1965-1981, 1982-1998, 1999-2017) to examine performance across different economic environments.
+    *   Robustness Check: Block bootstrapping (200 times) to obtain a distribution of AUROC values.",
+15," Bortoli, C., Combes, S. & Renault, T. (",2018,France,"Economics, Econometrics, Natural Language Processing (NLP), Data Science, Forecasting.","    *   **Sentiment Analysis (Dictionary-based):**
+        *   Built a custom French sentiment dictionary (840 terms: 281 positive, 559 negative, including unigrams and bigrams) by stemming terms and classifying them by experts.
+        *   Calculated a ""sentiment score"" for each article based on the number of positive and negative terms (both discrete and continuous coding were tested, with continuous chosen for better results).
+        *   Aggregated monthly article sentiment scores to create a ""Media Sentiment"" indicator.
+    *   **Automated Approach (Penalised Regression):**
+        *   Used tf-idf (term frequency-inverse document frequency) weighting for individual stemmed words and bigrams (excluding stopwords, very common, and very rare terms).
+        *   These weighted term frequencies were used as regressors in Elastic-Net penalised regressions for automatic variable selection.",Real quarterly volume growth of French GDP.,"    *   Real-time forecasting exercise over the period 2000-Q2 to 2017-Q3.
+    *   Comparison of model accuracy using Root Mean Square Forecast Error (RMSFE).
+    *   Statistical significance of RMSFE differences tested using the Harvey et al. (1997) test.
+    *   Models were estimated using a sliding window approach.",
+16,"Hassan, T. A., Hollander, S., van Lent, ",2019,United States,"Economics, Finance, Business, Political Economy, Computational Linguistics.","*   **NLP Method:** The paper adapts a simple **pattern-based sequence-classification method** from computational linguistics. It identifies two-word combinations (bigrams) frequently used in political texts (from training libraries). The core measure of political risk (PRisk) is constructed by counting the instances where these political bigrams appear in earnings call transcripts in conjunction with synonyms for ""risk"" or ""uncertainty"" (within a 10-word window), weighted by the bigram's association with political topics, and normalized by the total length of the call.
+*   **Sentiment Method:** A separate measure of **political sentiment (PSentiment)** is constructed using a similar bigram-based approach, but conditioning on the proximity to positive and negative tone words (from Loughran and McDonald (2011)'s sentiment dictionary) instead of risk synonyms.","The paper does not explicitly state a ""forecast target"" in the sense of predicting future values of political risk or firm outcomes. Its primary focus is on *measuring* political risk, *validating* the measure, and *analyzing its effects* on firm behavior (i.e., identifying correlations and associations, often with lagged effects on firm actions like lobbying).","The measure is extensively validated through:
+*   **Manual Review:** Showing top-scoring transcripts correctly identify conversations on political risks (Table 3, Appendix C).
+*   **Temporal Variation:** Demonstrating intuitive variation over time, including increases around federal elections and high correlation with the aggregate Economic Policy Uncertainty (EPU) Index (Figure 1, Figure 2).
+*   **Cross-Sectional Variation:** Showing intuitive variation across sectors, correlating with regulatory constraints and government contract revenue (Figure 3).
+*   **Correlation with Market Outcomes:** Significant correlation with firm-specific stock return volatility (Table 4).
+*   **Correlation with Firm Actions:** Significant associations with firm investment, planned capital expenditures, hiring, lobbying activities, and political donations (Table 5).
+*   **Falsification Exercises:**
+    *   Controlling for political sentiment (PSentiment) and overall sentiment/performance, showing the political risk measure captures the second moment (risk) rather than the first moment (mean/sentiment) of political shocks (Table 6).
+    *   Comparing the political risk measure with non-political risk and overall risk measures, demonstrating its unique information content regarding political engagement (Table 7).
+*   **Event Studies:** Examining specific events like ""Brexit"" and ""Trump's tweeting"" (Appendix Table 4).
+*   **Topic-Specific Validation:** Showing topic-specific political risk measures correlate with topic-specific lobbying disclosures (Table 11).
+*   **Case Studies:** Analyzing three federal budget crises during the Obama presidency to isolate politically-induced risk (Table 12).",90.0
+17,"Caruso, A. (2019). Macroeconomic news an",2019,United States,"Macroeconomics, Financial Economics, Econometrics, Forecasting, Quantitative Finance.","No, NLP or sentiment analysis methods are not used. The paper focuses on quantitative macroeconomic data and their unexpected components. While ""Consumer sentiment"" is a variable included, it's a pre-existing index, not derived via NLP in this study.","*   **Primary Nowcasting Target:** Quarterly GDP growth rate of the United States (current, previous, and following quarters).
+*   **Ultimate Target for Surprise Index Impact:** Asset prices (government bond yields, S&P 500 returns, USD/EUR exchange rate changes).","*   **Correlation Analysis:** Comparing the model-based index with market-based indexes and asset prices (bond yields, S&P 500, USD/EUR exchange rate) at different frequencies (1, 2, 3 months).
+*   **OLS Regressions:** Estimating the relationship between asset returns and the surprise indexes, reporting R-squared values and using Newey–West standard errors.
+*   **Efficiency Tests (Mincer-Zarnowitz type):** Testing the efficiency of market-based and model-based forecasts by regressing news on forecasts.
+*   **Forecast Accuracy Comparison:** Comparing Root Mean Squared Forecast Errors (RMSFEs) of model-based forecasts against a benchmark (previous release) for replicating Bloomberg survey expectations, using the Diebold and Mariano test statistic.",
+18,"Ardia, D., Bluteau, K., & Boudt, K. (201",2019,United States,"Econometrics, Financial Forecasting, Natural Language Processing (NLP), Machine Learning, Big Data.","*   **Methodology:** Lexicon-based sentiment analysis (bag-of-words approach).
+*   **Lexicons Used (L=7):** Harvard General Inquirer, Henry (2008), Loughran and McDonald (2011), SentiWordNet, SenticNet, SO-CAL, and NRC lexicon.
+*   **Sentiment Calculation:** Net sentiment is calculated as the relative spread between the number of positive and negative words, normalized by the total number of words (positive + negative + neutral words).
+*   **Valence Shifters:** Considered words that deal with negativity by inverting the sentiment of the first word following it (e.g., ""not good"" becomes negative).","Log-growth of US industrial production at one-month (h=1), three-month (h=3), six-month (h=6), nine-month (h=9), and twelve-month (h=12) horizons.","*   **Out-of-sample evaluation:** January 2001 (or January 2003 for h=12) to December 2016.
+*   **Estimation:** Rolling window basis of 60 months.
+*   **Performance Metrics:** Root Mean Squared Forecast Error (RMSFE) and Mean Absolute Forecast Error (MAFE).
+*   **Statistical Significance:** Diebold and Mariano (1995) (DM) test, with p-values computed using the bootstrap approach of Clark and McCracken (2001) for nested models, at a 5% significance level.
+*   **Analysis Periods:** Full sample, pre-crisis (Jan 2001-Jun 2007), crisis (Jul 2007-Dec 2009), and post-crisis (Jan 2010-Dec 2016).",
+19,"Gentzkow, M., Kelly, B., & Taddy, M. (20",2019,United States,"Economics and related social sciences, including specific sub-domains like finance, macroeconomics, media economics, industrial organization and marketing, political economy, and computational social science.","The paper *reviews* a comprehensive range of NLP and sentiment methods, rather than applying one itself. These include:
+*   **Dictionary-based methods:** Using predefined lists of words (e.g., General Inquirer, Harvard IV-4, finance-specific dictionaries) to quantify sentiment or specific concepts.
+*   **Text Regression methods:**
+    *   **Penalized Linear Models:** Lasso, Ridge, Elastic Net for high-dimensional regression.
+    *   **Dimension Reduction:** Principal Components Regression (PCR), Partial Least Squares (PLS).
+    *   **Nonlinear Text Regression:** Generalized Linear Models (GLMs), Support Vector Machines (SVMs), Regression Trees (Random Forests, Boosted Trees), Deep Learning (Neural Networks, DNNs).
+*   **Generative Language Models:**
+    *   **Unsupervised:** Topic Models (e.g., Latent Dirichlet Allocation - LDA, dynamic topic models, probabilistic LSA).
+    *   **Supervised:** Naive Bayes classifier, Multinomial Logistic Regression, Multinomial Inverse Regression (MNIR).
+*   **Word Embeddings:** Distributed language representations (e.g., Word2Vec, GloVe) for capturing semantic similarity.","The paper discusses various forecast targets from the literature, including:
+*   Asset price movements (stock prices, returns, volatility)
+*   Macroeconomic variables (inflation, unemployment, retail sales, GDP, consumer sentiment, housing starts)
+*   Policy uncertainty (economic, political, Federal Reserve policy)
+*   Political slant/ideology (of media, politicians, Wikipedia contributors)
+*   Consumer decision making
+*   Dynamics of political agendas and debate
+*   Incidence of local flu outbreaks
+*   Authorship attribution
+*   Firm performance
+*   Central bank communication effects on financial markets
+*   Corruption levels in cities
+*   Racial animus in geographic areas
+*   Patent quality and technological innovation
+*   Task content shifts in occupations
+*   Topics in academic research, politics, and law","The paper outlines several validation methods commonly used in text-as-data research:
+*   **Out-of-sample predictive performance:** Checking model accuracy on data not used for training, often using K-fold cross-validation (CV).
+*   **Manual audits/Human coding comparisons:** Cross-checking a subset of machine-generated classifications or predictions against human-coded labels (e.g., Baker, Bloom, and Davis 2016).
+*   **Inspection of estimated coefficients/parameters:** Examining the most important words or features identified by the model to see if they make intuitive sense (with caution due to potential multicollinearity or multimodal posteriors).
+*   **Tracking over time:** Observing if the model's outputs (e.g., topic importance) align with known historical events.",
+20,"Jones, J. T., Sinclair, T. M., & Stekler",2020,United Kingdom,"Economics, Macroeconomics, Forecasting, Financial Economics, Econometrics, Natural Language Processing (NLP) in Economics.","*   **Method:** Textual Analysis / Content Analysis.
+*   **Procedure:** An in-sample textual analysis procedure (2005–2014) was used to manually identify recurring keywords and phrases in the ""Overview"" section of the Inflation Reports. These expressions were then assigned scores on a discrete scale from -1.5 (trough) to +1 (exceptional growth) with 0.25 increments. For out-of-sample periods (1998–2004 and 2015–2018), an automatic scoring procedure was used, based on regression weights derived from the in-sample analysis, to count the frequency of these pre-selected terms. The authors explicitly distinguish their ""elicited forecast from the text"" from general sentiment analysis.
+","*   UK real output growth (GDP growth).
+*   Specifically, current-quarter (nowcasts) and one-quarter-ahead forecasts.","*   **Correlation Analysis:** Calculating correlation coefficients between the text scores and:
+    *   Real-time UK GDP growth (current quarter and one-quarter-ahead).
+    *   Bank of England's quantitative nowcasts and one-quarter-ahead forecasts.
+*   **Graphical Analysis:** Visual comparison of text scores with real GDP growth and quantitative forecasts, focusing on key economic events (e.g., US downturn in 2001, the Great Recession, post-Brexit referendum period).
+*   **Efficiency Regressions:** Using a modified Mincer-Zarnowitz regression (Faust & Wright, 2013 model) to test if the quantitative forecast errors (nowcast and one-quarter-ahead) can be predicted by the text scores. This assesses whether the text contains information not already incorporated into the quantitative forecasts.",
+21,"Algaba, A., Ardia, D., Bluteau, K., Borm",2020,,"*   Economics
+*   Econometrics
+*   Finance
+*   Machine Learning
+*   Natural Language Processing (NLP)
+*   Accounting
+*   Marketing
+*   Psychology
+*   Computer Science","The paper surveys various methods for sentiment quantification:
+*   **Lexicon-Based Approaches:**
+    *   Manual lexicon creation (e.g., General Inquirer, ANEW, NRC lexicon).
+    *   Dictionary-based expansion (e.g., WordNet, SentiWordNet).
+    *   Corpus-based adaptation (e.g., adjusting sentiment orientation to a new domain, linguistic rules like sentiment consistency/coherency).
+    *   Statistical methods for lexicon generation (e.g., regression frameworks like Ridge, LASSO, elastic net, tf-idf).
+    *   Integration of valence shifters (amplifiers, downtoners, negators, adversative conjunctions).
+*   **Machine Learning Approaches:**
+    *   **Supervised Learning:** Naive Bayes, Maximum Entropy Classification, Support Vector Machines (SVMs), Neural Networks (including Deep Learning). Requires annotated ""gold standard"" datasets.
+    *   **Unsupervised/Semi-supervised Learning:**
+        *   Pointwise Mutual Information (PMI) for semantic orientation.
+        *   Vector Space Models (VSM) and Word Embeddings (e.g., Word2Vec (CBOW, skip-gram), GloVe, fastText, BERT) to capture syntactic and semantic word relationships.
+        *   Latent Semantic Analysis (LSA), Probabilistic LSA (S-PLSA).
+        *   Label propagation methods (e.g., SENTPROP).
+*   **Multimodal Sentiment Analysis:** Combining textual, audio, and visual signals through joint feature vectors, individual stream modeling with subsequent combination, or unsupervised encoder-decoder frameworks.",,,
+22,"Mishev, K., Gjorgjevikj, A., Vodenska, I",2020,USA,Finance / Financial Informatics / Natural Language Processing (NLP) in Finance,"The paper evaluates a comprehensive range of NLP and sentiment analysis methods:
+*   **Lexicon-based:** Loughran-McDonald (financial-specific) and Harvard IV-4 (general-purpose) dictionaries, using the Lydia system for polarity detection.
+*   **Statistical Methods:** Count Vectorizer (uni-gram, 2-gram) and TF-IDF term weighting.
+*   **Word Encoders (Fixed Embeddings):** Word2Vec, GloVe, FastText, ELMo (contextual).
+*   **Sentence Encoders:** Doc2Vec, Skip-Thought Vectors, InferSent (GloVe and FastText versions), Universal Sentence Encoder (USE) (DAN architecture, versions 4 and 5), Language-Agnostic Sentence Representations (LASER).
+*   **NLP Transformers (Contextual Embeddings):** BERT (base, large), FinBERT, XLNet, XLM, ALBERT, RoBERTa, DistilBERT (distilled versions of BERT/RoBERTa), XLM-RoBERTa, BART.
+These methods are combined with various classifiers: Machine Learning (Support Vector Classifier - SVC, Extreme Gradient Boosting - XGB) and Deep Neural Networks (Convolutional Neural Networks - CNN, Recurrent Neural Networks - RNN, GRU, LSTM, with and without Attention mechanisms).","The paper's findings imply that the selected models can be successfully used for:
+*   Forecasting stock market trends and corporate earnings.
+*   Decision-making in securities trading and portfolio management.
+*   Brand reputation management.
+*   Fraud detection and regulation.","A general evaluation platform consisting of five phases:
+1.  **Dataset Creation:** Combining Financial Phrase Bank and SemEval 2017 datasets.
+2.  **Data Pre-processing:** Tokenization, stop-word removal, stemming, named entity replacement (e.g., Microsoft to `<CMPY>`), sentence length filtering (3-64 words), left padding for fixed-size inputs.
+3.  **Text Encoding:** Feature extraction using the various lexicon-based, statistical, word encoder, sentence encoder, and NLP transformer methods.
+4.  **Classification:** Feeding embeddings into Machine Learning classifiers (SVC, XGB) or Deep Learning classifiers (CNN, RNN, GRU, LSTM, with/without Attention). NLP transformers are fine-tuned with an additional dense layer.
+5.  **Performance Metrics:** Comparing real and predicted labels using the **Matthews Correlation Coefficient (MCC)** as the main evaluation metric.",
+23,"Clements, M. P., & Reade, J. J. (2020). ",2020,United Kingdom ,"Macroeconomic Forecasting, Central Banking, Financial Economics, Applied Econometrics, Natural Language Processing in Economics.","*   **Method:** Dictionary-based sentiment analysis using the ""Alba index"" (developed by J. Alba).
+*   **Tools:** Natural Language Toolkit (NLTK) in Python.
+*   **Process:**
+    *   Manually ranked 3000 most common words (adverbs, adjectives, nouns) from historical Inflation Reports.
+    *   Words scored as positive (+1), negative (-1), or neutral (0).
+    *   Additional categories: decrementers (halve score), incrementers (double score), and inverters (invert sign) to capture nuances.
+    *   Sentiment score for a report is the sum of word scores, divided by the number of sentences.
+*   **Comparison:** Also calculated an ""Afinn"" index for comparison purposes.
+*   **Scaling:** Sentiment indices were scaled by recent inflation or output growth depending on the variable being forecast.","*   Inflation (RPIX until 2003, then CPI)
+*   Output Growth (GDP growth)
+The forecasts are for up to eight quarters ahead.","The study employs several forecast evaluation methods:
+*   **Forecast Accuracy:** Diebold-Mariano (DM) tests (regression-based) to compare the Bank's forecasts against:
+    *   Benchmark time series models (AR(1) for output growth, 'no-change' for inflation).
+    *   Forecasts derived from the scaled sentiment indices.
+    *   Uses squared error loss (MSFE).
+*   **Forecast Efficiency:** Mincer-Zarnowitz (MZ) regressions to test if numerical forecast errors are predictable from the forecasts themselves (i.e., if the forecasts efficiently use available information).
+*   **Forecast Encompassing:** Regressions (Fair and Shiller type) to determine if the sentiment index contains useful additional information that is not already present in the numerical forecasts, by checking if sentiment can explain numerical forecast errors.
+*   **Forecast Updating:** Regressions to test if revisions to numerical forecasts (between adjacent reports) can be predicted by prior changes in the sentiment index.
+*   All test statistics are based on heteroscedasticity and autocorrelation-corrected standard errors.",
+24,"Adämmer, P., & Schüssler, R. A. (2020). ",2020,Germany,"Finance, Econometrics, Machine Learning, Natural Language Processing (NLP), Text as Data.","The paper primarily uses **Natural Language Processing (NLP)** techniques, specifically **Topic Modeling**, to extract and quantify information from news. It explicitly contrasts its approach with dictionary-based sentiment methods, focusing on the *content* (topics) rather than just the *tone* (sentiment).",Monthly equity premia,"*   **Out-of-Sample (OOS) Forecasting:** The primary evaluation method, mimicking a real-time investor's information set.
+*   **Statistical Evaluation:**
+    *   R2 OOS (Campbell and Thompson, 2008) to compare against a historical mean benchmark.
+    *   Clark and West (2007) test for statistical significance of R2 OOS.
+    *   Forecast encompassing tests (Harvey, Leybourne, and Newbold, 1998) to compare against established economic predictors.
+*   **Economic Evaluation:**
+    *   Certainty-Equivalent Return (CEQ) and Sharpe Ratio (SR) for a mean-variance investor, both before and after transaction costs (50 basis points).
+    *   Statistical significance of CEQ and SR assessed by simulated distributions under the null of no predictability (1,000 simulations).
+*   **Robustness Checks:**
+    *   Sensitivity to different numbers of topics (K).
+    *   Analysis with alternative samples (different start/end dates for OOS period).
+    *   Comparison with alternative forecast combination strategies (e.g., Best in-sample predictors, Exponential weighting scheme).
+    *   Comparison with popular machine learning methods (Tree-based methods, Support Vector Regressions, LASSO, Ridge Regression, Elastic Net).",6.52
+25,"Li, X., Wu, P., & Wang, W. (2020). Incor",2020,Hong Kong,"Finance, Financial Markets, Stock Market Prediction, Natural Language Processing (NLP), Deep Learning.","*   **Method:** Sentiment analysis is applied to financial news articles to convert them into sentiment vectors.
+*   **Preprocessing Steps:** Tokenization, phrase checking (based on dictionary keys), negation tagging, stop word exclusion, and lemmatization.
+*   **Dictionaries Used:** SenticNet 5, SentiWordNet 3.0, Vader, and Loughran–McDonald Financial Dictionary 2018 (LMFinance). Each word is mapped to a sentiment space, and daily news sentiment vectors are calculated by averaging individual news sentiment vectors.","Close-to-Close stock price return rate, categorized into three classes:
+*   **Fall (Class 0):** Return in the bottom 25% quantile.
+*   **Horizontal (Class 1):** Return in the middle 50% quantile.
+*   **Rise (Class 2):** Return in the top 25% quantile.","*   **Baselines:** Support Vector Machine (SVM) and Multiple Kernel Learning (MKL).
+*   **Cross-validation:** 3-fold time split cross-validation for hyperparameter optimization.
+*   **Data Split:**
+    *   Training set: March 2003 to March 2007 (approx. 80%).
+    *   Validation set (for early-stop in LSTM): March 2007 to September 2007 (approx. 10%).
+    *   Test set: September 2007 to March 2008 (last 10%).
+*   **Evaluation Metrics:** Accuracy and weighted macro F1-score.",120.0
+26,"Choudhary, M. A., Pasha, F., & Waheed, M",2020,Pakistan,"Economics, Macroeconomics, Financial Economics, Public Policy, Econometrics, Text Mining.","The paper uses a keyword-based content analysis (a form of text mining/information extraction within NLP). It identifies articles containing specific word sets for ""Economic,"" ""Policy,"" and ""Uncertainty"" categories using Boolean logic (AND/OR). It counts the frequency of these articles to construct the EPU index. It does not explicitly use sentiment analysis in the typical positive/negative/neutral sense.","Not applicable. The paper focuses on *measuring* and *explaining* historical economic policy uncertainty, rather than forecasting future events or economic variables.","1.  **Human Audit:** Sixteen undergraduate students manually reviewed 20% of uncertainty-marked articles from randomly selected years (2011, 2015, 2017, 2019) to verify the presence of ""E,"" ""P,"" and ""U"" words and the general theme of the article.
+2.  **Internal Consistency:** Demonstrated a high correlation (0.94) between the two developed indices (EPU-2, based on two newspapers, and EPU-4, based on four newspapers).
+3.  **Event Study:** Corroborating high EPU spikes with known historical economic and political events in Pakistan.",
+27,"Shapiro, A. H., Sudhof, M., & Wilson, D.",2020,United States,"Economics, Finance, Natural Language Processing (NLP), Computational Text Analysis.","*   **Lexical Methods:** Primarily focuses on ""bag-of-words"" lexical techniques using pre-defined lexicons (Harvard General Inquirer (GI), Loughran-McDonald (LM), Hu-Liu (HL)).
+*   **Lexicon Combination:** Explores combining existing lexicons to improve performance.
+*   **Heuristic Rules:** Incorporates simple heuristic rules, particularly for negation (similar to Vader), to account for word context.
+*   **Custom Lexicon:** Develops a new, domain-specific ""news PMI lexicon"" for economic news articles using Pointwise Mutual Information (PMI) to infer sentiment orientation for unique words in their corpus.
+*   **Machine Learning (Exploratory):** Experimented with linear ML models using different feature spaces: unigrams (bag-of-words), GloVe word embeddings, and BERT document embeddings. However, the lexical model was preferred for the main analysis due to training data limitations and transparency.","Not explicitly performed. The paper focuses solely on sentiment analysis, though it acknowledges topic analysis as a related field in computational text analysis.","*   **Nowcasting:** Preliminary and final releases of the Michigan Consumer Sentiment Index (MCSI) and the Conference Board’s Consumer Confidence Index (CBCI).
+*   **Macroeconomic Responses:** Impulse responses of consumption, output, real fed funds rate, and inflation to news sentiment shocks.
+*   **Out-of-sample Forecasting (LASSO):** Employment, industrial production (IP), inflation, real fed funds rate (FFR), and S&P 500 index.
+
+**10. Validation Method**
+*   **Human Ratings:** Predictive accuracy of sentiment models is evaluated against 800 human-labeled news articles using Spearman rank correlation, OLS R-squared, Ordered Logit Pseudo-R2, and Macro-F1 statistic.
+*   **Statistical Significance:** Pairwise Diebold-Mariano test is used to assess the statistical significance of improvements in model goodness-of-fit.
+*   **Correlation with Surveys:** The aggregated news sentiment index is validated by assessing its correlation with established survey-based consumer sentiment indexes (MCSI, CBCI).
+*   **Consistency with Economic Theory/Literature:** Macroeconomic impulse responses are compared for consistency with theoretical predictions and empirical findings from prior studies (e.g., Barsky and Sims (2012)).
+*   **LASSO:** Used for variable selection and to assess out-of-sample forecasting performance of the news sentiment measure for various economic outcomes.",
+28,"Aguilar, P., Ghirelli, C., Pacce, M., & ",2021,Spain,"   Economics, Econometrics, Financial Economics, Business Cycle Analysis, Economic Forecasting.","    **Method:** Keyword-based sentiment analysis.
+    **Process:**
+    *   Articles are filtered for Spanish language, content related to Spain, and topics like corporate news, economic news, or financial markets.
+    *   Two types of queries are performed to count articles:
+        *   **Upswing-related:** Articles containing ""recuperación*"" or (economic*/economía within 5 words of aceler*, crec*, expansi*, increment*, aument*, recuper*, mejora*), plus ""Españ*"".
+        *   **Downswing-related:** Articles containing ""recesión*"" or ""crisis"" or (economic*/economía within 5 words of descen*, disminu*, redu*, ralentiz*, decrec*, desaceler*, contracción*), plus ""Españ*"".
+    *   The DENSI is constructed by scaling the difference between upturn and downturn article counts by the total number of economic articles for a given newspaper/period (daily or monthly). These scaled counts are then standardized, averaged across newspapers, and finally rescaled to have a mean of 0. The procedure is based on Baker et al. (2016).","    *   Spanish GDP growth (nowcasting).
+    *   Short-term recession probabilities (predicting business cycle turning points).","    *   **Comparison with Benchmark:** The DENSI is compared against the Economic Sentiment Indicator (ESI) of the European Commission.
+    *   **GDP Nowcasting Accuracy:** A mixed-frequency bi-variate vector autoregressive (MF-BiVAR) model is used to nowcast GDP. The forecast accuracy of models including DENSI vs. ESI is compared using the Root Mean Squared Error (RMSE).
+    *   **Statistical Significance:** The Diebold and Mariano test is used to assess the statistical significance of the difference in RMSE between the DENSI and ESI models.
+    *   **Recession Probability Prediction:** Probit models are used to estimate recession probabilities based on the yield curve, with DENSI or ESI added as additional regressors. Their performance in predicting the COVID-19 recession is evaluated at various horizons (3, 6, 9, 12 months).",20.0
+29," Gite, S., Khatavkar, H., Kotecha, K., S",2021,India,"    Finance (Stock Market Prediction), Artificial Intelligence, Machine Learning, Deep Learning, Natural Language Processing (NLP).","    *   **Sentiment Analysis:** Performed on news headlines to classify them as having positive or negative sentiment.
+    *   **LSTM-CNN model:** Used for news classification for sentiments, employing interactions of words during the compositional process.
+    *   **Preprocessing:** Tokenization, stop word removal, word embedding (top 2000 words), normalization.","    Stock prices, specifically the **opening price** of stocks (e.g., BSE-SENSEX and NSE-NIFTY).","    *   **Data Split:** 80% for training, 10% for validation, and 10% for testing.
+    *   **Metrics:** Validation loss, validation accuracy, error percentage (calculated as `abs((Actual-predicted)/(Actual ))*100`), and Chi-squared test.
+    *   **Techniques:** Early Stopping to prevent overfitting during training.",74.76
+30,"Andre, P., Haaland, I., Roth, C., & Wohl",2021,United States,"Economics, Macroeconomics, Behavioral Economics, Public Opinion, Expectation Formation.","*   **NLP:** Basic text analysis techniques were used, such as **word clouds** to visualize frequently used words and bigrams.
+*   **Sentiment Method:** Not explicitly stated as a formal sentiment analysis method. However, the ""Politics"" narrative code (e.g., ""Negative comments about quality of government"") captures sentiment-laden explanations. The primary method for classifying narratives was manual coding based on a tailored scheme, not automated sentiment analysis.","*   **Inflation Expectations:** Probabilistic forecasts for 1-year ahead and 5-year ahead inflation rates.
+*   **Persistence of Inflation Drivers:** Beliefs about whether specific factors would remain relevant for inflation over the next 12 months.
+
+**10. Validation Method**
+*   **Sample Representativeness:** Household sample compared to U.S. population demographics (gender, age, region, income, education) using the American Community Survey (ACS).
+*   **Attention Checks:** Included in household and manager surveys.
+*   **Internal Consistency:** Correlation between hand-coded open-ended narratives and structured measures of perceived quantitative importance of different inflation drivers (Figure A.8).","*   **Sample Representativeness:** Household sample compared to U.S. population demographics (gender, age, region, income, education) using the American Community Survey (ACS).
+*   **Attention Checks:** Included in household and manager surveys.
+*   **Internal Consistency:** Correlation between hand-coded open-ended narratives and structured measures of perceived quantitative importance of different inflation drivers (Figure A.8).",2.6
+31,"Ashwin, J., Kalamara, E., & Saiz, L. (20",2021,"Euro area (specifically focusing on the four largest Euro area economies: Germany, France, Italy, and Spain for data collection).","Macroeconomics, Econometrics, Natural Language Processing (NLP), Machine Learning, Financial Economics.","*   **Methodology:** Lexicon-based sentiment analysis.
+*   **Preprocessing:** Non-English articles are machine translated into English using the Google Translate API. Sentiment scores are then computed from the translated text.
+*   **Dictionaries Used:**
+    *   AFINN (Nielsen, 2011) - General purpose, granular scale (+5 to -5).
+    *   CGLM (Correa et al., 2017) - Economics-focused (financial stability), binary (+1/-1).
+    *   HIV (Tetlock, 2007) - General purpose, binary (+1/-1).
+    *   HL (Hu and Liu, 2004) - General purpose (opinion in reviews), binary (+1/-1).
+    *   LM (Loughran and McDonald, 2013) - Economics and finance-focused, binary (+1/-1).
+    *   NKTGOS (Nyman et al., 2018) - Finance applications (excited/anxious), binary (+1/-1).
+    *   VADER (Hutto and Gilbert, 2014) - General purpose (social media text), sentence-level, continuous scale (-1 to 1), accounts for negation and punctuation.
+*   **Aggregation:** Sentiment scores are aggregated daily for each country, then combined into Euro area aggregates using Eurostat's GDP weights.","Real GDP growth for the Euro area (quarterly frequency). The task is ""nowcasting,"" meaning predicting the current quarter's GDP before official release.","*   **Evaluation Metric:** Mean Squared Error (MSE) calculated daily across the quarter for an out-of-sample period (April 2006 to December 2019, and separately for 2020).
+*   **Benchmarks:**
+    1.  Models of the same functional form using only the quasi-daily Purchasing Managers’ Index (PMI).
+    2.  Latest available ECB official GDP projections.
+*   **Statistical Significance:** Diebold and Mariano (1995) test with Harvey’s correction for short samples.
+*   **Training:** Models are re-trained daily using an expanding window of data (starting January 2002), ensuring only real-time data vintages are used.
+*   **Hyperparameter Tuning:** Cross-validation (specifically Time Series Split with k=5 folds, updated quarterly) is used for models requiring hyperparameter selection (Ridge Regression, Random Forests, Neural Networks, Boosting).",
+32,"Ho, C. C., Chong, E., Ong, Z. F., & Ong,",2021,"To investigate the forecasting power of news sentiment (extracted from Malaysian online news articles) for macroeconomic indicators, specifically GDP growth and its demand-side components, and to assess its ability to nowcast existing survey-based sentiment measures in Malaysia. The overarching goal is to explore the feasibility of using online news articles to obtain timely and forward-looking cues about economic conditions to inform policymaking.","*   **Text Data:** Over 720,000 English-language business and financial news articles from 16 major Malaysian online news portals, with digital archives dating from as early as 2001 up to June 2021.
+*   **Economic Data:** Quarterly macroeconomic indicators for Malaysia (aggregate real GDP year-on-year growth, private consumption growth, private investment growth, exports growth, and imports growth).
+*   **Survey Data:** Quarterly survey-based sentiment measures from the Malaysian Institute of Economic Research (MIER): Business Condition Index (BCI) and Consumer Sentiment Index (CSI).",Not explicitly used or mentioned. The paper focuses on sentiment extraction using dictionary-based methods.,"*   **Out-of-Sample Forecasting:** Models were trained recursively on a rolling window to produce out-of-sample predictions.
+*   **Evaluation Metric:** Root Mean Squared Error (RMSE) was used to compare forecast performance.
+*   **Benchmark Comparison:** A ""Ratio RMSE"" was calculated, which is the model's RMSE relative to a pure OLS-AR(1) (Autoregressive model of order 1) baseline model. A ratio RMSE less than 1 indicates improved performance.
+*   **Initial Assessment:** Pearson correlation coefficients were used to assess contemporaneous relationships between news sentiment and macroeconomic variables.","*   News sentiment measures comove with the business cycle and key economic events, exhibiting sharp declines during economic downturns (e.g., 2007-08 financial crisis, COVID-19 pandemic) and subsequent increases during recovery.
+*   Monthly news sentiment can effectively nowcast survey-based business sentiment (MIER BCI), with its statistical significance and explanatory power increasing as more news within the quarter is incorporated. Its ability to nowcast consumer sentiment (MIER CSI) is weaker.
+*   News sentiment demonstrates a reliable predictive ability for **private investment growth** within a two to three-quarter forecast horizon, consistently outperforming the OLS-AR(1) benchmark model. This holds true across linear models (OLS, Ridge, Huber), non-linear machine learning models (e.g., AdaBoost Regressor, Random Forest Regressor, Extra Trees Regressor), and LSTM neural networks.
+*   For **aggregate GDP** and other demand-side components (private consumption, exports, and imports), news sentiment generally shows limited or no significant improvement in forecasting performance across most models and forecast horizons, suggesting its information content is more specific to investment activities rather than the broader economy.
+*   Non-linear machine learning algorithms showed some improvements for 2- and 3-quarter predictions of exports and imports growth, though with less consistency than for private investment.
+*   LSTM experiments showed mixed results; including newspaper sentiment improved predictions for GDP, private consumption, and private investment, but worsened them for exports and imports.",
+33,"Aharon, D. Y., Umar, Z., Aziz, M. I. A.,",2022,"G-7 economies : Canada, France, Germany, Italy, Japan, United Kingdom, and United States.","Financial Economics, Macroeconomics, Risk Management.",The paper *uses* a pre-computed Media Coverage Index (MCI) from Ravenpack as a proxy for media sentiment. It does not detail its own NLP or sentiment analysis methodology.,"The paper's primary objective is not forecasting. It aims to understand and map dynamic connectedness and risk spillovers, which can *inform* future predictions or policy decisions, but isn't a direct forecast itself.","Robustness checks were performed by estimating results using 500 randomly chosen Minnesota priors for the TVP-VAR model, which yielded qualitatively similar results to the main findings.",
+34,"Lukauskas, M., Pilinkienė, V., Bruneckie",2022,"Lithuania
+","Economics, Natural Language Processing (NLP), Machine Learning, Data Science.","
+ **Translation:** Lithuanian news articles were translated to English using the Python package `deep-translator` (specifically Google Translate) due to the lack of robust Lithuanian sentiment analysis models.
+*   **Text Embedding for Clustering:** The `all-MiniLM-L6-v2` sentence transformer model was used to transform textual data into 384-dimensional dense vector space for clustering.
+*   **Sentiment Analysis Models:** An ensemble of four different pre-trained transformer models was used for sentiment detection to avoid bias from a single model:
+    *   DistilBERT-base-uncased (trained on SST-2 dataset)
+    *   FinBERT (trained on financial texts by Prosus)
+    *   Twitter-roBERTa-base (trained on 124 million Twitter messages)
+    *   FinBERT-tone (trained on three financial information datasets: 10-K/10-Q reports, earnings call transcripts, analyst reports).
+*   **Sentiment Index (SI) Calculation:** A general sentiment index was calculated as the average output (0 to 1) of these four models for each news article.
+","*   Youth unemployment rate (UNY)
+*   Total unemployment rate (UNA)
+*   Consumer satisfaction (CS)
+*   Monthly inflation rate (MI)
+*   Annual inflation rate (YI)
+*   Production index (PI)","*   **Forecasting Validation:** Rolling K-fold cross-validation was used for time series forecasting. The model was trained on a portion of the data (e.g., 80%) and tested on the subsequent 3 months, then the training window was expanded (e.g., to 84%) and tested on the next 3 months, and so on.
+*   **Evaluation Metrics:** Root Mean Square Error (RMSE), Mean Absolute Error (MAE), and Mean Absolute Percentage Error (MAPE) were used to evaluate forecasting accuracy.
+*   **Clustering Validation:** Calinski and Harabasz metric, Davies–Bouldin metric, and Silhouette coefficient were used to evaluate clustering results.",1.3
+35,"Barbaglia, L., Consoli, S., & Manzan, S.",2022,USA,"Economics, Finance, Macroeconomics, Econometrics, Natural Language Processing (NLP), Text Analysis.","The paper proposes and uses a novel **Fine-Grained Aspect-based Sentiment (FiGAS) analysis** method. Key characteristics:
+*   **Aspect-based:** Sentiment is calculated only on text semantically dependent on a specific ""Token of Interest"" (ToI) (e.g., economy, inflation, unemployment, financial sector, manufacturing, monetary policy).
+*   **Fine-grained:** Sentiment scores are assigned to each word based on a custom-developed dictionary for economics and finance, with scores ranging between -1 and +1.
+*   **NLP Workflow:** Includes tokenization, lemmatization, location detection (filtering for US-related articles), Part-of-Speech (POS) tagging, dependency parsing, tense detection, and negation handling. The spaCy Python library is used for NLP tasks.","*   **Quarterly:** Real GDP growth rate (GDPC1).
+*   **Monthly:**
+    *   Growth rate of the Industrial Production Index (INDPRO).
+    *   Growth rate of the Consumer Price Index (CPIAUCSL).
+    *   Change in non-farm payroll employment (PAYEMS).","*   **In-sample analysis:** Statistical significance of sentiment measures as predictors using a **double lasso procedure** for variable selection and **adjusted p-values** (Benjamini and Hochberg, 1995) to account for multiple testing.
+*   **Out-of-sample analysis:** Forecasts from 2002-2019, comparing a baseline ARX model with sentiment-augmented models (ARXS, Average, LASSO).
+*   **Forecast evaluation:**
+    *   **Point forecasts:** Evaluated using the **square loss function** and the **average Superior Predictive Ability (aSPA) test** (Quaedvlieg, 2021) for multi-horizon comparison.
+    *   **Quantile forecasts:** Evaluated using the **check loss function** and a loss function for **conditional coverage** of one-sided intervals.
+*   **Robustness check:** Fluctuations in forecasting performance are assessed using the **Giacomini and Rossi (2010) fluctuation test** on rolling windows.",
+36,"Caldara, D., & Iacoviello, M. (2022). Me",2022,"Primarily focuses on the **United States**, **United Kingdom**, and **Canada** for newspaper data collection, reflecting a North American and British perspective. However, the study also includes **cross-country analysis** for 26 countries (1900-2019) and constructs **country-specific GPR indices**, indicating a broader global scope in its application and validation.","Economics, specifically Macroeconomics, Financial Economics, Business Cycles, and Firm-level Investment. It also touches upon Political Economy and International Relations through its focus on geopolitical events.","The paper uses a **dictionary-based text analysis method**. It constructs the GPR index by counting the share of articles that contain specific ""topic words"" (e.g., war, nuclear, terrorism) and ""threat"" or ""act"" words (e.g., threat, warn, attack, invade). These words are often searched for within a specified **proximity** (e.g., two words of each other) or within the same article. The counts are normalized by the total number of published articles. For firm-level GPR, it counts joint occurrences of ""risk"" words within ten words of ""geopolitical"" words in earnings call transcripts.","*   **Macroeconomic (US):** Investment, employment, stock prices, oil prices, two-year Treasury yield, National Financial Conditions Index (NFCI).
+*   **Cross-Country:** Probability of economic disasters, expected GDP growth, downside risks to GDP growth, TFP growth, military spending.
+*   **Firm-Level:** Firm-level investment.","The GPR index undergoes extensive validation, including:
+*   **Plausibility Checks:** Verifying that index spikes align with well-known historical geopolitical events (e.g., World Wars, Cuban Missile Crisis, 9/11).
+*   **Comparison with Narrative Index:** High correlation (0.86) with a manually-scored ""narrative"" GPR index from *New York Times* front pages.
+*   **Comparison with Related Indicators:** Correlation with military spending news (Ramey, 2011), worldwide war deaths, VIX, and the Economic Policy Uncertainty (EPU) index.
+*   **Country-Specific Measures:** Demonstrating that country-specific indices capture relevant national/regional events.
+*   **Granger Causality Tests:** Showing that the GPR index is not Granger-caused by macroeconomic, financial, or uncertainty developments.
+*   **Robustness to Newspaper Selection:** Confirming that the index is not unduly sensitive to the specific newspapers used.
+*   **Analysis of Language Evolution:** Verifying that the dictionary accounts for changes in war-related language over time.
+*   **Audit of Media Attention:** Checking that the index is not prone to spurious fluctuations due to media biases or crowding out by other news.
+*   **Human Audit:** High correlation (0.93) with a ""human"" GPR index constructed by manually coding over 7,000 articles.",
+37,"Jiang, F., Li, K., Meng, L., & Xue, B. (",2022,China,"Economics, Econometrics, Financial Economics, Macroeconomics, Natural Language Processing (NLP) applications in economics.a","*   **NLP Method:** Latent Dirichlet Allocation (LDA) for topic modeling.
+*   **Other Methods:** Partial Least Squares (PLS) for dimension reduction and index construction. Text preprocessing steps included excluding irrelevant articles, normalization, lemmatization, stop word removal, tokenization (uni-grams and bi-grams), and Document-Term Matrix (DTM) construction.","*   **Nowcasting:** Monthly Industrial Production (IP) growth rate.
+*   **Forecasting:**
+    *   Next-month Industrial Production (IP) growth rate.
+    *   Daily implied stock market volatility (VIX).
+    *   CBOE Crude Oil ETF Volatility Index (OVX).
+    *   CBOE Gold ETF Volatility Index (GVZ).
+    *   Term spread (difference between the 10-year Treasury bond rate and the 3-month Treasury bill rate).","*   **Qualitative Analysis:**
+    *   Comparison of NDEI trends with NBER recession periods.
+    *   Observation of NDEI spikes and declines around important economic events (e.g., Gulf War, Dot-Com crash, 2008 financial crisis, COVID-19 pandemic).
+    *   Visual correlation with other macroeconomic series (GDP growth, IP growth, Weekly Economic Condition Index (WEC), Economic Policy Uncertainty (EPU)).
+*   **Quantitative Analysis (In-sample):**
+    *   OLS regressions to assess the contemporaneous relationship between NDEI and economic output variables (Adj. R2, R2 up, R2 down for expansions/recessions).
+    *   OLS regressions to assess the predictive power of NDEI for market volatility and term spread, including control variables and competitive indicators (Adj. R2, R2 up, R2 down).
+*   **Quantitative Analysis (Out-of-sample):**
+    *   MIDAS (Mixed Data Sampling) regression models for nowcasting and forecasting industrial production, evaluated using Root Mean Squared Error (RMSE) and relative RMSE against Random Walk and Autoregression benchmarks.
+    *   Out-of-sample R2 OS statistics for forecasting term spread, compared against a historical average model and other competitive indicators.
+*   **Robustness Checks:** Sensitivity analysis to different target variables (GDP, WEC, ADS) and alternative training methods (Target PCA, Lasso, Random Forest, PLS with two factors) for NDEI construction.",
+38,"Ellingsen, J., Larsen, V. H., & Thorsrud",2022,"*   **Research Affiliation:** Norway (BI Norwegian Business School, Norges Bank)
+*   **Study Focus:** United States (US GDP, consumption, and investment growth)","Economics (Macroeconomics, Econometrics, Economic Forecasting), Natural Language Processing, Machine Learning, Data Science.","*   **NLP Method:** Latent Dirichlet Allocation (LDA) topic model (Blei et al., 2003) is used to decompose textual data into quantitative time series.
+*   **Sentiment Method:** Not a primary method. Tone-adjusted topic time series were explored in robustness checks using a dictionary-based adjustment procedure (Harvard IV-4 Psychological Dictionary), but it did not improve predictive performance for consumption.","Quarterly US GDP growth, real personal consumption expenditures growth, and real gross private domestic nonresidential investment growth.
+*   **Forecasting Horizons:** Nowcasting (H0), one-quarter ahead (H1), and two-quarter ahead (H2).","*   **Forecasting Approach:** Real-time out-of-sample (OOS) forecasting comparison.
+*   **Performance Metrics:** Root-mean-square errors (RMSEs) for average performance, cumulative squared prediction error differences (CSPED) for performance over time.
+*   **Statistical Significance:** Diebold-Mariano test statistics.
+*   **Benchmarks:** Comparison against simple auto-regressive (AR) and constant growth rate (RW) models, as well as forecasts from the Survey of Professional Forecasters (SPF).",
+39,"Lange, K.-R., Reccius, M., Schmidt, T., ",2022,Germany,"Economics, Econometrics, Natural Language Processing (NLP), Text Mining. (JEL-Codes: C18, C55, C87, E70 confirm the economic and econometric focus).","The paper heavily relies on NLP methods. Sentiment analysis is not explicitly mentioned as a method used, though the definition of narratives involves ""world views"" and ""opinions.""
+*   **Core NLP Methods:**
+    *   **Semantic Role Labeling (SRL):** Used to identify ""who did what to whom"" (agent, verb, patient) based on AllenNLP.
+    *   **Named Entity Recognition (NER):** Used to detect real-world entities (persons, organizations, etc.) within sentences, performed by Spacy's NER.
+    *   **Coreference Resolution:** Used to link pronouns and other references to their actual entities (e.g., ""it"" to ""inflation""), performed by Spacy's Coreferee model.
+    *   **K-Means Clustering:** Applied to word embeddings of non-recognized agents/patients to reduce dimensionality and group semantically similar terms into latent entities.
+    *   **RELATIO-method (Augmented):** A modified version of Ash et al. (2021)'s method, which forms the groundwork for statement detection.
+    *   **Causality Detection:** A lexicon-based approach using a predefined list of causal indicators (e.g., ""because,"" ""due to"") to identify causal links between statements.","The paper's pipeline *does not* have a direct forecast target. Its primary goal is the *extraction* of narratives. While the introduction mentions that narratives can ""predict the future"" and discusses central banks' use of ""forward guidance"" to manage inflation expectations, the proposed methodology itself is for identifying and understanding existing narratives, not for making economic forecasts.","The validation of the pipeline's performance involves:
+1.  **Graphical Comparison:** Displaying the extracted statements (agent-verb-patient structures) as network graphs. This includes comparing:
+    *   The original RELATIO-method on filtered texts (Figure 7).
+    *   Their augmented pipeline without dimension reduction (Figure 2).
+    *   Their augmented pipeline with dimension reduction (clustering) (Figure 3).
+    The comparison aims to show improvements in consistency, noise reduction, and entity identification.
+2.  **Qualitative Examples:** Presenting specific ""complete"" collective economic narratives (CENs) as chains of causally linked statements (Figure 4, 5, 6) to demonstrate the pipeline's ability to identify the defined narrative structure.",
+40,"Gardner, B., Scotti, C., & Vega, C. (202",2022,USA,"Financial Economics, Macroeconomics, Econometrics, Central Banking.","The paper develops a custom dictionary-based textual analysis method to create the FOMC sentiment index.
+*   **Dictionary Construction:** User-defined dictionary of topic-keywords (e.g., ""GDP"", ""unemployment"") and modifier-keywords (e.g., ""increasing"", ""decreasing"") related to five topics: labor market, output, inflation, financial conditions, and future monetary policy.
+*   **Sentiment Scoring:** For the first four topics, a topic-keyword is paired with the closest modifier-keyword within a sentence. Topics and modifiers are assigned scores of 1 (good), 0 (neutral), or -1 (bad). The topic-modifier pair sentiment is calculated by multiplying their scores.
+*   **Future Monetary Policy Index:** Uses a combination of phrases and specific rules to identify and score actions related to changes in rates and asset purchases.
+*   **Aggregation:** The sentiment index for each topic is the sum of its topic sentiments, divided by the square root of the number of words in the statement (after removing uninformative sentences). The overall FOMC sentiment index is the sum of all five topic sentiments.
+*   **Comparison:** The method is shown to perform better than using the general financial market dictionary of Loughran and McDonald (2011).
+","*   Future FOMC monetary policy decisions (e.g., federal funds rate changes, policy stance).
+*   Investors’ beliefs about future economic activity, specifically professional forecasters' revisions of Blue Chip forecasts for real GDP growth, the GDP deflator, and the unemployment rate.","*   **Equity Price Response:** Nonlinear least squares regression (Eq. 2) to estimate the time-varying effect of macroeconomic news on E-mini S&P 500 futures returns, interacting news surprises with the FOMC sentiment index and other economic proxies (Eq. 3).
+*   **FOMC Sentiment Index Properties:**
+    *   Ordered probit models to forecast FOMC monetary policy decisions (Table 3, 4).
+    *   Regressions of interest rate changes (across various maturities: 3-month, 6-month Treasury bills, Eurodollar futures, 2-, 5-, 10-year Treasury notes) on the FOMC sentiment index and target rate surprises (Table 5).
+    *   Regressions of Blue Chip forecast revisions (for GDP, unemployment rate, GDP deflator) on the FOMC sentiment index, target surprises, and other news variables (Table 6).
+*   **Robustness Checks:** Comparison with an alternative sentiment index derived from the Loughran and McDonald (2011) dictionary, and an alternative FOMC index computed as the first principal component of its sub-components (Table 8). Analysis of sub-components' individual predictive power (Table 7). Robustness to excluding the Effective Lower Bound (ELB) period and including the COVID-19 sample (Appendix Tables A18-A20).",
+41,"Bieri, M.-C. (2025). Assessing economic ",2023,Switzerland,"Economics, Econometrics, Natural Language Processing (NLP), Financial Economics.","Dictionary-based sentiment analysis using a lexical approach. Three domain-specific lexica were used: Henry's finance-specific dictionary (2008), Loughran and McDonald's finance-oriented dictionary (2016), and a combined version. These English lexica were manually translated and adapted to German and French. Sentiment is calculated as ""net positivity"" (number of positive terms minus number of negative terms) per article.","Regional consumption growth, regional GDP growth, and regional inflation rates.","*   **In-sample analysis:** Cross-correlation tests to measure leading relationships between news-based sentiment indices and survey-based indicators (KOF Economic Sentiment Indicator, regional KOF Business Situation Indicators).
+*   **Out-of-sample analysis:** Local projection analysis (Jordà, 2005) to evaluate the forecasting power of news-based indices for regional economic variables.
+*   **Forecast-encompassing tests:** Based on Chong and Hendry (1986) to compare the value added by news-based forecasts against various benchmarks (KOF ESI, regional KOF BSI, AR(1) model, SNB Business Cycle Index).
+*   **Granger-causality tests:** To assess whether news-based sentiment Granger-causes survey-based indicators.
+*   **Robustness checks:** Comparing results across different lexica and analyzing sentiment of identical articles translated into different languages.",
+42,"Tkacova, A., & Gavurova, B. (2023). Econ",2023,European Union,"Economics, Econometrics, Business Cycles, Economic Forecasting, Quantitative Analysis.","The paper utilizes **Sentiment Analysis** based on **survey data**. The Economic Sentiment Indicator (ESI) and its components are derived from ""questionnaire research"" where ""evaluations and the expectations of managers and consumers are aggregated and expressed as the differences between the percentages of positive and negative answers."" This is a traditional, survey-based method for measuring sentiment, not Natural Language Processing (NLP) applied to text data.","The economic cycles of EU countries, specifically represented by:
+*   Gross Domestic Product (GDP)
+*   Index of Industrial Production (IIP)","*   **Data Preparation:** Time series data (Q1 2000 to Q4 2022, and sub-periods: 2000–2007, 2008–2017, 2018–2022) were subjected to the Hodrick-Prescott (HP) filter to extract their cyclical components (after seasonal adjustment).
+*   **Relationship Determination:** Pearson correlation coefficient with time shifts (five forward and five backward shifts) was employed to determine the cross-correlation between variables.
+*   **Prediction Quality Assessment:** Criteria were established based on the maximum cross-correlation value and the lead period (e.g., leading indicator must have a lead period of at least one quarter, minimum cross-correlation > 0.55, and second highest value > 0.5).",
+43,"Hong, Y., Jiang, F., Meng, L., & Xue, B.",2023,China,"Economics (Macroeconomics, Econometrics), Finance, Natural Language Processing (NLP), Machine Learning, Textual Analysis.","*   **NLP Method:** Topic modeling techniques are used to decompose economic narratives into quantitative and time-varying news topics.
+*   **Specific NLP Model:** Latent Dirichlet Allocation (LDA) model (Blei et al., 2003) is the primary method for topic extraction. Latent Semantic Indexing (LSI) is used for robustness checks.
+*   **Sentiment Method:** In Appendix C, the paper investigates sentiment by calculating a ""tone-adjusted topic attention."" This involves counting positive and negative words (based on the Harvard IV-4 Psychological Dictionary) within articles best explained by each topic, and then calculating `Sentimentk,t = (POSk,t - NEGk,t) / (POSk,t + NEGk,t)`. This sentiment is then multiplied by the topic attention: `θ(s)k,t = θk,t × Sentimentk,t`.","*   **Out-of-Sample Forecasting:** The primary validation approach, using an initial training sample (Jan 1984 - Dec 1999) and an out-of-sample evaluation period (Jan 2000 - May 2021). Models are estimated recursively.
+*   **Performance Metrics:** Root Mean Squared Error (RMSE) and Relative RMSE (rRMSE) compared to an Autoregressive (AR) benchmark model.
+*   **Statistical Tests for Equal Predictive Ability (EPA):**
+    *   Diebold and Mariano (1995) t-statistic.
+    *   Clark and West (2007) MSPE-adjusted test.
+    *   Hansen et al. (2011) Model Confidence Sets (MCS) test.
+    *   Giacomini and White (2006) test.
+*   **Hyperparameter Tuning:** 10-fold cross-validation.
+*   **Sub-period Analysis:** Performance during recession vs. expansion periods (using CFNAI) and Pre-Covid vs. Post-Covid periods.
+*   **Robustness Checks:** Different numbers of topics (150, 250), alternative topic model (LSI), quarterly frequency forecasting, and smoothed topic time series.","*   **Primary Target:** Accumulated monthly inflation rates for various horizons (h = 3, 6, 9, and 12 months ahead).
+*   **Secondary Targets:**
+    *   Inflation expectations (University of Michigan Surveys of Consumers).
+    *   Subcomponents of inflation (Commodity, Transportation, Food, Housing CPI).
+    *   Quarterly inflation rates (for robustness check).",
+44,"Hong, Y., Jiang, F., Meng, L., & Xue, B.",2023,"*   **Authors' Affiliations:** China (Chinese Academy of Sciences, University of Chinese Academy of Sciences, Central University of Finance and Economics, Peking University).
+*   **Research Focus/Data:** United States (Wall Street Journal, U.S. CPI, PCE, Core CPI, University of Michigan Surveys of Consumers).","Economics (Macroeconomics, Econometrics), Finance, Natural Language Processing (NLP), Machine Learning.","*   **NLP Method:** Latent Dirichlet Allocation (LDA) model (Blei et al., 2003) for topic modeling.
+*   **Sentiment Method:** Explored in Appendix C, using a dictionary-based approach (Harvard IV-4 Psychological Dictionary) to calculate tone-adjusted topic attentions.","U.S. inflation rates, specifically accumulated inflation from month t+1 to t+h, for various forecast horizons (h=3, 6, 9, and 12 months). Quarterly inflation forecasts (1, 2, 3, 4 quarters ahead) are also examined for robustness. The primary target is CPI-based inflation, with PCE and Core CPI as alternative targets.","*   **Out-of-Sample Forecasting:** Recursive estimation scheme with an initial training sample (Jan 1984 - Dec 1999) and an out-of-sample evaluation period (Jan 2000 - May 2021).
+*   **Performance Metrics:** Root Mean Squared Error (RMSE) and relative RMSE (rRMSE) compared to an Autoregressive (AR) benchmark model.
+*   **Statistical Tests:** Diebold and Mariano (1995) t-statistic, Clark and West (2007) MSPE-adjusted statistic, Hansen et al. (2011) Model Confidence Sets (MCS) test, and Giacomini and White (2006) test.
+*   **Time-Varying Performance:** Cumulative sum of squared prediction errors (SSE) differences.
+*   **State-Dependent Analysis:** Odendahl et al. (2022) DMNL test using the Chicago Fed National Activity Index (CFNAI) to identify performance during recession periods.
+*   **Hyperparameter Tuning:** 10-fold cross-validation.",
+45,"Korinek, A. (2023). Generative AI for ec",2023,United States,"Economics Research (specifically, economic methodology, labor economics, innovation, and general economics). The paper categorizes applications into:
+*   Ideation and Feedback
+*   Writing
+*   Background Research
+*   Data Analysis
+*   Coding
+*   Mathematical Derivations
+JEL Codes: A10, B41, J23, O3","The core method is the application and analysis of Large Language Models (LLMs), which are deep neural networks based on transformer models. Specific NLP capabilities demonstrated and discussed include:
+*   Text generation and synthesis
+*   Text summarization
+*   Text translation
+*   Text classification and scoring (e.g., O*NET tasks, FOMC statements)
+*   Sentiment extraction (e.g., from FOMC statements)
+*   Code generation and explanation (which relies on understanding natural language instructions)","The paper itself does not perform forecasting. However, it *discusses* forecasting as a potential application of LLMs. It mentions that LLMs can be used for ""economic forecasting"" and cites research (Lopez-Lira and Tang, 2023) showing LLMs can be used for sentiment analysis to predict stock price movements.
+","The validation method is primarily qualitative and subjective:
+*   **Qualitative Assessment:** The author evaluates the LLM outputs (e.g., brainstormed ideas, written text, code, mathematical derivations, explanations) against expected correct answers, clarity, relevance, and insightfulness.
+*   **Subjective Usefulness Ratings:** Table 2 provides the author's subjective ratings of LLM capabilities from ""experimental"" to ""highly useful.""
+*   **Comparison with Known Principles:** For economic concepts and mathematical derivations, outputs are checked against established economic theory.
+*   **Reproducibility:** Python code is provided for some examples, with temperature set to zero for near-deterministic responses, though inherent variability is acknowledged.
+*   **Literature Review:** The paper contextualizes LLM capabilities by referencing other studies on LLM performance (e.g., productivity gains in coding, brainstorming quality).",
+46,"Liapis, C. M., Karanikola, S., & Kotsian",2023,Greece,"Financial Time Series Forecasting, Stock Market Prediction, Deep Learning, Sentiment Analysis.","Three different sentiment analysis methods were utilized to extract daily sentiment scores from tweets:
+*   **TextBlob:** A rule-based sentiment analysis scheme.
+*   **VADER (Valence Aware Dictionary and sEntiment Reasoner):** A rule-based approach for general sentiment analysis.
+*   **FinBERT:** A financial-based fine-tuning of the BERT (Bidirectional Encoder Representations from Transformers) language representation model.",Future daily closing prices of stocks (treated as a regression problem). The study investigated single-step (1-day) and multi-step (7-day and 14-day) forecasts.,"*   **Data Split:** 80% for training, 20% for testing.
+*   **Forecast Horizons:** 1-day (single-step), 7-day (multi-step), and 14-day (multi-step) shifts.
+*   **Evaluation Metrics:** Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Root Mean Squared Logarithmic Error (RMSLE), and Coefficient of Determination (R2).
+*   **Statistical Tests:** Friedman's statistical test for ranking methods and feature setups, followed by the Nemenyi post hoc test for pairwise significant differences. Results were visualized using Critical Difference (CD) diagrams and box plots.",
+47,"Kwon, B., Park, T., Rungcharoenkitkul, P",2023,United States,"Macroeconomics, Econometrics, Financial Economics, Natural Language Processing (NLP), Machine Learning.
+(JEL Classification: E30, E44, E60, C55, C82)","*   **Method:** Large Language Models (LLMs), specifically **GPT-4.1 mini** (for initial screening) and **GPT-5 mini** (for in-depth classification), accessed via API.
+*   **Approach:** LLM-based prompting (rather than embedding-based classifiers) with a hierarchical decomposition strategy.
+*   **Process:**
+    1.  **Filtering:** Minimal prompt to screen articles for relevance to growth/inflation with clear directional sentiment.
+    2.  **Main Classification:** Identify primary drivers (demand, supply, or both) and their directional sentiment (Positive, Negative, Neutral, Null).
+    3.  **In-depth Classification:** Categorize drivers into granular sub-components based on a predefined taxonomy (e.g., Real, private; Financial, monetary policy; Commodity prices).
+*   **Techniques:** Explicit definitions of economic concepts, in-context learning (ICL) with concrete examples, explicit prioritization rules for ambiguous cases, separate prompting pipelines for growth and inflation, and ensuring no context is preserved between article analyses to prevent information leakage.","*   **Growth Measures:** Year-on-year changes in total nonfarm payroll for all employees, the Philly Fed Coincident Economic Activity Index, and the Chicago Fed National Activity Index.
+*   **Inflation Measures:** Year-on-year changes in CPI, core CPI, PCE, and core PCE.","The validation methods are extensive and include:
+1.  **Manual Review:** 300 randomly selected classified articles were manually reviewed, achieving an estimated classification accuracy of 92%.
+2.  **Comparison with ""Hard Data"":** Aggregate growth and inflation sentiment indices are compared visually and statistically (using Spearman cross-correlograms) against various traditional macroeconomic indicators (e.g., nonfarm payrolls, CPI, PCE, industrial production, CFNAI, Philly Fed).
+3.  **Validation of Detailed Drivers:** Granular sentiment drivers (e.g., real private demand, commodity prices) are compared against their corresponding empirical data counterparts (e.g., PCE, WTI, GSCPI, TPU).
+4.  **Internal Consistency:** Correlation analysis between demand (supply) components of growth sentiment and inflation sentiment.
+5.  **External Model-Based Validation:** Comparison of demand and supply decompositions with established model-based estimates of inflation decomposition (Shapiro, 2025) and aggregate demand/supply shocks (Eickmeier and Hofmann, 2023).
+6.  **Policy Driver Validation:** Monetary policy sentiment is compared with interest rates (effective fed funds, UST 2-year) and existing monetary policy shock measures. Fiscal policy sentiment is aligned with key historical fiscal events.",
+48,"Zhang, Z., Keasey, K., Lambrinoudakis, C",2024,United States,"Economics, Finance, Consumer Behavior, Social Media Analytics.",The VADER (Valence Aware Dictionary and sEntiment Reasoner) method by Hutto and Gilbert (2014) was used for textual analysis to derive influencer sentiment.,"The paper aims to understand the relationship and influence on Consumer Sentiment (Michigan Consumer Sentiment Index, stratified by demographics). While it establishes Granger causality, implying predictive power, it doesn't explicitly build a forecasting model for future sentiment values.","*   **Stationarity Tests:** Augmented Dickey–Fuller (ADF) tests were conducted to ensure consumer and influencer sentiment series are stationary.
+*   **Causality Tests:** Granger causality tests (with two lags) were performed to determine the direction of influence (influencer sentiment informs consumer sentiment, not the opposite).
+*   **Regression Analysis:** Ordinary Least Squares (OLS) regression models were used (Eq. 3), including month fixed-effects.
+*   **Robustness:** Heteroscedasticity-robust standard errors clustered at the month level were used. The analysis was repeated for different categories of influencer sentiment (total posts, posts linked to listed companies, US-based influencers' total posts, US-based influencers' listed company posts) and across different demographic groupings (age, income, education).
+*   **Statistical Significance:** Wald tests were used to compare coefficients across different influencer sentiment categories and demographic groups.
+*   **Endogeneity:** The abstract mentions testing for endogeneity concerns, though specific methods are not detailed in this excerpt.",
+49,"Allard, M.-A., Teiletche, P., & Zinebi, ",2024,Switzerland,"Economics (Macroeconomics, Financial Forecasting), Natural Language Processing (NLP), Machine Learning (ML), Artificial Intelligence (AI).","*   **Core Method:** Sentiment Analysis.
+*   **Proposed Model:** InflaBERT, a BERT-based LLM fine-tuned to predict inflation-related sentiment in news.
+*   **Comparison Models:**
+    *   **Traditional ML:** Logistic Regression, Random Forest, Support Vector Machine (SVM), XGBoost (using CBOW/word2vec or GloVe embeddings).
+    *   **Deep Learning (Transformers):** BERT-base, FinBERT, Fin-distill-RoBERTa.
+*   **Sentiment Scoring:** Polarity score (expected value of sentiment labels, accounting for model uncertainty).
+*   **Data Preparation:** Lexicon-based filtering for inflation-related articles, GPT-4 Turbo for labeling, data augmentation using a paraphraser (<humarin/chatgpt_paraphraser_on_T5_base>) to address class imbalance.","Annualized month-over-month inflation predictions, specifically enhancing the nowcast of the Cleveland Federal Reserve Bank model.","*   **Sentiment Model (InflaBERT):** F1-weighted score on an out-of-sample test set (news articles from January 2020 to December 2023, representing a high inflation period). Traditional ML models were validated using grid search with 3-fold cross-validation.
+*   **Nowcasting Model:** Root Mean Square Error (RMSE) and the Giacomini-White test to quantify the significance of improvements, comparing nowcasts against realized inflation during the COVID-19 period (January 2020 to December 2023).",0.02
+50,"Barbaglia, L., Consoli, S., & Manzan, S.",2024,"Europe, specifically focusing on five major European economies: France, Germany, Italy, Spain, and the United Kingdom.","Economics, Macroeconomics, Economic Forecasting, Data Science, Natural Language Processing.","The paper uses the **Fine-Grained, Aspect-based Sentiment (FiGAS) approach** proposed by Consoli et al. (2022). Key features include:
+*   **Aspect-based:** Computes sentiment related to specific economic topics (e.g., Economy, Financial Sector, Inflation) by focusing on words grammatically connected to the terms of interest within a sentence.
+*   **Fine-grained:** Relies on a dictionary that scores words in the range [-1, 1] rather than simple positive/negative categories.
+*   **Contextual adjustments:** Adjusts the sentiment sign for words dependent on terms with negative connotations (e.g., ""unemployment"") or when negations are detected.
+*   **Geographic filtering:** Extracts and includes only text referencing the targeted country.
+*   Non-English articles were translated to English before applying the FiGAS algorithm.","*   Annualized real GDP growth (quarterly frequency).
+*   Monthly change in the unemployment rate.
+*   Monthly growth rates of the Industrial Production Index (IPI).
+*   Monthly growth rates of the Consumer Price Index (CPI).","*   **In-sample analysis:**
+    *   Double lasso methodology (Belloni et al., 2014) for variable selection and parameter estimation in the U-MIDAS regression model.
+    *   P-values corrected for multiple testing using the approach by Benjamini et al. (2006).
+*   **Out-of-sample analysis:**
+    *   Evaluation of Mean Square Forecast Error (MSFE) reduction compared to a benchmark model (ARX).
+    *   Multi-horizon average Superior Predictive Ability (aSPA) test (Quaedvlieg, 2021) to assess the statistical significance of forecast improvements.
+    *   Fluctuation test (Giacomini and Rossi, 2010) to evaluate the variation over time in relative forecast performance.
+    *   Mention of additional predictive accuracy tests (Giacomini and White, 2006; Granziera and Sekhposyan, 2019) in the Online Appendix.",
+51,"Eugster, P., & Uhl, M. W. (2024). Foreca",2024,United States,"Economics (Macroeconomics, Financial Economics), Econometrics, Natural Language Processing (NLP).","*   **Method:** Refinitiv News Analytics (RNA) proprietary Natural Language Processing (NLP) algorithm, based on a bag-of-words approach coupled with a neural network.
+*   **Sentiment Scoring:** News article tone classified between -1 (negative) and 1 (positive).
+*   **Adjustment:** Individual sentiment scores were multiplied by -1 for news articles published during periods when inflation rates were over two percent (US Federal Reserve's target inflation rate) to ensure a positive correlation with inflation.","US inflation rates, primarily measured by the Consumer Price Index (CPI) for all urban consumers. Robustness checks included CPI Core, PCE, PCE Core, and GDP Deflator. Forecast horizons ranged up to eight quarters.",Recursive pseudo out-of-sample forecasting. Model performance was evaluated using Root Mean Squared Errors (RMSE) and relative RMSEs (comparing the model's RMSE to that of a naïve random walk). An initial testing period of 40 quarters was used.,30.0
+52,"Groß-Klußmann, A. (2024). Learning deep ",2024,"Australia (AU), Canada (CA), China (CN), Europe (EU), Japan (JP), United Kingdom (UK), United States (US)","Macro-finance, Financial Econometrics, News Analytics, Alternative Data, Machine Learning in Finance, Natural Language Processing (NLP) in Finance.","*   **Sentiment Extraction:** Utilizes Natural Language Processing (NLP) techniques to infer positive or negative tonality from textual information. Specifically, the GDELT data uses the Loughran and McDonald (2011) dictionary.
+*   **Representation Learning (Core Method):**
+    *   **Supervised Autoencoders (SAE):** The primary method, which blends a standard reconstruction error loss with financial market-inspired supervision losses. These supervision tasks guide the dimension reduction to create interpretable 5-dimensional representations corresponding to:
+        1.  Equity returns (rEq)
+        2.  Fixed-income returns (rFI)
+        3.  Macroeconomic factor changes (ΔfMacro)
+        4.  Currency forward returns (rFX)
+        5.  Commodity returns (rCmdty)
+    *   **Encoder Architectures:** Both Feedforward (FF) and Gated Recurrent Unit (GRU) neural networks are used as encoders within the SAE.
+    *   **Training:** Involves a two-phase process: unsupervised pre-training (reconstruction loss) followed by supervised fine-tuning (reconstruction + classification losses).
+*   **Benchmark Methods:**
+    *   Principal Component Analysis (PCA): An unsupervised linear dimension reduction technique.
+    *   Partial Least Squares (PLS): A supervised linear dimension reduction technique.
+    *   Feedforward Classifier (FF Class.): A supervised neural network without a reconstruction loss.","1.  **Explaining Daily Asset Class Returns:** Equities, Fixed-Income (10-year government bond yield changes), and Currencies (FX forward returns).
+2.  **Time Series Momentum Investment:** Generating trading signals for stock index futures, government bond futures, and currency forwards.
+3.  **Nowcasting GDP Growth:** Forecasting quarterly real GDP growth.","*   **Rolling Window Setup:** Data is split into training and test sets in a rolling fashion, updated every half-year. Training data expands up to a maximum of 7 years.
+*   **Global Validation Set:** A dedicated validation set (07/2003-12/2003) is used for hyperparameter and architecture calibration.
+*   **Model Confidence Set (MCS) Procedure:** Used to statistically compare models and identify a set of ""superior"" models that are not significantly inferior to others, addressing data snooping. This is applied to:
+    *   Panel regression residuals (for asset return explanation).
+    *   Negative strategy returns (for time series momentum).
+    *   Squared forecast errors (for GDP nowcasting).
+*   **SHAP (SHapley Additive exPlana-tions) Values:** Employed to interpret the contributions of individual sentiment topics to the learned representations, enhancing transparency.
+*   **Performance Metrics:**
+    *   Panel regressions: Log-likelihood, Ljung-Box statistic, significance levels of coefficients.
+    *   Time series momentum: Information Ratios (annualized return / annualized standard deviation), significance of regression intercept against market variables.
+    *   Nowcasting GDP: Root Mean Squared Error (RMSE) fractions against an AR(1) benchmark.",
+53,"Rogmann, J., Beckmann, J., Gaschler, R.,",2024,Germany,"Energy Economics, Financial Economics, Behavioral Economics, Media Studies.","MarketPsych's data collection uses a machine learning algorithm to extract sentiment (scaled -1 to +1) and specific emotions (Joy, Fear, LoveHate, Optimism, Pessimism) from various text sources, accounting for linguistic complexity.","Out-of-sample forecasts of daily energy price returns (for gasoline, heating oil, and natural gas).","*   **Model Selection (PLS):** Optimal number of components determined by cross-validation.
+*   **Forecasting:** Out-of-sample prediction for 2012-2021 based on a 2006-2011 training sample.
+*   **Evaluation Metric:** Root Mean Squared Error (RMSE) and comparison of RMSE error ratios against a no-change (random walk) benchmark.",
+54,"Andre, P., Haaland, I., Roth, C., Wieder",2024,"The study focuses on **US households** and the US macroeconomy (specifically, US inflation). The research team and funding are international, primarily from **Germany, Norway, and Denmark**.","Macroeconomics, Behavioral Economics, Economic Psychology, Monetary Economics, Public Opinion.
+","The paper explicitly states it does *not* use automated NLP or sentiment analysis in the traditional sense. Instead, it employs a **manual coding procedure** by trained research assistants. Open-ended survey responses are manually identified and represented as **Directed Acyclic Graphs (DAGs)** to capture their causal structure. Each response is independently coded by two research assistants for cross-verification.","*   **Inflation expectations:** Probabilistic expectations for 12-month and 5-year ahead inflation, and 12-month point forecasts.
+*   **Real government spending growth:** 12-month point forecasts.","*   **For Narrative Coding:**
+    *   **Inter-rater reliability:** Each response was independently coded by two research assistants, with a conflict resolution process. High agreement rates (88% for factors, 77% for connections).
+    *   **Test-retest reliability:** Measured the congruence of narratives for the same person across two surveys three days apart (correlation coefficient of 0.63).
+    *   **Correlation with structured measures:** Factors mentioned in open-ended narratives were strongly correlated with respondents' ratings of importance in structured questions.
+    *   **Predictive accuracy from text:** LASSO procedure showed high accuracy (around 90%) in predicting manually assigned DAG factors from text data.
+*   **For Expectation Data:**
+    *   Comparison of elicited inflation expectations with the **New York Fed’s Survey of Consumer Expectations (SCE)**.
+*   **For Causal Inference:**
+    *   Multiple **randomized controlled experiments** (narrative provision, attention manipulation, information interpretation).
+    *   Analysis of **experimenter demand effects** by eliciting respondents' guesses about the study hypothesis (found to be low).",10.0
+55,"Beiranvand, M., Malek Sadati, S. S., & R",2024,Iran,"Economics (Macroeconomics, Econometrics), Data Science, Natural Language Processing (NLP), Financial Economics.
+JEL Codes: E17 (Forecasting and Prediction), C53 (Forecasting and Prediction Models; Simulation Models), C55 (Machine Learning, Artificial Intelligence, and Other Computational Methods in Econometrics).","*   **Sentiment Analysis:** Lexicon-based sentiment analysis utilizing SentiStrength. This tool uses a lexicon of emotion words and their weights, manually selected by linguistics experts, to determine positive or negative sentiment scores for each news article (considering title, summary, and main text).
+*   **Text Preprocessing:** Used the Parsivar library for normalization, word tokenization, and stop-word removal.",Iran's quarterly Gross Domestic Product (GDP).,"The efficacy of the constructed seasonal sentiment time series in nowcasting Iran's quarterly GDP was assessed using:
+*   **Regression Models:** Ridge regression, Lasso regression, Elastic Net, and Gradient Boosting methods.
+*   **Benchmark Model:** A univariate time series model (ARIMA(1,1,0)) was used as a benchmark for comparison.
+*   **Evaluation Metrics:** Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and Mean Absolute Percentage Error (MAPE).
+*   **Data Split:** 90% of the data was used for training, and 10% was randomly selected for testing.",
+56,"Borja, K. J. V., Chambal, V. S., & Wangl",2024,Philippines,"Economics, Economic Forecasting, Natural Language Processing (NLP), Machine Learning, Time-Series Analysis.","*   **Sentiment Method:** BERT base (uncased) model.
+*   **Preprocessing:** BERT Tokenizer for tokenization and sequencing.
+*   **Annotation:** Manual scoring by three authors (1 for positive, 0 for negative sentiment), with the final score determined by majority vote.","Future vulnerability trends, specifically the positive sentiment probabilities, for the agriculture, commerce, and finance sectors. The predictions are for the ""next coming month"" (e.g., November 2024 onwards).","*   **General:** Train-test split (80% training, 20% testing for sector classification and sentiment analysis; first 80% for training, last 20% for testing for time-series forecasting).
+*   **Sector Classification:** Accuracy, Confusion Matrix.
+*   **Sentiment Analysis:** Accuracy percentage (comparing model results to manual annotations).
+*   **Time-Series Forecasting:** R2 score, Mean Absolute Percentage Error (MAPE).",97.305
+57,"Talazadeh, S., & Peraković, D. (n.d.). *",2024,USA,"Finance, Stock Market Prediction, Machine Learning, Natural Language Processing (NLP), Artificial Intelligence.
+","*   **Method:** Sentiment analysis is performed using the **FinGPT** generative AI model.
+*   **Process:** FinGPT, a transfer learning model pre-trained on massive financial textual content, is utilized via its APIs to analyze financial news articles. It extracts sentiment scores ranging from -1 (negative) to 1 (positive).","Directional prediction of stock market index movements (up or down) for medium- and long-term horizons (specifically, evaluated at a 60-day time window, demonstrating efficacy for the 62–82 days range).","*   **Metrics:** Accuracy, Precision, Recall, F1-score, AUC-ROC, and Precision-Recall curves.
+*   **Techniques:** Cross-validation (specifically 3-fold cross-validation for parameter optimization) to ensure robustness and minimize overfitting.
+*   **Comparison:** Performance is compared against conventional Random Forest (RF) and Long Short-Term Memory (LSTM) models.
+*   **Parameter Optimization:** Super parametric optimization, Grid Search (initially), and Random Search were used to tune hyperparameters (e.g., number of trees, maximum tree depth, minimum samples for splitting).",9.23
+58,"Simionescu, M., & Nicula, A. S. (2024). ",2024,Romania,"Economics, Macroeconomic Forecasting, Financial Economics, Applied Econometrics, Natural Language Processing (NLP) applications in economics.","*   **Methodology:** Natural Language Processing (NLP) is used to compute sentiment indices.
+*   **Process:** Sentiment analysis determines the polarity (positive, negative, or neutral) of text content. Each word is scored (+1 for positive, -1 for negative, 0 for neutral), these scores are summed, and then normalized to obtain values between 0 and 1.
+*   **Tool:** The sentiment indices are automatically computed using `IntelliDocker`.
+*   **Dictionary:** The approach considers all words in the dictionary of the Romanian language.
+*   **Additional Function:** A ""Context Splitter Function"" is employed to cut text into meaningful pieces, considering word relationships, sentence endings, word roles, entity recognition, and machine learning.
+*   **Distinction:** Unlike some previous studies, this paper manually calculates sentiment indices (though using an automated tool for the process) to better predict future inflation trends, emphasizing adaptation to the specific context.",Quarterly inflation rate in Romania.,"The forecast accuracy of the proposed sentiment-based models is compared against:
+*   Numerical forecasts published by the National Bank of Romania (NBR).
+*   Combined predictions based on traditional combination schemes.
+Accuracy is evaluated using several metrics: Mean Error, Mean Absolute Error, Root Mean Absolute Error, U1 coefficient, U2 coefficient, and Mean Absolute Percentage Error over the 2006:Q1 - 2023:Q4 horizon.",
+59,"Audrino, F., & Offner, E. A. (2024). The",2024,The empirical analysis focuses on **U.S.** Treasury yields and macroeconomic data. The authors are affiliated with universities in Switzerland and Germany.,"Financial Economics, Macroeconomics, Econometrics (specifically Fixed Income Markets and Behavioral Finance/Economics).","The paper utilizes **RavenPack’s News Analytics Algorithm**, which applies proprietary NLP methods to news articles. This algorithm generates Event Sentiment Scores (ESS) based on a collection of surveys where finance and economics professionals rated entity-specific events for sentiment, and also considers the polarity of words used. The authors validate RavenPack's scores against traditional lexicon-based methods (Loughran–McDonald, psychological Harvard-IV dictionary, Hu and Liu).","U.S. Treasury yields with maturities of 3-months, 2-, 5-, 8-, and 10-years, for 1- to 12-month ahead horizons.","*   **In-sample analysis:** Ordinary Least Squares (OLS) regressions, Threshold Autoregressive Process (TAR) for regime-switching, Dynamic Nelson–Siegel (DNS) model, and Arbitrage-Free Short Rate based (AFSR) model. Model selection is guided by AIC/BIC. Impulse Response Functions (IRF) are used to understand the dynamic relationships.
+*   **Out-of-sample forecasting:** Root Mean Square Error (RMSE) is used to evaluate forecast accuracy against various benchmarks (Taylor Rule variations, AR(1) variations, Random Walk). A Model Confidence Set (MCS) is performed to assess statistical significance of forecast improvements, using a rolling-window approach starting in January 2012 (and also tested from 2016).",2.0
+60,"Cummins, R., Harris, B., & Mahoney, N. (",2024,United States ,"    Economics, Macroeconomics, Behavioral Economics, Public Policy.","The paper *analyzes existing sentiment data* from surveys (University of Michigan, Conference Board). While the paper itself does not detail its own NLP or sentiment analysis methodology, it *references and synthesizes findings from external research* that employs such methods, such as:
+    *   An ""economic news sentiment index constructed by the Federal Reserve Bank of San Francisco.""
+    *   Analysis of ""television news reports on gasoline prices"" using ""the universe of TV news transcripts"" to determine tone (always negative when prices rise above a threshold).
+    *   Academic research establishing a correlation between sentiment and economic views expressed by ""social media influencers.""","The paper's primary objective is *explanatory and analytical* rather than forecasting. It highlights a *breakdown in the historical relationship* where macroeconomic variables *previously predicted* sentiment, but this relationship no longer holds. It does not present a new forecasting model or target."," The authors validate their analysis by:
+    *   **Comparing Survey Data with Objective Metrics:** Contrasting consumer sentiment indices with ""hard economic data"" (GDP, unemployment, inflation, wages, investment).
+    *   **Examining Behavioral Evidence:** Assessing whether consumer, worker, entrepreneur, and business behavior (e.g., consumption, quit rates, business formation, investment) aligns with stated sentiment or objective economic conditions.
+    *   **Historical Contextualization:** Using pre-pandemic relationships between sentiment and macro variables as a baseline to identify the ""decoupling.""
+    *   **Disaggregating Sentiment:** Analyzing sentiment by different groups (own-situation vs. macro, party affiliation, age) and comparing it with other sentiment measures (CEO confidence).
+    *   **Synthesizing Existing Research:** Drawing upon and integrating findings from numerous other academic papers and reports to support their explanations.",
+61,"Garcia, K. N. (2024). Understanding rece",2024,"Indonesia (Author affiliation: UPN Veteran Jakarta, Jakarta, Indonesia)","Social Sciences (Economics, Behavioral Macroeconomics, Sociology), Computer Science (Natural Language Processing, Social Media Analysis).",Sentiment Analysis (using NVIVO 12's auto-code feature after preprocessing with Microsoft Excel).,"Not a direct forecast paper. It analyzes public perception/sentiment regarding the *imminent* global economic recession and related topics. The paper suggests that such data *could* be utilized in future work to forecast market and economic situations.
+",Not explicitly stated. The paper relies on NVIVO 12's built-in auto-code features for sentiment and theme identification.,46.0
+62,"Matos, J. M. P. de. (2024). *Using Twitt",2024,United States,"Economic Forecasting, Data Science, Time Series Analysis, Natural Language Processing (NLP), Machine Learning.",Context-aware sentiment analysis using pre-trained machine learning models (specifically FinBERT and FinBERT-tone are mentioned in the tables for sentiment classification).,US Gross Domestic Product (GDP),Rolling forecasts from an ARIMAX model (enriched with sentiment analysis exogenous variables) were compared against a base ARIMA model. Forecasting accuracy gains were assessed for statistical significance using the Diebold-Mariano (DM) test. Root Mean Squared Error (RMSE) was used as an accuracy measure.,
+63,"Seo, B. (2025). Econometric forecasting ",2025,South Korea,"Econometrics, Economic Forecasting, Nowcasting, Text Mining, Machine Learning, Applied Statistics, Macroeconomics.","The paper employs a rule-based lexical approach to extract quantified information. It proposes **Theme Frequency Indices (TFIs)**, which utilize domain-specific subject-predicate patterns to measure public perception about the economy. TFIs are computed at the sentence level, and for some sectors, directional TFIs (rise/fall) are calculated, with the final TFI being their difference. This method does not require labeled training data.","*   **Primary:** Near-term Gross Domestic Product (GDP) forecasts (current and following quarters), specifically Seasonally Adjusted (SA) GDP Quarter-over-Quarter (QoQ) growth and Non-Seasonally Adjusted (NSA) GDP Year-over-Year (YoY) growth rates.
+*   **Secondary (Monthly Variables):** Unemployment rate, Consumer price index, Manufacturing production index, Service industry production index, Facility investment index, Construction completed, and National Housing sales price index.","*   **For TFIs:** Validity is verified by comparing them to relevant official statistics using Pearson's cross-correlation (including leading lags) and Granger causality tests.
+*   **For Forecasting Models:** Out-of-sample recursive predictions for GDP (from 2016.1Q to 2023.3Q) and monthly variables are evaluated using Mean Absolute Error (MAE) and Root Mean Square Error (RMSE). Statistical significance is tested using the Diebold & Mariano (2002) test (Newey & West, 1987 adjusted) against an Autoregressive (AR) benchmark, and the Superior Predictive Ability (SPA) test (Hansen, 2005) comparing TFM against a standard Dynamic Factor Model (DFM).",
+64,"Weinig, M., & Fritsche, U. (2025). *Goin",2025,USA,"Macroeconomics, Narrative Economics, Textual Analysis, Econometrics.","The paper employs a combination of a semi-supervised topic model and an embedding-based, purpose-specific polarity measurement. Specifically:
+*   **Keyword-assisted Topic Model (keyATM)** for narrative extraction.
+*   **Latent Semantic Scaling (LSS)** for measuring the narrated inflation tone (i.e., whether a document discusses rising/high or falling/low inflation rates).","Household inflation expectations, specifically 1-year and 3-year ahead.","*   **Granger causality tests:** To examine the predictive power and weak exogeneity of narrative measures on macroeconomic variables (inflation expectations, CPI inflation, economic activity).
+*   **Local Projections (LP) method:** To investigate the dynamic effects (impulse responses) of narrative shocks on inflation expectations.
+*   **Robustness Checks:** Including subsample comparisons (e.g., only Wall Street Journal articles) and estimations with different time series treatments (level, difference, boosted HP-Filter).",
+65,"Kaczmarek, I., Iwaniak, A., Chrobak, G.,",2025,Poland,"Computational Social Science, Economics, Natural Language Processing (NLP), Economic Forecasting.","*   **Method:** Sentiment analysis.
+*   **Models Used:** Four pre-trained natural language processing models specifically designed for Polish language processing were evaluated:
+    1.  **Finance Sentiment PL (s1) by bards.ai:** Financial sentiment model.
+    2.  **Twitter sentiment PL (s2):** Designed for Polish social media communications (Twitter).
+    3.  **A Herbert language model-based sentiment analysis model for Polish texts (s3):** Adapted to different text contexts.
+    4.  **PaReS-sentimenTw-political-PL (s4) by eevvgg:** Specialized in Polish political text sentiment analysis.
+*   **Output Scaling:** Sentiment ratings were scaled to -1 (negative), 0 (neutral), and 1 (positive) for consistency.
+*   **No Fine-tuning:** The models were applied in their original form without additional fine-tuning due to limitations in historical data.","*   Purchasing Managers’ Index (PMI)
+*   Consumer Confidence Index (CCI)
+*   Average employment in the enterprise sector","*   **Pearson Correlation:** Calculated between daily media sentiment scores (from each NLP model and an average score) and the three economic indicators.
+*   **Temporal Shifts:** The correlation analysis incorporated both negative and positive temporal shifts (ranging from -100 to +100 days) to identify leading or lagging relationships between media sentiment and economic indicators. This method was used to determine if media sentiment could predict future changes in economic indicators (positive shifts) or react to past changes (negative shifts).
+*   **Statistical Significance:** P-values were used to assess the statistical significance of the correlations.",
+66,San Francisco Federal Reserve Bank. (202,2025,United States,"Economics, Economic Forecasting, Regional Economics, Monetary Policy, Business Sentiment Analysis.","The method is **survey-based sentiment index construction**, not traditional Natural Language Processing (NLP) of unstructured text. It involves:
+    *   Collecting responses to specific questions on a five-tiered qualitative scale (e.g., ""decrease significantly"" to ""increase significantly"").
+    *   Assigning symmetrical numerical weights to each tier (e.g., -2, -1, 0, 1, 2).
+    *   Aggregating the weighted shares of responses for each tier within each index.
+    *   Normalizing the resulting series by its own average and standard deviation for comparison.","    *   National GDP (output growth)
+    *   Regional GDP (output growth)
+    *   Overall Inflation (PCE inflation rate)
+    *   **Horizon:** Near-term (one quarter ahead and one-year-ahead projections).","   *   **Correlation Analysis:** Calculating correlation coefficients between the new sentiment indexes and official economic data (e.g., SF Fed Business Sentiment Index vs. National GDP, SF Fed Business Sentiment Index vs. District GDP, SF Fed Inflation Gauge Index vs. Headline PCE Inflation).
+    *   **Regression Analysis:** Running linear regressions on a 2014–2022 data sample to estimate out-of-sample projections (from Q1 2023 onwards). This involved comparing forecast errors (Root Mean-Squared Forecast Error) with and without the inclusion of the new indexes in the regression models.
+    *   **Comparison with Other Indexes:** Benchmarking the patterns of the new indexes against established business and household sentiment indexes (e.g., University of Michigan’s Surveys of Consumers, Cleveland Fed’s Survey of Regional Conditions and Expectations, Dallas Fed’s Texas Business Outlook Surveys, Atlanta Fed’s Business Inflation Expectations, New York Fed’s Survey of Consumer Expectations).
+    *   **Timeliness Assessment:** Highlighting the advantage of the Beige Book data's collection frequency (twice per quarter) compared to delayed official GDP releases.",45.0

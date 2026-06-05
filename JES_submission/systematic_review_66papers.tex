@@ -303,7 +303,40 @@ Granger causality tests (15 papers, 23\%) establish temporal precedence (sentime
 
 \subsection{Geographic Coverage: Disparity and Research Gaps}
 
-The geographic distribution of research shows stark concentration: North America hosts 37 papers (56\%), Europe 13 (20\%), East/Southeast Asia 9 (14\%), and South Asia 4 (6\%). Zero coverage in Africa, Latin America, and the Middle East represents a profound research gap relative to economic significance. The United States alone accounts for 37 papers; incorporating Canada yields 39 (59\% of total).
+The geographic distribution of research shows stark concentration: North America hosts 37 papers (56\%), Europe 13 (20\%), East/Southeast Asia 9 (14\%), and South Asia 4 (6\%). Zero coverage in Africa, Latin America, and the Middle East represents a profound research gap relative to economic significance. The United States alone accounts for 37 papers; incorporating Canada yields 39 (59\% of total). Figure~\ref{fig:geographic} visualizes this concentration.
+
+\begin{figure}[H]
+\centering
+\caption{Geographic Distribution of Studies (N=66)}
+\label{fig:geographic}
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=0.45\textwidth,
+    ylabel=Number of Papers,
+    xtick={1,2,3,4,5,6,7},
+    xticklabels={North America, Europe, East/Southeast Asia, South Asia, Africa, Latin America, Middle East},
+    xticklabel style={rotate=45, anchor=north east},
+    grid=major,
+    ymajorgrids=true,
+    ybar,
+    bar width=0.6cm,
+    style={very thick},
+]
+\addplot[color=blue, fill=blue!60] coordinates {
+    (1, 37)    % North America
+    (2, 13)    % Europe
+    (3, 9)     % East/Southeast Asia
+    (4, 4)     % South Asia
+    (5, 0)     % Africa
+    (6, 0)     % Latin America
+    (7, 0)     % Middle East
+};
+\end{axis}
+\end{tikzpicture}
+\raggedright\footnotesize
+\textit{Note:} Bar chart shows number of papers by geographic region. North America dominates with 37 papers (56\%). Three regions---Africa, Latin America, and the Middle East---have zero studies, representing a critical research gap. Regional counts assign each paper to a single primary region.
+\end{figure}
 
 This geographic bias has methodological and substantive implications. \emph{Methodologically}, the concentration on English-language sources and US/UK institutional affiliations introduces language bias: 84\% of papers employ English text, limiting applicability to non-English economies. \emph{Substantively}, the gap means sentiment-based indices for critical emerging markets remain underdeveloped: no identified index for Bangladesh (165 million people), India (2 papers for 1.4 billion), Indonesia, Nigeria, or Brazil. Developed economies covered well---US, UK, Germany, France, Switzerland, Norway, Australia---allow robust cross-country validation of sentiment forecasting. However, emerging and developing countries are systematically underrepresented, limiting evidence on sentiment forecasting performance in high-volatility, low-information-efficiency settings where sentiment might be especially informative or misleading.
 
