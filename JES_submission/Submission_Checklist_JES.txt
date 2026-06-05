@@ -239,7 +239,7 @@ SUBMISSION WORKFLOW (ScholarOne)
    □ Complete profile information
 
 2. FILES TO UPLOAD
-   □ Manuscript_JES.pdf (anonymous, 26 pages)
+   □ Manuscript_JES.pdf (anonymous, 31 pages)
    □ Title_Page_JES.txt (with author info)
    □ Cover_Letter_JES.txt
    □ Figures/*.pdf (if requested separately)

@@ -3,10 +3,10 @@
                   Journal of Economic Surveys
 ═══════════════════════════════════════════════════════════════════
 
-[Author Name]
-[Affiliation]
-[Email]
-[Date]
+[Ann Naser Nabil]
+[Jahangirnagar University]
+[ann.n.nabil@gmail.com]
+[05 June, 2026]
 
 Editor, Journal of Economic Surveys
 
@@ -51,7 +51,7 @@ FOUR KEY CONTRIBUTIONS
 
 4. QUANTIFIED GEOGRAPHIC AND LINGUISTIC GAPS (Section 6)
    We provide the first systematic documentation of research concentration:
-   56% USA, 84% English, 0% Africa/Latin America/Bangla. The Bangla Economic
+   56% North America, 84% English, 0% Africa/Latin America/Bangla. The Bangla Economic
    Narrative Index (BENI) case study demonstrates a concrete pathway for
    expanding sentiment analysis to the 265 million Bangla speakers -- the
    world's 7th most spoken language with zero economic sentiment indices.
@@ -96,6 +96,6 @@ and natural language processing. We look forward to your feedback.
 
 Sincerely,
 
-[Author Names]
+[Ann Naser Nabil]
 
 ═══════════════════════════════════════════════════════════════════

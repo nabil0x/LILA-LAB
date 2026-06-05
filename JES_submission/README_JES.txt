@@ -16,7 +16,7 @@ FOLDER CONTENTS
 FILE                                    SIZE    DESCRIPTION
 ────────────────────────────────────────────────────────────────────
 Manuscript_JES.pdf                      277 KB  Compiled anonymous manuscript
-                                               (26 pages, ~9,000 words, blind review)
+                                                (31 pages, ~9,000 words, blind review)
                                                
 Title_Page_JES.txt                       2 KB   Title page with abstract,
                                                keywords, JEL codes, word count,
@@ -60,7 +60,7 @@ STEP 2: VERIFY MANUSCRIPT (15 minutes)
      - Tables are clear and readable
      - References formatted correctly
   2. Check word count: ~9,000 words
-  3. Check page count: 26 pages
+  3. Check page count: 31 pages
 
 STEP 3: PREPARE SCHOLARONE SUBMISSION (10 minutes)
   1. Create account at: https://mc.manuscriptcentral.com/jes
@@ -108,7 +108,7 @@ Key findings:
   - Median 20% RMSE reduction across 66 studies
   - 55% dictionary-based, 6% ML, 6% BERT, 3% LLM, 30% theoretical
   - 83% OOS testing, 33% real-time protocols, 18% MCS/SPA
-  - 56% USA, 84% English, 0% Africa/Latin America/Bangla
+   - 56% North America, 84% English, 0% Africa/Latin America/Bangla
 
 ═══════════════════════════════════════════════════════════════════
 SENIOR EDITOR FEEDBACK STATUS

@@ -9,10 +9,10 @@ A Systematic Review of Methodologies, Applications, and Research
 Gaps (2007--2025)
 
 AUTHORS:
-[Author Names Redacted -- Blind Review]
+[Ann Naser Nabil]
 
 CORRESPONDING AUTHOR:
-[Email and affiliation redacted]
+[ann.n.nabil@gmail.com]
 
 KEYWORDS:
 Sentiment analysis; Economic narratives; Natural language processing;
