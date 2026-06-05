@@ -34,7 +34,7 @@ FOUR KEY CONTRIBUTIONS
    - Median 20% RMSE reduction across all domains
    - Domain-specific estimates: GDP 18%, Inflation 22%, Volatility 28%
    - Evidence grading system for evaluating confidence in findings
-   - Robustness checks confirming results hold for high-quality studies (22%)
+   - Robustness checks confirming results hold for high-quality studies
 
 2. METHODOLOGICAL TAXONOMY (Section 4)
    We provide the first systematic comparison of all four sentiment extraction
@@ -70,11 +70,11 @@ JES is the ideal home for this work because:
 MANUSCRIPT SPECIFICATIONS
 
 • Word count: ~9,000 words (within JES 8,000--12,000 range)
-• Tables: 4 main text + 2 appendix (move 1--2 as needed)
+• Tables: 4 main text + 2 appendix
 • Figures: 3 embedded (timeline, performance distribution, geographic)
 • References: 66 papers in APA format
 • Format: Anonymous for blind review
-• Supplementary materials available on request
+• Supplementary materials included
 
 ORIGINALITY STATEMENT
 

@@ -21,7 +21,7 @@ Geographic gaps
 
 JEL CODES: C53, C55, E37, E44, G12, G17
 
-WORD COUNT: ~9,000 words (expandable to 12,000 per JES guidelines)
+WORD COUNT: ~9,000 words
 
 TABLES: 4 (main text) + 2 (appendix)
 FIGURES: 3 (main text)
@@ -46,15 +46,4 @@ sentiment indices exist for Africa, Latin America, or Bangla-speaking regions
 forecasting validation and propose expansion strategies, using the Bangla
 Economic Narrative Index (BENI) as a case study for bridging geographic gaps.
 
-═══════════════════════════════════════════════════════════════════
-                   SUBMISSION INFORMATION
-═══════════════════════════════════════════════════════════════════
 
-Target Journal:  Journal of Economic Surveys (Wiley)
-Article Type:    Survey Article with Meta-Analysis
-Submission:      ScholarOne Manuscripts
-                  https://mc.manuscriptcentral.com/jes
-
-Estimated Acceptance Probability: 90-95%
-
-═══════════════════════════════════════════════════════════════════
