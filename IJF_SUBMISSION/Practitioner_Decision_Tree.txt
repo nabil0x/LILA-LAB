@@ -1,0 +1,133 @@
+═══════════════════════════════════════════════════════════════════
+           PRACTITIONER'S DECISION TREE: CHOOSING A METHOD
+═══════════════════════════════════════════════════════════════════
+
+PURPOSE: Help practitioners select sentiment forecasting method based on 
+their constraints and requirements.
+
+═══════════════════════════════════════════════════════════════════
+
+DECISION 1: What is your forecast horizon?
+
+├─ SHORT-TERM (intra-day to 1 week)
+│  └─ Go to DECISION 2
+│
+└─ MEDIUM/LONG-TERM (1 month to 12 months)
+   └─ Go to DECISION 2
+
+═══════════════════════════════════════════════════════════════════
+
+DECISION 2: Do you have labeled training data?
+
+├─ YES (500+ documents with sentiment labels)
+│  ├─ Budget: High? → Use BERT/Transformers
+│  ├─ Budget: Medium? → Use Traditional ML (Random Forest/SVM)
+│  └─ Budget: Low? → Use Dictionary with labeled fine-tuning
+│
+└─ NO (no pre-labeled data)
+   ├─ Cost tolerance: High? → Use LLM (GPT-4/Claude)
+   ├─ Cost tolerance: Medium? → Use Pre-trained BERT (RoBERTa)
+   └─ Cost tolerance: Low? → Use Dictionary-based (Loughran-McDonald)
+
+═══════════════════════════════════════════════════════════════════
+
+DECISION 3: What is your deployment constraint?
+
+├─ REAL-TIME (< 5 minute latency)
+│  ├─ Accuracy critical? → Pre-trained BERT
+│  ├─ Speed critical? → Dictionary-based
+│  └─ Accuracy + Speed? → Ensemble (Dictionary + cached BERT)
+│
+├─ BATCH (daily/hourly processing)
+│  └─ Use anything: BERT, LLM, ML (process overnight)
+│
+└─ EXPLORATORY (research phase)
+   └─ Use LLM for prototyping, then optimize to production method
+
+═══════════════════════════════════════════════════════════════════
+
+DECISION 4: What is your interpretability requirement?
+
+├─ HIGH (must explain why sentiment = negative to auditors/clients)
+│  └─ Use Dictionary-based (transparent word lists)
+│
+├─ MEDIUM (need some interpretability)
+│  └─ Use Traditional ML (feature importance via SHAP values)
+│
+└─ LOW (black-box acceptable)
+   └─ Use BERT/LLM (best accuracy trade-off)
+
+═══════════════════════════════════════════════════════════════════
+
+QUICK REFERENCE MATRIX
+
+┌──────────────────────────────────────────────────────────────────┐
+│ USE CASE          │ RECOMMENDED METHOD   │ WHY                   │
+├──────────────────────────────────────────────────────────────────┤
+│ Real-time daily   │ Pre-trained BERT     │ 85-92% accuracy,      │
+│ nowcasting        │ (RoBERTa)            │ <100ms latency        │
+├──────────────────────────────────────────────────────────────────┤
+│ Batch overnight   │ BERT or LLM (GPT-4)  │ 90-95% accuracy,      │
+│ forecast          │                      │ best performance      │
+├──────────────────────────────────────────────────────────────────┤
+│ High-frequency    │ Dictionary-based     │ <10ms latency,        │
+│ trading (< 1 min) │                      │ simple integration    │
+├──────────────────────────────────────────────────────────────────┤
+│ Policy nowcast    │ Ensemble: Dict + BERT│ Balanced accuracy,     │
+│ (must explain)    │                      │ transparent + modern  │
+├──────────────────────────────────────────────────────────────────┤
+│ Research/paper    │ BERT or LLM          │ State-of-art          │
+│ (cost no concern) │                      │ performance           │
+├──────────────────────────────────────────────────────────────────┤
+│ Cost-constrained  │ Dictionary-based     │ Free, fast,           │
+│ emerging market   │                      │ works reasonably      │
+└──────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+
+KEY PERFORMANCE TRADE-OFFS
+
+Dictionary-based:
+  ✓ Accuracy: 60-75%    | ✓ Speed: <10ms      | ✓ Cost: Free
+  ✓ Interpretable       | ✗ Context-blind
+
+Traditional ML:
+  ✓ Accuracy: 75-85%    | ✓ Speed: 50-200ms   | ✓ Cost: Low
+  ~ Medium interpretable | ✗ Requires labeled data
+
+BERT/Transformers:
+  ✓ Accuracy: 85-92%    | ~ Speed: 100-500ms  | ~ Cost: Medium
+  ✗ Black-box           | ✗ Data-hungry
+
+LLM (GPT-4):
+  ✓ Accuracy: 88-95%    | ~ Speed: 1-2 sec    | ✗ Cost: High
+  ✗ Latency issues      | ~ Hallucination risk
+
+═══════════════════════════════════════════════════════════════════
+
+VALIDATION CHECKLIST FOR PRACTITIONERS
+
+Before deploying sentiment forecasting system, verify:
+
+□ Real-time data protocol: Only use info available at forecast date
+□ Out-of-sample testing: Never evaluate on training data
+□ Rolling window: Simulate real-time deployment scenario
+□ Statistical test: Use Diebold-Mariano for significance
+□ Robustness check: Try alternative sentiment measure
+□ Baseline strength: Compare to ARIMA, not just AR(1)
+□ Sub-sample analysis: Test pre/post-crisis performance
+□ Documentation: Explicit description of data sources & timing
+
+═══════════════════════════════════════════════════════════════════
+
+COMMON PITFALLS TO AVOID
+
+1. Look-ahead bias: Using future data → INVALID for real-time
+2. Weak baselines: Comparing to AR(1) only → Overstate improvement
+3. Specification search: Tuning on test data → Overfitting
+4. Ignoring costs: LLMs expensive; dictionary free → Choose right tool
+5. Neglecting updates: Don't retrain weekly; retrain monthly or quarterly
+6. Single sentiment measure: Use 2-3 to verify robustness
+7. Crisis overconfidence: Sentiment helps in 2008/2020; weak in normal times
+
+═══════════════════════════════════════════════════════════════════

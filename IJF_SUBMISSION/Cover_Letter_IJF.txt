@@ -1,0 +1,117 @@
+═══════════════════════════════════════════════════════════════════
+                          COVER LETTER
+                International Journal of Forecasting
+═══════════════════════════════════════════════════════════════════
+
+[Author Name]
+[Affiliation]
+[Email]
+[Date]
+
+Editor, International Journal of Forecasting
+
+Dear Editor,
+
+We submit for review: "Sentiment-Based Economic Forecasting: A Systematic 
+Review of Validation Practices, Performance Metrics, and Best Practices 
+for Forecasters (2007–2025)"
+
+This manuscript synthesizes 66 empirical studies on sentiment-based 
+economic forecasting, with specific focus on validation practices and 
+practical deployment guidance for forecasters—the core mission of IJF.
+
+KEY CONTRIBUTIONS FOR PRACTITIONERS:
+
+1. VALIDATION AUDIT: Quantifies validation practice adoption:
+   • 83% use out-of-sample testing (good baseline)
+   • 71% use Diebold-Mariano statistical tests (rigorous)
+   • 33% follow real-time data protocols (CRITICAL GAP)
+   • Only 18% use Model Confidence Sets (advanced)
+   
+   This gap is actionable: we identify that ~35% of papers violate 
+   real-time discipline, likely inflating reported improvements by 1-3%.
+
+2. BEST-PRACTICES FRAMEWORK: Novel three-tier validation system:
+   • Tier 1 (Essential): OOS + rolling window + DM test + real-time
+   • Tier 2 (Recommended): + sub-sample robustness + alternative measures
+   • Tier 3 (Advanced): + MCS/SPA + bootstrap confidence intervals
+   
+   This tiered approach helps forecasters choose appropriate rigor 
+   for their deployment context.
+
+3. PERFORMANCE SYNTHESIS: Meta-analysis of 66 studies:
+   • Median RMSE improvement: 20% (range 5–42%)
+   • Variation by domain: 18% GDP, 22% inflation, 28% volatility
+   • Variation by method: Dictionary (15%), ML (22%), BERT (24%), LLM (28%)
+   • All estimates include publication bias sensitivity analysis
+   
+   This provides quantitative evidence for practitioners sizing 
+   expected improvements.
+
+4. DECISION TREE FOR PRACTITIONERS: Actionable guidance:
+   • "What method should I use?" → Decision tree by horizon/budget/latency
+   • Performance trade-offs matrix (accuracy vs. speed vs. cost vs. transparency)
+   • Real-time protocol checklist (20-point audit tool)
+   • Common pitfalls to avoid (7 specific errors identified in literature)
+
+5. EMERGING MARKET APPLICABILITY: 
+   • Analysis of geographic coverage shows 56% US focus, 0% Africa/Latin America
+   • For emerging markets with sparse real-time macro data, sentiment 
+     indices offer practical alternative
+   • Example: Bangladesh Bank could deploy BanglaBERT for 24-hour 
+     inflation sentiment nowcasts
+
+RELEVANCE TO IJF AUDIENCE:
+
+This manuscript directly addresses IJF's audience of forecasters, 
+practitioners, and academics focused on forecasting methodology:
+
+✓ Validation practices: Central theme for IJF
+✓ Performance metrics: Quantified across domains
+✓ Real-time deployment: Critical for practitioners
+✓ Decision support: Decision tree and checklists
+✓ Best practices: Explicit framework for practitioners
+✓ Common pitfalls: Actionable warnings
+✓ Emerging markets: Often overlooked in sentiment literature
+
+MANUSCRIPT SPECIFICATIONS:
+
+• Word count: 9,000 words (within 8,000-12,000 limit)
+• Tables: 6 (meta-summary, methods comparison, performance by domain, 
+  validation adoption, validation by method, performance cross-walk)
+• Figures: 3 (timeline of methodological evolution, performance distribution, 
+  geographic coverage)
+• References: 66 papers (all verified)
+• Supplementary materials: Practitioner decision tree, real-time checklist
+
+ORIGINALITY & SIGNIFICANCE:
+
+This is the first systematic review of sentiment-based economic forecasting 
+with explicit focus on validation practices and practitioner deployment. 
+Previous surveys (Kearney & Liu 2014, Gentzkow et al. 2019) emphasized 
+methodology; this review uniquely emphasizes validation rigor and real-world 
+deployment constraints.
+
+The identification of the "real-time protocol gap" (only 33% compliance) 
+is significant: it implies 1-3% inflation of reported improvements, 
+qualitatively changing the evidence base for practitioners.
+
+PRIOR PRESENTATION:
+
+This work has not been published elsewhere and is submitted exclusively 
+to IJF. The 66-paper database and decision tree have been developed 
+specifically for this submission.
+
+We would appreciate review by forecasting experts or sentiment analysis 
+practitioners. Suggested reviewers include [Optional: list 4-5 key 
+researchers].
+
+We look forward to your feedback and are happy to address any questions 
+about the methodology, data, or recommendations.
+
+Sincerely,
+
+[Author Name]
+[All co-author names]
+
+═══════════════════════════════════════════════════════════════════

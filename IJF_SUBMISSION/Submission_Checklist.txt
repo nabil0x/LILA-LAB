@@ -1,0 +1,181 @@
+═══════════════════════════════════════════════════════════════════
+                     IJF SUBMISSION CHECKLIST
+          International Journal of Forecasting Submission
+═══════════════════════════════════════════════════════════════════
+
+BEFORE UPLOADING TO EDITORIAL MANAGER
+
+MANUSCRIPT PREPARATION
+─────────────────────────────────────────────────────────────────
+□ Manuscript PDF named: Manuscript_IJF.pdf
+□ Page numbers: Consecutive 1-26
+□ Line numbers: Added for review
+□ Abstract: 100-150 words (current: 145 ✓)
+□ Keywords: 5-8 terms, relevant to forecasters
+  Keywords: Sentiment analysis; Economic forecasting; Validation 
+  frameworks; Meta-analysis; Forecasting best practices ✓
+□ JEL Codes: C53, E37 (listed on title page)
+□ Margins: 1 inch on all sides
+□ Line spacing: 1.5
+□ Font: 11pt Times New Roman
+□ All citations: Numbered format [1], [2], etc.
+
+AUTHOR INFORMATION
+─────────────────────────────────────────────────────────────────
+□ Title page includes:
+  - Title (12 words max preferred)
+  - Authors (with affiliations) - BLIND REVIEW: names redacted
+  - Corresponding author email - BLIND: redacted
+  - Word count (9,000)
+  - Number of tables (6)
+  - Number of figures (3)
+  - JEL codes (C53, C55, E37, E44, G12, G17)
+□ No author names or identifying info in main text
+□ Footnotes: Substantive only, no author identifiers
+
+TABLES & FIGURES
+─────────────────────────────────────────────────────────────────
+□ Table 1: Meta-summary (All 66 papers, metrics)
+□ Table 2: Methods Comparison (Dictionary, ML, BERT, LLM)
+□ Table 3: Performance by Domain (GDP, Inflation, Volatility, etc.)
+□ Table 4: Validation Methods Adoption (OOS, DM, MCS/SPA, etc.)
+□ Table 5: Performance Cross-walk (Method × Domain)
+□ Table 6: [If additional - check manuscript]
+
+□ Figure 1: Timeline of Methodological Evolution
+□ Figure 2: Performance Distribution by Domain (box plots)
+□ Figure 3: Geographic Distribution of Papers
+
+□ All tables: Titled, captioned, footnoted
+□ All figures: High resolution (300 dpi min)
+□ All referenced in text: "See Table 1", "Figure 2 shows..."
+
+REFERENCES
+─────────────────────────────────────────────────────────────────
+□ All 66 papers cited in references section
+□ Format: [#] Last name, F.I. (Year). Title. Journal, vol(issue):pp.
+  Example: [1] Tetlock, P.C. (2007). Giving content to investor sentiment. 
+  Journal of Finance, 62(3):1139–68.
+□ All references numbered [1] through [66]
+□ All citations in text use [#] format
+□ No URLs in references (use DOI instead if available)
+□ All references verified: no missing pages, incorrect years, etc.
+
+DOCUMENT INTEGRITY
+─────────────────────────────────────────────────────────────────
+□ PDF is searchable (not scanned image)
+□ PDF is not password-protected
+□ No hyperlinks in text
+□ No colored text (black only)
+□ Headers/footers: None (or only page numbers)
+□ Page count: 26 pages
+□ File size: <5 MB
+
+SUPPLEMENTARY MATERIALS (If submitting separately)
+─────────────────────────────────────────────────────────────────
+□ Practitioner_Decision_Tree.pdf
+□ Real_Time_Protocol_Checklist.pdf
+□ Literature_Matrix_66_Papers.xlsx (if available)
+
+COVER LETTER
+─────────────────────────────────────────────────────────────────
+□ Filename: Cover_Letter_IJF.txt (or .docx)
+□ Length: 1-2 pages
+□ Contents:
+  - Journal name: International Journal of Forecasting
+  - Manuscript title
+  - Brief summary of contributions (3-5 bullets)
+  - Relevance to IJF audience
+  - Originality statement
+  - Suggested reviewers (4-5 names)
+  - No author names if blind review ✓
+□ Tone: Professional, highlights practical value for forecasters
+
+EDITORIAL MANAGER SUBMISSION
+─────────────────────────────────────────────────────────────────
+□ Create account at: https://www.editorialmanager.com/ijf/
+□ Manuscript type: Research article
+□ Title: "Sentiment-Based Economic Forecasting: A Systematic Review 
+  of Validation Practices, Performance Metrics, and Best Practices 
+  for Forecasters (2007–2025)"
+□ Abstract: 145-word version from title page
+□ Keywords: "Sentiment analysis; Economic forecasting; Validation 
+  frameworks; Meta-analysis; Natural language processing; 
+  Forecasting best practices; Real-time protocols"
+□ Research area: Time series forecasting / Forecasting methods
+□ Corresponding author email: [Your email]
+□ Upload files:
+  - Manuscript PDF ✓
+  - Title page (with author info for tracking)
+  - Cover letter ✓
+  - Supplementary materials (decision tree, checklist)
+
+REVIEWER SUGGESTIONS
+─────────────────────────────────────────────────────────────────
+□ Suggest 4-5 reviewers from sentiment/forecasting literature
+  Examples:
+  - Paul Tetlock (Sentiment pioneer)
+  - Zheng Da (FEARS index author)
+  - Hanno Lustig (Forecast evaluation expert)
+  - Justin Wolfers (Forecasting methodology)
+  - [Local expert in your region]
+
+PRE-SUBMISSION CHECKLIST
+─────────────────────────────────────────────────────────────────
+□ Manuscript proofread: No typos, grammar correct
+□ References: All 66 papers accounted for
+□ Figures: High-resolution, labeled clearly
+□ Tables: Consistent formatting, all captions present
+□ Anonymity: No author identifying information
+□ Word count confirmed: 9,000 words ✓
+□ File format verified: PDF readable, not encrypted
+
+FINAL VERIFICATION
+─────────────────────────────────────────────────────────────────
+□ Open PDF on different device: Verify rendering correct
+□ Print first 3 pages: Check formatting on paper
+□ Count pages: 26 pages ✓
+□ Verify metadata: No hidden author info in PDF properties
+
+SUBMISSION WORKFLOW
+─────────────────────────────────────────────────────────────────
+1. Go to https://www.editorialmanager.com/ijf/
+2. Click "New Submission"
+3. Enter manuscript information
+4. Upload Manuscript_IJF.pdf
+5. Upload Cover_Letter_IJF.txt
+6. Upload supplementary materials (optional)
+7. Enter reviewer suggestions
+8. Review and submit
+
+═══════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+
+Issue: "File too large"
+→ Compress PDF (use Adobe or online tool)
+→ Max file size: 5 MB
+
+Issue: "References not formatted correctly"
+→ Use format: [1] Author, A.B. (Year). Title. Journal, vol(issue):pp.
+→ Verify all 66 citations
+
+Issue: "Can't find submit button"
+→ Make sure you're in Editorial Manager for IJF (not another journal)
+→ URL should contain: editorialmanager.com/ijf/
+
+Issue: "Forgot author email"
+→ For corresponding author: Use your professional email
+→ Journal will send decision notifications here
+
+═══════════════════════════════════════════════════════════════════
+
+AFTER SUBMISSION
+
+□ Save confirmation email from Editorial Manager
+□ Note submission date and manuscript ID
+□ Add to calendar: Check status in 2-3 weeks (desk review)
+□ Follow up: If no desk decision in 1 month, contact editor
+□ Expected timeline: 3-4 months to first decision
+
+═══════════════════════════════════════════════════════════════════

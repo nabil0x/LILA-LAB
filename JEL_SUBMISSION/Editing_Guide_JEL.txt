@@ -1,0 +1,190 @@
+═══════════════════════════════════════════════════════════════════
+        EDITING GUIDE: PREPARING JEL VERSION (9,000 → 8,200 words)
+═══════════════════════════════════════════════════════════════════
+
+JEL has stricter word limits than JES. This guide helps trim manuscript 
+while maintaining quality and rigor.
+
+WORD COUNT BUDGET: 800 words to cut
+
+Strategy: Remove examples, consolidate sections, maintain rigor
+
+═══════════════════════════════════════════════════════════════════
+
+SECTION 1: ABSTRACT (CUT 20 words)
+Current: 160 words
+Target: 120-140 words
+Strategy: Remove specific examples, keep core tensions
+
+Original:
+"We conduct a comprehensive meta-analysis establishing that sentiment-based 
+models improve forecast accuracy by approximately 20% (median RMSE reduction), 
+with substantial variation by domain: 18% for GDP, 22% for inflation, 28% 
+for volatility."
+
+Trimmed:
+"Meta-analysis of 66 studies establishes 20% median RMSE improvement 
+(range 5–42%), with variation by domain. However, critical unresolved 
+questions persist..."
+
+Savings: ~25 words
+
+═══════════════════════════════════════════════════════════════════
+
+SECTION 2: INTRODUCTION (CUT 100-150 words)
+Current: ~800 words
+Target: ~700 words
+Strategy: Cut redundant phrases, tighten transitions
+
+Examples to cut:
+- "from Tetlock (2007)'s analysis of Wall Street Journal sentiment 
+  predicting stock returns, to recent LLM-based decomposition of 
+  macroeconomic narratives (Kwon et al., 2025)"
+  → Replace with: "spanning dictionary-based approaches (Tetlock 2007) 
+     to emerging LLM methods (Kwon et al. 2025)"
+  
+  Savings: 20 words
+
+- Redundant phrase: "Despite 18 years of research and methodological 
+  sophistication, critical gaps remain. Geographic bias is stark..."
+  → Tighten to: "Despite 18 years of research, critical gaps remain: 
+     geographic bias is stark..."
+     
+  Savings: 10 words
+
+Total intro cuts: ~120 words
+
+═══════════════════════════════════════════════════════════════════
+
+SECTION 3: METHODOLOGICAL EVOLUTION (CUT 100-150 words)
+Current: ~1,000 words
+Target: ~850-900 words
+Strategy: Remove detailed examples, keep essentials
+
+Cut these details:
+- Dictionary subsection example: "Recognition that general dictionaries 
+  misclassify financial language ("liability" marked negative) motivated..."
+  → Simply state: "Domain-specific alternatives emerged (Loughran-McDonald 2011)"
+  
+  Savings: 30 words
+
+- ML subsection: Detailed description of each algorithm
+  → Consolidate into 2-3 sentences
+  
+  Savings: 50 words
+
+- BERT/LLM descriptions: Too technical for JEL
+  → Condense to: "Pre-trained transformers (BERT, RoBERTa) achieve 85-92% 
+     accuracy; LLMs enable zero-shot classification"
+     
+  Savings: 40 words
+
+Total section cuts: ~120 words
+
+═══════════════════════════════════════════════════════════════════
+
+SECTION 4: RESULTS SUBSECTIONS (CUT 150-200 words)
+Current: Multiple detailed subsections
+Strategy: Consolidate tables, remove redundant discussions
+
+- Results 4.2: Remove detailed example papers
+  Keep: "36 papers (55%) use dictionaries; 4 (6%) use BERT"
+  Cut: Individual examples like "Tetlock (2007) pioneered..."
+  
+  Savings: 60 words
+
+- Results 4.3: Consolidate performance discussion
+  Keep: "Median 20% improvement, 15-25% economically meaningful"
+  Cut: Repeated examples: "GDP forecasting (22 papers) shows median RMSE..."
+  
+  Savings: 80 words
+
+Total cuts: ~150 words
+
+═══════════════════════════════════════════════════════════════════
+
+SECTION 5: GEOGRAPHIC COVERAGE (CUT 100 words)
+Current: ~600 words
+Target: ~500 words
+Strategy: Keep gap analysis, cut descriptive details
+
+- Current paragraph: "The geographic distribution of research shows stark 
+  concentration: North America hosts 37 papers (56%), Europe 13 (20%), 
+  East/Southeast Asia 9 (14%), and South Asia 4 (6%). Zero coverage in 
+  Africa, Latin America, and the Middle East represents a profound research 
+  gap relative to economic significance."
+
+- Trimmed: "Geographic concentration: US 56%, Europe 26%, Asia 14%, South Asia 4%, 
+  Africa/Latin America 0%. Zero indices exist for 4 billion people."
+  
+  Savings: 40 words
+
+- Remove redundant implications discussion
+  Savings: 60 words
+
+Total cuts: ~100 words
+
+═══════════════════════════════════════════════════════════════════
+
+SECTION 6: REMOVE LOW-PRIORITY CONTENT
+
+Option A: Move two minor tables to appendix
+  Current: 6 tables in main text
+  New: 4 tables main + 2 appendix
+  Savings: ~80-100 words (caption, cross-references)
+
+Option B: Consolidate validation discussion
+  Savings: ~50 words
+
+Total: ~150 words
+
+═══════════════════════════════════════════════════════════════════
+
+CUMULATIVE WORD CUTS
+═══════════════════════════════════════════════════════════════════
+
+Abstract:            -20 words
+Introduction:        -120 words
+Methodological Evo:  -120 words
+Results subsections: -150 words
+Geographic section:  -100 words
+Table/validation:    -150 words
+Misc tightening:     -140 words
+─────────────────────────────
+TOTAL:              -800 words
+
+New total: 9,000 - 800 = 8,200 words ✓
+
+═══════════════════════════════════════════════════════════════════
+
+EDITING CHECKLIST
+═══════════════════════════════════════════════════════════════════
+
+□ Abstract trimmed to 120-140 words (from 160)
+□ Introduction tightened (remove redundancy, keep core ideas)
+□ Methodological Evolution: Remove detailed examples
+□ Results: Consolidate similar discussions
+□ Geographic section: Move to appendix tables if needed
+□ Tables: Reduce from 6 to 4 in main text
+□ Word count verified: 8,200 exactly
+□ No loss of rigor or evidence quality
+□ All major findings intact
+□ Unresolved questions still prominent (JEL focus)
+
+═══════════════════════════════════════════════════════════════════
+
+EMPHASIS FOR JEL (Don't Cut These)
+
+✓ UNRESOLVED QUESTIONS (Section 3)
+  Keep: Causality debate, Information vs. noise, Geographic gaps
+  These are the core contribution for JEL
+
+✓ CRITICAL ASSESSMENT (throughout)
+  Keep: 35% real-time violations, publication bias, validation gaps
+  This is the critical perspective JEL values
+
+✓ RESEARCH AGENDA (Section 9)
+  Keep: Priorities for future research
+  JEL readers want to know "what comes next"
+
+═══════════════════════════════════════════════════════════════════

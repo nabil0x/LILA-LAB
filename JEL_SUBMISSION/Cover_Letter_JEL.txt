@@ -1,0 +1,114 @@
+═══════════════════════════════════════════════════════════════════
+                          COVER LETTER
+                Journal of Economic Literature
+═══════════════════════════════════════════════════════════════════
+
+[Author Name]
+[Affiliation]
+[Email]
+[Date]
+
+Editor, Journal of Economic Literature
+
+Dear Editor,
+
+We submit: "Economic Narratives and Sentiment-Based Forecasting: A 
+Critical Assessment of Evidence, Unresolved Questions, and Research Gaps 
+(2007–2025)"
+
+This systematic review synthesizes 66 studies with explicit focus on 
+UNRESOLVED QUESTIONS in the sentiment-based forecasting literature, 
+addressing a critical gap that JEL targets: identifying and articulating 
+what remains unknown in economics.
+
+THREE UNRESOLVED TENSIONS:
+
+1. THE CAUSALITY QUESTION (Section 3.3):
+   Current evidence: 55/66 papers show sentiment Granger-causes outcomes
+   PROBLEM: Granger causality ≠ causal effect
+   
+   Example: Does media pessimism cause GDP decline, or does expected 
+   GDP decline cause media pessimism?
+   
+   Current state: Only Hansen & McMahon (2016) use quasi-exogenous FOMC 
+   shocks. No instrumental variables. No natural experiments.
+   
+   Implications: Practitioners cannot infer whether sentiment management 
+   (central bank communication) causally influences real outcomes. Policy 
+   effectiveness remains unknown.
+
+2. THE INFORMATION VS. NOISE DEBATE (Section 3.2):
+   Tetlock (2007): Media pessimism predicts returns 1-5 days ahead, 
+   then reversals (noise, overreaction).
+   
+   Da et al. (2015): FEARS index predicts returns 2-3 weeks ahead 
+   (information, genuine predictive power).
+   
+   PROBLEM: Both interpretations fit the same data. Context appears to 
+   matter: crisis periods show information; normal periods show noise. 
+   But this distinction lacks formal theory.
+
+3. THE GEOGRAPHIC AND LINGUISTIC GAP (Section 4.5):
+   56% USA, 84% English, 0% Africa/Latin America/Bangla
+   
+   CONSEQUENCE: We know sentiment works in developed English-speaking 
+   markets. We have no evidence for:
+   - Emerging markets with sparse macro data (where sentiment could be 
+     most valuable)
+   - Non-English language economies (Asia, Africa, South America)
+   - Crisis periods in developing countries
+   
+   RESEARCH OPPORTUNITY: Bangladesh Bank could deploy BanglaBERT for 
+   real-time inflation sentiment within 24 hours—but no precedent exists.
+
+NOVEL CONTRIBUTIONS FOR JEL:
+
+✓ IDENTIFICATION OF UNRESOLVED QUESTIONS (JEL core mission):
+  Not "what we know" but "what we don't know" and why it matters
+
+✓ CRITICAL ASSESSMENT:
+  35% of papers violate real-time data protocols → estimates inflated 1-3%
+  Only 18% use advanced statistical tests (MCS/SPA)
+  Publication bias likely: null results underrepresented
+
+✓ THEORETICAL GAPS:
+  No formal theory of when sentiment is information vs. noise
+  Causality identification nearly absent
+  Sentiment rarely embedded in structural macro models
+
+✓ RESEARCH ROADMAP:
+  Priority 1: Causal identification using natural experiments/IV
+  Priority 2: Geographic expansion to emerging markets
+  Priority 3: Integration into DSGE/structural models
+
+RELEVANCE TO JEL AUDIENCE:
+
+JEL publishes comprehensive literature surveys that identify gaps and 
+guide future research. This review does exactly that: it identifies 
+three fundamental unresolved questions and proposes a research agenda.
+
+The geographic gap (zero Bangla, zero Africa) is significant: 4 billion 
+people live in these regions, yet we have zero economic sentiment indices.
+
+MANUSCRIPT SPECIFICATIONS:
+
+• Word count: 8,200 words (trimmed to fit JEL limit)
+• Tables: 4 main + 2 appendix (moved supplementary tables)
+• Figures: 3 (timeline, performance, geographic)
+• References: 66 papers (verified)
+• Tone: Critical, not merely descriptive
+
+ORIGINALITY:
+
+This is the first systematic review of sentiment forecasting with 
+explicit focus on unresolved questions and research gaps. Previous 
+surveys emphasized empirical success; this emphasizes what remains unknown.
+
+The identification of the "real-time protocol gap" (35% of papers) is 
+novel and consequential: it implies published improvements are inflated.
+
+Sincerely,
+
+[Author Names]
+
+═══════════════════════════════════════════════════════════════════

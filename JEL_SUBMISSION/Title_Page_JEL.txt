@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════════════════════
+                    JOURNAL OF ECONOMIC LITERATURE
+                              TITLE PAGE
+═══════════════════════════════════════════════════════════════════
+
+TITLE:
+Economic Narratives and Sentiment-Based Forecasting: A Critical 
+Assessment of Evidence, Unresolved Questions, and Research Gaps (2007–2025)
+
+AUTHORS:
+[Author Names Redacted - Blind Review]
+
+CORRESPONDING AUTHOR:
+[Email and affiliation redacted]
+
+KEYWORDS:
+Sentiment analysis; Economic narratives; Forecasting; Causality; 
+Information vs. noise; Validation; Meta-analysis; Geographic gaps
+
+JEL CODES: C53, E37, G17
+
+WORD COUNT: 8,200 words (trimmed from 9,000)
+
+TABLES: 4 (main text) + 2 (appendix)
+FIGURES: 3 (main text)
+
+ABSTRACT:
+
+Despite 18 years of research on sentiment-based economic forecasting, 
+fundamental questions remain unresolved. We critically examine 66 empirical 
+studies (2007–2025), identifying three key unresolved tensions: (1) 
+causality ambiguity—does sentiment cause outcomes or merely reveal them 
+earlier? Current evidence relies on Granger causality; no causal identification 
+exists. (2) Information vs. noise—are sentiment-driven movements persistent 
+or reverting? Evidence suggests context-dependent distinction: informative 
+during crises, noisy during normal times. (3) Geographic and linguistic 
+bias—56% of studies focus on USA, 84% analyze English text, zero coverage 
+of Africa/Latin America/Bangla speakers. Meta-analysis shows median 20% 
+RMSE improvement (range 5–42%), but 35% of papers violate real-time data 
+protocols, likely inflating estimates by 1–3%. We develop a best-practices 
+validation framework (Tier 1/2/3) and propose research roadmap prioritizing 
+causal identification, geographic expansion, and theoretical integration of 
+sentiment into structural economic models. The field has achieved empirical 
+success in forecasting but lacks theoretical maturity and geographic reach.
+
+═══════════════════════════════════════════════════════════════════

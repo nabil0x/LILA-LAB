@@ -1,0 +1,51 @@
+═══════════════════════════════════════════════════════════════════
+                    INTERNATIONAL JOURNAL OF FORECASTING
+                              TITLE PAGE
+═══════════════════════════════════════════════════════════════════
+
+TITLE:
+Sentiment-Based Economic Forecasting: A Systematic Review of Validation 
+Practices, Performance Metrics, and Best Practices for Forecasters (2007–2025)
+
+AUTHORS:
+[Author Names Redacted - Blind Review]
+
+CORRESPONDING AUTHOR:
+[Email and affiliation redacted]
+
+KEYWORDS:
+Sentiment analysis; Economic forecasting; Validation frameworks; Meta-analysis; 
+Natural language processing; Predictive modeling; Forecasting best practices; 
+Real-time protocols
+
+JEL CODES:
+C53 - Forecasting and prediction models
+E37 - Expectations; Learning
+C55 - Statistical simulation methods
+
+WORD COUNT: 9,000 words
+
+TABLES: 6 (main text)
+FIGURES: 3 (main text)
+
+ABSTRACT:
+
+We systematically review 66 empirical studies (2007–2025) examining sentiment-based 
+economic forecasting methods, validation practices, and performance. Meta-analysis 
+establishes median RMSE improvement of 20% (range 5–42%) over benchmark models across 
+domains: 18% for GDP, 22% for inflation, 28% for volatility. However, validation 
+practices vary substantially: 83% employ out-of-sample testing, 71% use Diebold-Mariano 
+tests, but only 33% follow real-time data protocols (critical for practical deployment). 
+We document methodological evolution from dictionary-based methods (55% of studies) 
+through traditional ML (6%) to BERT/transformers (6%) and LLMs (2%), characterizing 
+trade-offs: interpretability vs. accuracy vs. cost. We develop a best-practices validation 
+framework (Tier 1: Essential; Tier 2: Recommended; Tier 3: Advanced) and identify common 
+pitfalls practitioners should avoid: real-time protocol violations (~35% of papers), 
+weak baseline selection, inadequate robustness checks. Geographic analysis reveals 56% 
+of studies focus on USA, 84% use English text, zero coverage of Africa/Latin America. 
+For practitioners deploying sentiment forecasting systems, we provide actionable decision 
+trees and recommendations by use case (short-term vs. long-term, exploratory vs. 
+production). Core finding: sentiment indices provide economically meaningful forecast 
+improvements but require rigorous validation discipline for real-world reliability.
+
+═══════════════════════════════════════════════════════════════════
