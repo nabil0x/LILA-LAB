@@ -22,3 +22,9 @@ beni/experiment/outputs/reports/
 *.joblib
 *.safetensors
 *.jsonl
+
+# Kaggle data bundle (too large for git)
+beni/experiment/data/kaggle/
+
+# All generated outputs (models, reports, index, correlations)
+beni/experiment/outputs/
