@@ -17,6 +17,8 @@ beni/experiment/data/processed/
 beni/experiment/models/
 beni/experiment/outputs/models/
 beni/experiment/outputs/reports/
+BENI_v1_data_paper/data/raw/bnad
+BENI_v1_data_paper/data/processed/*.csv
 
 # Model/data artifacts
 *.joblib
