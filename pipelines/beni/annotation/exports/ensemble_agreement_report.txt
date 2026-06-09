@@ -1,0 +1,50 @@
+============================================================
+BENI Multi-LLM Ensemble Agreement Report
+============================================================
+
+Articles: 2
+Models:   ['llama2', 'qwen2.5', 'gemma2']
+
+── Pairwise Agreement (Cohen's κ) ──────────────────────────────
+  gemma2_vs_llama2         : κ = 1.0000, observed = 100.00%, p = 1.0000
+  gemma2_vs_qwen2.5        : κ = 0.0000, observed = 0.00%, p = 1.0000
+  llama2_vs_qwen2.5        : κ = 0.0000, observed = 0.00%, p = 1.0000
+
+── Three-Way Agreement (Fleiss' κ) ─────────────────────────────
+  Fleiss' κ:        -0.5
+  P_bar (observed): 0.3333
+  P_e_bar (chance): 0.5556
+  95% CI:           -1.0 — 1.0
+
+  Breakdown:
+    full_agreement           :    0 (0.0%)
+    majority                 :    2 (100.0%)
+    full_disagreement        :    0 (0.0%)
+
+── Vote Margins ────────────────────────────────────────────────
+  Mean margin:           1.00
+  3/3 unanimous:         0
+  2/1 split:             2
+
+── Agreement by Topic ──────────────────────────────────────────
+  Topic                   N   Full%   Maj%   Dis%
+  -------------------------------------------
+  national                1    0.0% 100.0%   0.0%
+  sports                  1    0.0% 100.0%   0.0%
+
+── Confidence Calibration ──────────────────────────────────────
+  Level                        N   Mean      Range
+  ---------------------------------------------
+  Majority                     2   2.33 2.3333333333333335–2.3333333333333335
+
+── Disagreements (sample) ─────────────────────────────────────
+  bnlp_train_1159          majority           {'llama2': 'Economic', 'qwen2.5': 'Not Economic', 'gemma2': 'Economic'}
+  bnlp_train_1211          majority           {'llama2': 'Economic', 'qwen2.5': 'Not Economic', 'gemma2': 'Economic'}
+
+────────────────────────────────────────────────────────────
+Methods sentence for the paper:
+────────────────────────────────────────────────────────────
+
+Three open-source LLMs (llama2, qwen2.5, gemma2) independently annotated 2 Bengali news articles for economic relevance. Pairwise Cohen's kappa ranged from 0.000 to 1.000; Fleiss' multi-rater kappa = -0.5 (95% CI: -1.0–1.0). Full three-way agreement was achieved on 0 of 2 articles (0%).
+
+============================================================

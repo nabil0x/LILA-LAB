@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+joblib
+PyYAML
+streamlit
+torch>=2.0
+transformers>=4.30
+scipy
+pyarrow

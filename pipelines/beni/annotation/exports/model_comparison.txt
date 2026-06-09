@@ -1,0 +1,76 @@
+==============================================================
+  3-MODEL COMPARISON: TF-IDF vs BanglaBERT vs LLM (vs Gold Standard)
+==============================================================
+
+Dataset: 298 aligned articles
+  Gold Economic:     22
+  LLM Economic:      22
+  TF-IDF Economic:   19
+  BanglaBERT Economic: 3
+
+── Per-Model Performance (vs Gold Standard) ──
+  Model                     Acc      κ   Prec Recall     F1  Econ   FP   FN
+  --------------------------------------------------------------------
+  LLM (GPT-4o)           100.00% 1.0000 100.00% 100.00% 100.00%  22/298   0   0
+  TF-IDF + LogReg        92.28% 0.3978 47.37% 40.91% 43.90%  19/298  10  13
+  BanglaBERT             92.95% 0.1448 66.67% 9.09% 16.00%   3/298   1  20
+
+── Pairwise McNemar's Test (H₀: equal error rates) ──
+  Model A                vs Model B                     χ²  p-value  Sig(0.05)  Discordant
+  ------------------------------------------------------------------------
+  TF-IDF + LogReg        vs BanglaBERT               0.182   0.6698         No  12+10=22
+  TF-IDF + LogReg        vs LLM (GPT-4o)            23.000   0.0000        Yes  23+0=23
+  BanglaBERT             vs LLM (GPT-4o)            21.000   0.0000        Yes  21+0=21
+
+── Pairwise Inter-Model Agreement (no gold) ──
+  Model A                vs Model B                    Agree      κ
+  ----------------------------------------
+  TF-IDF                 vs BanglaBERT              276/298 (92.62%)  κ=-0.0177
+  TF-IDF                 vs LLM                     275/298 (92.28%)  κ=0.3978
+  BanglaBERT             vs LLM                     277/298 (92.95%)  κ=0.1448
+
+── Pattern Summary (Gold/LLM/TF-IDF/BanglaBERT) ──
+  G=N/L=N/T=N/B=N                       n=265
+  G=E/L=E/T=N/B=N                       n= 11
+  G=N/L=N/T=E/B=N                       n= 10
+  G=E/L=E/T=E/B=N                       n=  9
+  G=E/L=E/T=N/B=E                       n=  2
+  G=N/L=N/T=N/B=E                       n=  1
+
+── Error Detail ──
+  Articles with ≥1 model wrong: 33 / 298
+  bnlp_dev_1211           gold=E  llm=E  tfidf=N  bert=E  wrong: TF-IDF
+  bnlp_dev_1283           gold=N  llm=N  tfidf=N  bert=E  wrong: BanglaBERT
+  bnlp_dev_166            gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_dev_370            gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_dev_373            gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_test_1077          gold=E  llm=E  tfidf=N  bert=E  wrong: TF-IDF
+  bnlp_test_596           gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_10065        gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_10626        gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_10927        gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_10943        gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_1506         gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_1530         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_1657         gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_2357         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_4220         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_435          gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_4977         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_5165         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_5205         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_5379         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_6598         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_699          gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_6995         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_7049         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_777          gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_8601         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_8702         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+  bnlp_train_8779         gold=N  llm=N  tfidf=E  bert=N  wrong: TF-IDF
+  bnlp_train_9173         gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_9512         gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_9528         gold=E  llm=E  tfidf=E  bert=N  wrong: BanglaBERT
+  bnlp_train_9992         gold=E  llm=E  tfidf=N  bert=N  wrong: TF-IDF,BanglaBERT
+
+──────────────────────────────────────────────────────────────

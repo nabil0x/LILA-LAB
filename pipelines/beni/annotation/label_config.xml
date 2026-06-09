@@ -1,0 +1,150 @@
+<View>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 1: Article Display              -->
+  <!-- ════════════════════════════════════════ -->
+
+  <!-- Article text to annotate -->
+  <Text name="article_text" value="$text" maxLength="5000" />
+
+  <!-- Context header with metadata -->
+  <Header value="Source: {source} | Topic: {topic} | Reference: keyword_label = {keyword_label}" />
+  <View style="border: 1px solid #ddd; padding: 8px; border-radius: 4px; background: #fafafa;">
+    <Text name="metadata_display" value="Article ID: {id} | Source: {source} | BNLP Topic: {topic}" />
+  </View>
+
+  <Divider />
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 2: Economic Relevance (Binary)  -->
+  <!-- ════════════════════════════════════════ -->
+
+  <Header value="Section A: Is this article economically relevant for Bangladesh?" />
+  <Text name="econ_instructions" value="Choose 'Economic' if the article's primary subject relates to Bangladesh's economy — GDP, inflation, trade, fiscal policy, banking, forex, agriculture, industry, prices, employment, remittances, or economic policy. Choose 'Not Economic' for all other content (politics without economic content, crime, sports, entertainment, general international news, etc.)." />
+
+  <Choices name="economic_relevance" toName="article_text"
+           choice="single" showInline="true" required="true">
+    <Choice value="Economic" background="#1a73e8" />
+    <Choice value="Not Economic" background="#999999" />
+  </Choices>
+
+  <!-- Confidence rating -->
+  <Rating name="confidence" toName="article_text"
+          maxRating="3" icon="star" required="true"
+          description="How confident are you? 1 = Guessing, 2 = Fairly sure, 3 = Certain" />
+
+  <!-- Difficulty flag -->
+  <Choices name="difficulty" toName="article_text"
+           choice="single" showInline="true" required="true"
+           visibleWhen="choice-selected" whenTagName="economic_relevance"
+           whenChoiceValue="Economic">
+    <Choice value="Clear-cut" background="#4caf50" />
+    <Choice value="Borderline" background="#ff9800" />
+  </Choices>
+
+  <Divider />
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 3: Economic Topic (Multiclass)  -->
+  <!-- ════════════════════════════════════════ -->
+  <!-- Only shown when article is Economic -->
+
+  <Header value="Section B: Which macro topic does this article primarily address?" />
+  <Text name="topic_instructions" value="Select the SINGLE most relevant macro topic. Choose the topic that best captures the article's central economic subject." />
+
+  <Choices name="economic_topic" toName="article_text"
+           choice="single" showInline="false" required="true"
+           visibleWhen="choice-selected" whenTagName="economic_relevance"
+           whenChoiceValue="Economic">
+    <Choice value="inflation_prices" text="Inflation &amp; Prices" background="#e53935" />
+    <Choice value="exchange_rate_reserves" text="Exchange Rate &amp; Reserves" background="#1e88e5" />
+    <Choice value="monetary_banking" text="Monetary Policy &amp; Banking" background="#43a047" />
+    <Choice value="fiscal_budget" text="Fiscal Policy &amp; Budget" background="#fb8c00" />
+    <Choice value="trade_external" text="Trade, Exports &amp; External Sector" background="#8e24aa" />
+    <Choice value="employment_wages" text="Employment &amp; Wages" background="#00acc1" />
+    <Choice value="agriculture_food" text="Agriculture &amp; Food Security" background="#6d4c41" />
+    <Choice value="industry_investment" text="Industry, Investment &amp; Growth" background="#3949ab" />
+    <Choice value="remittances" text="Remittances &amp; Migration" background="#c0ca33" />
+    <Choice value="energy_imports" text="Energy &amp; Import Costs" background="#d81b60" />
+    <Choice value="general_economy" text="General Economy / Multiple" background="#546e7a" />
+    <Choice value="other" text="Other" background="#757575" />
+  </Choices>
+
+  <Divider />
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 4: Sentiment (Ordinal)          -->
+  <!-- ════════════════════════════════════════ -->
+
+  <Header value="Section C: What is the economic sentiment / tone of this article?" />
+  <Text name="sentiment_instructions" value="Rate the overall economic sentiment conveyed by the article about Bangladesh's economic conditions. Ignore sentiment about individuals or political parties — focus on the economic outlook." />
+
+  <Choices name="sentiment" toName="article_text"
+           choice="single" showInline="true" required="true"
+           visibleWhen="choice-selected" whenTagName="economic_relevance"
+           whenChoiceValue="Economic">
+    <Choice value="negative" text="Negative" background="#e53935" />
+    <Choice value="neutral" text="Neutral / Mixed" background="#757575" />
+    <Choice value="positive" text="Positive" background="#43a047" />
+  </Choices>
+
+  <Divider />
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 5: Narrative Force              -->
+  <!-- ════════════════════════════════════════ -->
+
+  <Header value="Section D: Narrative force — how is the economic situation framed?" />
+  <Text name="narrative_instructions" value="Select the SINGLE narrative frame that best describes how the article presents the economic situation. This captures the emotional / evaluative framing beyond just factual reporting." />
+
+  <Choices name="narrative_force" toName="article_text"
+           choice="single" showInline="false" required="true"
+           visibleWhen="choice-selected" whenTagName="economic_relevance"
+           whenChoiceValue="Economic">
+    <Choice value="crisis_warning" text="Crisis / Warning" background="#b71c1c" />
+    <Choice value="burden_hardship" text="Burden / Hardship" background="#e53935" />
+    <Choice value="blame_criticism" text="Blame / Criticism" background="#ff6f00" />
+    <Choice value="reform_solution" text="Reform / Solution" background="#2e7d32" />
+    <Choice value="stability_confidence" text="Stability / Confidence" background="#1b5e20" />
+    <Choice value="uncertainty_concern" text="Uncertainty / Concern" background="#ff8f00" />
+    <Choice value="resilience_opportunity" text="Resilience / Opportunity" background="#00695c" />
+    <Choice value="neutral_reporting" text="Neutral Reporting / Descriptive" background="#546e7a" />
+  </Choices>
+
+  <Divider />
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 6: Valuation Target             -->
+  <!-- ════════════════════════════════════════ -->
+
+  <Header value="Section E: Who is the target of the economic narrative?" />
+  <Text name="valuation_instructions" value="Who does the article primarily evaluate, blame, credit, or discuss in economic terms? Select the SINGLE most relevant target. If none of these is appropriate, choose 'Unnamed / General System'." />
+
+  <Choices name="valuation_target" toName="article_text"
+           choice="single" showInline="false" required="true"
+           visibleWhen="choice-selected" whenTagName="economic_relevance"
+           whenChoiceValue="Economic">
+    <Choice value="government" text="Government (ministries, politicians)" background="#3949ab" />
+    <Choice value="central_bank" text="Central Bank (Bangladesh Bank, monetary authority)" background="#1e88e5" />
+    <Choice value="banks_financial" text="Banks &amp; Financial Institutions" background="#43a047" />
+    <Choice value="businesses" text="Businesses &amp; Private Sector" background="#fb8c00" />
+    <Choice value="households" text="Households &amp; Consumers / Public" background="#e53935" />
+    <Choice value="global_economy" text="Global Economy / External Actors" background="#8e24aa" />
+    <Choice value="market_actors" text="Market Actors (investors, traders)" background="#00acc1" />
+    <Choice value="unnamed_system" text="Unnamed / General Economic System" background="#546e7a" />
+  </Choices>
+
+  <Divider />
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 7: Free-text Notes              -->
+  <!-- ════════════════════════════════════════ -->
+
+  <Header value="Section F: Notes (optional)" />
+  <Text name="notes_instructions" value="Add any comments about this article — why it was borderline, what made the decision difficult, or any context that might help during adjudication." />
+
+  <TextArea name="notes" toName="article_text"
+            maxSubmissions="1" editable="true"
+            placeholder="Optional: Any notes about this annotation..." />
+
+</View>
