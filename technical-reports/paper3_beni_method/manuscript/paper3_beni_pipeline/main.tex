@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, graphicx, booktabs, hyperref, natbib}
+\usepackage[a4paper, margin=1in]{geometry}
+
+\title{Building Local-Language Economic Narrative Indices: \\
+The BENI v1 Pipeline from Raw News to Validated Measurement}
+
+\author{Ann Naser Nabil \\
+Department of Economics, Jahangirnagar University \\
+\texttt{lila.lab0x@gmail.com}}
+
+\date{June 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Economic narrative indices---monthly measures of economic news salience---are well-established for English-language media but remain scarce for low-resource languages. We present the BENI v1 method pipeline, a reproducible workflow for transforming Bangla-language news into economic narrative measurements for Bangladesh.
+
+The BENI v1 database combines dated Potrika articles from 2014--2020 with post-2020 BNAD articles, producing 1,467,705 harmonised article records with source metadata, deduplication fields, economic seed labels, and model-ready text. The current frozen validation set contains 186 clean reference labels mapped to canonical BENI v1 article IDs; the remaining 114 ambiguous rows are conservatively excluded from clean validation.
+
+In the frozen BENI v1 validation run, TF-IDF + Logistic Regression achieves 88.17\% accuracy, $\kappa = 0.736$, precision of 92.73\%, recall of 73.91\%, and F1 of 0.823 on the Economic class. The corresponding monthly BENI v1 index is built from 1,453,510 deduplicated article predictions and provides both article-weighted and source-balanced specifications.
+
+The contribution is a complete low-resource measurement template: database harmonisation, weak labeling, LLM-assisted reference annotation, frozen validation, article-level prediction, index construction, and macro-validation checks. Legacy Potrika calibration results are retained as prototype evidence only; the final BENI v1 outputs are grounded in the repaired corpus and frozen validation set.
+
+\textbf{Keywords:} economic narratives, Bangla NLP, low-resource text classification, annotation cost, narrative index, BENI
+
+\textbf{JEL Codes:} C53, C55, E37
+\end{abstract}
+
+\input{drafts/introduction}
+
+\input{drafts/related_work}
+
+\input{drafts/methods}
+
+\input{drafts/results}
+
+\input{drafts/discussion}
+
+\input{drafts/template}
+
+\input{drafts/conclusion}
+
+\paragraph{Acknowledgments.}
+The author thanks the anonymous developers of the Potrika corpus and the BNLP dataset for making Bangla NLP research possible.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\section{Annotation Prompt}\label{app:annotation-prompt}
+
+The full annotation prompt used for Claude Sonnet 4 is available in the supplementary materials and the GitHub repository (\url{https://github.com/ann-nabil/economic-narrative-indices}).
+
+\section{Economic Keyword List}\label{app:keywords}
+
+The full list of 32 Bangla economic terms used for keyword-based pseudo-label generation is available in the supplementary materials.
+
+\end{document}

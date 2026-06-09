@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════════════════
+                    THE JAHANGIRNAGAR ECONOMIC REVIEW
+                     DOUBLE-BLIND PEER REVIEW — TITLE PAGE
+═══════════════════════════════════════════════════════════════════
+
+TITLE:
+Economic Narrative Indices and Media-Based Sentiment Measures:
+A Systematic Review of Methodologies, Applications, and Research
+Gaps (2007–2025)
+
+AUTHOR:
+Ann Naser Nabil
+Department of Economics, Jahangirnagar University
+Savar, Dhaka 1342, Bangladesh
+Email: lila.lab0x@gmail.com
+ORCID: 0009-0006-3561-045X
+
+MANUSCRIPT TYPE: Review Article
+
+WORD COUNT: ~5,500 words including appendix text
+
+FIGURES: 3
+TABLES: 1 main-text table
+
+KEYWORDS:
+Sentiment analysis; Economic narratives; Natural language processing;
+Systematic review; Forecasting; Validation; Geographic gaps
+
+JEL CODES: C53, C55, E37, E44, G12, G17
+
+NOTE:
+This title page will be removed from the manuscript for blind review.
+Author details appear here only.

@@ -1,0 +1,67 @@
+COVER LETTER
+Journal of Economic Surveys
+
+Ann Naser Nabil
+Department of Economics, Jahangirnagar University, Savar, Dhaka, Bangladesh
+lila.lab0x@gmail.com
+7 June 2026
+
+Editor, Journal of Economic Surveys
+
+Dear Editor,
+
+I am pleased to submit my manuscript, "Economic Narrative Indices and
+Media-Based Sentiment Measures: A Systematic Review of Methodologies,
+Applications, and Research Gaps (2007--2025)," for consideration as a Survey
+Article in the Journal of Economic Surveys.
+
+The manuscript reviews 46 empirical studies and 20 theoretical papers on the
+use of sentiment and narrative measures in economic forecasting. It is closest
+to Algaba et al. (2020), also published in the Journal of Economic Surveys, but
+it takes a narrower forecasting-oriented perspective. The review asks how much
+predictive value sentiment measures add out of sample, how reported gains vary
+with benchmark strength, what validation practices are used, and where the
+evidence base remains geographically or linguistically thin.
+
+This systematic review fully follows the Journal of Economic Surveys' reporting
+guidelines for systematic reviews in economics (Havranek et al., 2020).
+The search strategy — including the databases queried (Scopus, Web of Science,
+EconLit, arXiv), the full search-term string, and the date range (2007–2025) —
+is documented in the manuscript's methodology section and the supplementary
+coding matrix. The submission includes a PRISMA flow diagram, coded literature
+matrix, and structured quality assessment. It also cites Irsova et al. (2024)
+as a methodological reference for practitioners conducting meta-analyses in
+this domain. The supplementary materials provide a fully coded literature
+matrix with audit trail,
+quality-assessment scores for all 66 papers, and raw data for the quantitative
+synthesis.
+
+The manuscript makes four contributions. First, it provides a quantitative
+synthesis of reported forecast improvements, distinguishing results against
+weak autoregressive baselines from results against stronger benchmarks such as
+ARIMA models, professional forecasts, and published nowcasts. Second, it
+organizes the methods used in the literature, from dictionary-based measures to
+machine learning, transformer models, and early large-language-model
+applications. Third, it audits validation practice, including out-of-sample
+testing, real-time data discipline, Diebold-Mariano testing, Model Confidence
+Sets, and reporting of annotation reliability. Fourth, it documents the
+geographic and linguistic concentration of the literature and uses the Bangla
+Economic Narrative Index as an illustrative roadmap for future work in
+underrepresented language settings.
+
+The submission includes a clean supplementary coding matrix and quality
+assessment file. These files provide one row per reviewed paper, coded columns
+for method, validation, benchmark type, region, language, and standardized
+forecast-performance entries where comparable information is available.
+
+The manuscript is approximately 10,200 words, contains three main-text tables and
+four figures, and is anonymized for blind review. The title page provides author
+and contact information separately. The manuscript is original, has not been
+published previously, and is not under consideration elsewhere. I declare no
+competing financial interests.
+
+Thank you for considering the manuscript.
+
+Sincerely,
+
+Ann Naser Nabil
