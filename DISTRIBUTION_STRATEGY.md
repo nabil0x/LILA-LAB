@@ -106,7 +106,7 @@ This document focuses on **research platform distribution** (OSF, Zenodo, Huggin
 
 **Structure**:
 ```
-BENI Research Program (OSF Project)
+LILA Lab (OSF Project)
 ├── Components:
 │   ├── Paper 1: Statistical Economics (preprint)
 │   ├── Paper 2: Systematic Review (preprint)
@@ -121,7 +121,7 @@ BENI Research Program (OSF Project)
 │   ├── dataset_cards/ (DATASET_CARD.md, FILE_SCHEMA.md)
 │   └── README.md
 └── Links:
-    ├── GitHub: https://github.com/nabil0x/economic-narrative-indices
+    ├── GitHub: https://github.com/nabil0x/LILA-LAB
     ├── Zenodo: 10.5281/zenodo.20585401
     ├── HF: hf.co/nabil0x/beni-banglabert
     └── Mendeley: 10.17632/v362rp78dc.4
@@ -194,7 +194,7 @@ BENI v1.0: Economic Narrative Measurement Dataset for Bangla News
 
 **Structure** (suggested reorganization):
 ```
-economic-narrative-indices/
+LILA-LAB/
 ├── .github/                          # GitHub-specific config
 │   ├── workflows/                    # CI/CD (future: test on push)
 │   └── FUNDING.yml

@@ -1,4 +1,4 @@
-# Contributing to the BENI Research Program
+# Contributing to LILA Lab
 
 Thank you for contributing to this project. Every contribution — whether screening papers, running replications, extracting data, or writing — moves us toward a shared goal: measurement infrastructure for data-scarce economies.
 

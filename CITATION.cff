@@ -63,7 +63,7 @@ references:
         given-names: "Ann Naser"
     status: "submitted"
     year: 2026
-    repository: "https://github.com/nabil0x/economic-narrative-indices/tree/main/systematic-review"
+    repository: "https://github.com/nabil0x/LILA-LAB/tree/main/technical-reports/paper2_systematic_review"
     keywords: ["systematic review", "economic narrative", "replication", "meta-analysis"]
 
   - type: article
@@ -73,7 +73,7 @@ references:
         given-names: "Ann Naser"
     status: "in preparation"
     year: 2026
-    repository: "https://github.com/nabil0x/economic-narrative-indices/tree/main/beni"
+    repository: "https://github.com/nabil0x/LILA-LAB/tree/main/pipelines/beni"
 
   - type: article
     title: "LILA Technical Report #4: Nowcasting Inflation with BENI — Local-Language News as a High-Frequency Economic Indicator"
