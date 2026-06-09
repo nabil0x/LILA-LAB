@@ -20,7 +20,7 @@ lila-lab/
 ├── 📁 pipelines/                    # XENI Pipeline Collection
 │   ├── beni/                        # Bangla (active)
 │   ├── aeni/                        # Assamese (planned)
-│   ├── nenl/                        # Nepali (planned)
+│   ├── neni/                        # Nepali (planned)
 │   └── shared/                      # Shared utilities
 │
 ├── 📁 technical-reports/                       # Research Papers (6-paper series)
@@ -33,7 +33,7 @@ lila-lab/
 │   ├── contributions/               # Contributor records
 │   └── extensions/                  # Extension proposals
 │
-├── 📁 data/                         # Datasets
+├── 📁 dataset/                      # Datasets
 │   ├── beni-v1/                     # BENI v1 dataset
 │   ├── raw/                         # Upstream data
 │   └── processed/                   # Processed datasets
@@ -105,18 +105,20 @@ cd infrastructure/website/
 
 ## What We Have Already Built
 
-A complete, production-tested pipeline that takes raw native-language news and produces validated measurements:
+A complete, production-tested pipeline family. The first XENI pipeline — **BENI** — proves the framework works:
 
 ```
 Raw Bangla news articles (664,000+)
     → LLM annotation (Claude, GPT-4o ensemble)
     → Multi-model classification (TF-IDF, BanglaBERT)
-    → Monthly narrative index
+    → BENI Economic Index (monthly narrative index)
     → Macroeconomic validation (CPI, FX, reserves)
     → Published papers + open-source code
 ```
 
-**Proven in Bangla (265M speakers). Ready for your language.**
+**BENI is the pipeline. The BENI Economic Index is its first validated output. The same instrument can now produce health, climate, education, and other domain indices.**
+
+**Proven in Bangla (265M speakers). Ready for your language and domain.**
 
 | Benchmark | Result |
 |-----------|--------|

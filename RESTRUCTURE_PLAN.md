@@ -1,5 +1,7 @@
 # LILA Lab Repository Restructuring Plan
 
+> **STATUS**: Most phases completed. This document is kept for reference — remaining items noted below.
+
 ## Current Structure Analysis
 
 The current repository is organized around the BENI research project. To properly represent LILA Lab as a research organization, we need to restructure to support:
@@ -44,13 +46,24 @@ lila-lab/
 │   ├── aeni/                              # Assamese (planned)
 │   │   └── README.md
 │   │
-│   ├── nenl/                              # Nepali (planned)
+│   ├── neni/                              # Nepali (planned)
 │   │   └── README.md
 │   │
-│   └── shared/                            # Shared pipeline utilities
-│       ├── annotation/                    # Shared annotation tools
-│       ├── classifiers/                   # Shared classifier code
-│       └── utils/                         # Common utilities
+│   ├── seni/                              # Sylheti (planned)
+│   │   └── README.md
+│   │
+│   ├── ceni/                              # Chittagonian (planned)
+│   │   └── README.md
+│   │
+│   └── template/                          # Pipeline template for new languages
+│       ├── README.md
+│       ├── annotation/
+│       ├── indices/
+│       ├── experiment/
+│       ├── database/
+│       └── data/
+│
+│   ⚠️  `shared/` not yet created — may add if shared utilities across pipelines grow
 │
 ├── 📁 technical-reports/                             # Research Papers
 │   ├── README.md                          # Paper series overview
@@ -82,7 +95,7 @@ lila-lab/
 │       ├── EXTENSION_TEMPLATE.md          # Proposal template
 │       └── REPLICATION_TEMPLATE.md        # Replication template
 │
-├── 📁 data/                               # Datasets
+├── 📁 dataset/                            # Datasets (actual: `dataset/`, not `data/`)
 │   ├── README.md                          # Data overview
 │   │
 │   ├── beni-v1/                           # BENI v1 dataset
@@ -159,11 +172,11 @@ lila-lab/
 
 | Current Location | New Location | Notes |
 |-----------------|--------------|-------|
-| `beni/` | `pipelines/beni/` | Core pipeline |
-| `data-paper/` | `data/beni-v1/` | Dataset release |
-| `discord-bot/` | `infrastructure/discord-bot/` | Bot code |
-| Root HTML/CSS | `infrastructure/website/` | Website |
-| `releases/` | `data/` or archive | Distribution manifests |
+| `beni/` | `pipelines/beni/` | ✅ Done — Core pipeline |
+| `data-paper/` | `dataset/beni-v1/` | ✅ Done — Dataset release (note: `dataset/` not `data/`) |
+| `discord-bot/` | `infrastructure/discord-bot/` | ✅ Done — Bot code |
+| Root HTML/CSS | `infrastructure/website/` | ✅ Done — Website |
+| `releases/` | `dataset/` or archive | ⚠️ Partial — Version manifests still at root level |
 
 ### Phase 3: Update References
 
@@ -198,7 +211,7 @@ lila-lab/
 ### Move: beni/ → pipelines/beni/
 All BENI pipeline files move here.
 
-### Move: data-paper/ → data/beni-v1/
+### Move: data-paper/ → dataset/beni-v1/
 Dataset release files move here.
 
 ### Move: discord-bot/ → infrastructure/discord-bot/
