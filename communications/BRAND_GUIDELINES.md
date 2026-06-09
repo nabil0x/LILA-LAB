@@ -8,10 +8,10 @@
 
 ```
 LILA Lab
-├── Name: NLP Infrastructure for the Global South
+├── Name: Language Intelligence for Low-resource Applications
 ├── Pronunciation: /ˈliːlə/ (LEE-lah)
-├── Tagline: "Language intelligence for the billions AI was never designed to serve."
-├── Vibe: Academic rigor × South Asian cultural roots × Global South solidarity × open collaboration
+├── Tagline: "Your language. Your stories. Amplified by AI."
+├── Vibe: Academic rigor × Global South solidarity × open collaboration × cultural respect
 │
 ├── Pipelines (XENI naming system):
 │   ├── BENI  → Bangla  Exploration & Native-language Intelligence (Bangladesh)
@@ -19,7 +19,7 @@ LILA Lab
 │   ├── NENI  → Nepali  " (Nepal)
 │   ├── SENI  → Sylheti  " (Sylhet region)
 │   ├── CENI  → Chittagonian  " (Chittagong region)
-│   └── [X]ENI → [Language] Exploration & Native-language Intelligence
+│   └── [X]ENI → [Language] Exploration & Native-language Intelligence (any language)
 │
 ├── Indices (per pipeline, per domain):
 │   ├── BENI Economic Index    ← Bangla economic narrative index (proven)
@@ -39,12 +39,12 @@ LILA Lab
 
 ### Why LILA?
 
-**Lila** (লীলা / लीला / লীলা) in Sanskrit, Bangla, Hindi, Nepali, and Assamese means *divine play, creative exploration, cosmic rhythm*. It captures:
+**Lila** (লীলা / लीলा / লীলা) in Sanskrit, Bangla, Hindi, Nepali, and Assamese means *divine play, creative exploration, cosmic rhythm*. It captures:
 
-- **Exploration** — discovering how Global South languages think about the world
+- **Exploration** — discovering how underserved languages think about the world
 - **Creativity** — building new tools at the intersection of linguistics and AI
 - **Playfulness** — the joy of scientific discovery
-- **South Asian roots** — the name belongs to the Global South region the project serves
+- **Global reach** — the name works across languages and cultures
 
 ### Why XENI?
 
@@ -54,6 +54,8 @@ Every pipeline is an **XENI** — [Language initial] + **E**xploration & **N**at
 BENI = Bangla Exploration & Native-language Intelligence
 AENI = Assamese Exploration & Native-language Intelligence
 HENI = Hindi   Exploration & Native-language Intelligence
+YENI = Yoruba  Exploration & Native-language Intelligence
+KENI = Kinyarwanda Exploration & Native-language Intelligence
 ```
 
 #### Two-Level Self-Teaching Pattern
@@ -76,7 +78,7 @@ The naming teaches itself on **two axes**:
 | **Formality** | Professional but not academic-stuffy. Write like a senior researcher explaining to a curious peer |
 | **Audience** | Linguistic experts, NLP researchers, economists, data scientists, native speakers — all equally welcome |
 | **First-person** | Use "we" — LILA Lab is a collective, not a solo project |
-| **Cultural awareness** | Never "exoticize" Global South languages. They are not "untapped" or "discovered." They are systematically underserved by current AI infrastructure. The Global South is not a data source — it is a partner in building the next frontier of intelligence. |
+| **Cultural awareness** | Never "exoticize" underserved languages. They are not "untapped" or "discovered." They are systematically underserved by current AI infrastructure. The Global South is not a data source — it is a partner in building the next frontier of intelligence. |
 | **Citations** | Always cite contributors, data sources, and prior work. Attribution is non-negotiable. |
 
 ### Voice Examples
@@ -85,8 +87,8 @@ The naming teaches itself on **two axes**:
 |-------|----------|
 | "We built a pipeline to measure economic narratives in Bangla" | "We revolutionized NLP" |
 | "The BENI pipeline now also tracks health discourse — same instrument, new domain" | "BENI is an economic index" (it's a pipeline that can produce many indices) |
-| "Your language is part of the Global South's 4,000+ voices. We can build infrastructure for it together." | "Your language is primitive according to AI" |
-| "BENI achieves 88.2% accuracy on gold-standard human annotations" | "BENI crushes benchmarks" |
+| "Your language is part of the world's 7,000+ voices. We can build infrastructure for it together." | "Your language is primitive according to AI" |
+| "BENI achieves 91.7% accuracy on the Potrika test set" | "BENI crushes benchmarks" |
 | "This framework is designed for easy adaptation to new languages and domains" | "One-click language support" |
 
 ---
@@ -128,7 +130,7 @@ The naming teaches itself on **two axes**:
 | Light | White | `#FFFFFF` | Page background |
 | Accent | Coral | `#E76F51` | Warnings, new items, attention |
 
-*Rationale*: The palette is inspired by Global South natural tones — ocean teal connecting continents, harvest gold of equatorial sun, desert sand of the global belt. It evokes the regions we serve without being stereotypical.
+*Rationale*: The palette is inspired by natural tones — ocean teal connecting continents, harvest gold of equatorial sun, desert sand of the global belt. It evokes the regions we serve without being stereotypical.
 
 ---
 
@@ -139,7 +141,7 @@ The naming teaches itself on **two axes**:
 | Element | Rule |
 |---------|------|
 | **Wordmark** | "LILA Lab" in title case, no hyphen |
-| **Icon** | Consider: stylized ব (Bangla letter) or leaf/network motif |
+| **Icon** | Consider: stylized leaf/network motif representing language connections |
 | **Minimum size** | Wordmark never below 24px |
 
 ---
@@ -151,7 +153,7 @@ The naming teaches itself on **two axes**:
 | **X** | Short, punchy. Threads for substantive content. Visual-first (figures > text) |
 | **LinkedIn** | More narrative. Frame as "here's what we learned" stories. Tag collaborators |
 | **YouTube** | Conversational, walkthrough style. "Let me show you how this works" |
-| **Facebook** | Bangla-first content when targeting South Asia. Global South community announcements. Multilingual posts where possible |
+| **Facebook** | Community-first content. Global South language community announcements. Multilingual posts where possible |
 | **Substack** | Newsletter voice — "Dear fellow language explorers..." Longer-form reflection |
 | **Discord** | Casual, helpful. Answer questions, celebrate contributions, coordinate work |
 
@@ -175,6 +177,27 @@ The naming teaches itself on **two axes**:
 - [ ] Is the domain scope accurate? (Don't call BENI an "economic index" when referring to the pipeline itself)
 - [ ] Are all contributors credited?
 - [ ] Is the tone warm and precise (not hype)?
-- [ ] Are Global South languages described as underserved, not primitive? Is the "Global South" framing used instead of "low-resource" where appropriate?
+- [ ] Are underserved languages described as underserved, not primitive? Is the "Global South" framing used instead of "low-resource" where appropriate?
 - [ ] Does this reference the repo as the source of truth?
 - [ ] Are all links included (GitHub, relevant DOI)?
+
+---
+
+## 9. Verified Pipeline Metrics
+
+Use these exact numbers when referencing BENI's performance:
+
+| Metric | Value | Context |
+|--------|-------|---------|
+| Classification accuracy | **91.7%** | TF-IDF + Logistic Regression on Potrika timeseries test set (30,207 articles) |
+| Macro F1 | **0.894** | Same test set |
+| Monthly index built | **79 months** | June 2014 – December 2020 |
+| Correlation with CPI | **r = −0.75** (p < 0.001) | Level correlation, economic_share vs CPI |
+| Correlation with FX rate | **r = −0.72** (p < 0.001) | Level correlation, economic_share vs BDT/USD |
+| Articles processed | **664,880** | Potrika dataset (6 Bangla newspapers, 2014–2020) |
+| Data volume | **3.3 GB** | 39 CSV files |
+
+**Important notes:**
+- Correlations are for **level (raw) data**. First-differenced correlations are near zero (r ≈ 0.10), indicating the relationship is long-run only with the current TF-IDF classifier.
+- The 91.7% accuracy applies to the **Potrika timeseries test set** specifically.
+- All metrics are documented in `pipelines/beni/experiment/EXPERIMENT_REPORT.md` and the arxiv paper.
