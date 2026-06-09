@@ -81,7 +81,7 @@ GUILD_ID=your_server_id
 
 # GitHub Integration
 GITHUB_TOKEN=your_github_token
-GITHUB_REPO=nabil0x/economic-narrative-indices
+GITHUB_REPO=nabil0x/LILA-LAB
 
 # Email Notifications (optional)
 SMTP_HOST=smtp.gmail.com
