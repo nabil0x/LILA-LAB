@@ -109,7 +109,7 @@ All LILA Lab spaces (Discord, GitHub, email, calls) follow this simple code:
 1. **Respect boundaries.** Not everyone is on the same schedule, time zone, or expertise level.
 2. **Assume good faith.** Most disagreements are about method, not values.
 3. **Credit others.** If someone helped you, acknowledge them.
-4. **No hierarchy of contributions.** The annotator who labels 100 articles is as valued as the PhD who wrote the pipeline.
+4. **No hierarchy of contributions.** The annotator who labels 100 articles is as valued as the researcher who built the pipeline.
 5. **Harassment of any kind is not tolerated.**
 
 Report violations to lila.lab0x@gmail.com. Reports are handled confidentially.
