@@ -106,3 +106,6 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+
+# ── Personal / non-LILA projects ──
+personal/
