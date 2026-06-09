@@ -8,10 +8,10 @@
 
 ```
 LILA Lab
-├── Name: Language Intelligence for Low-resource Applications
+├── Name: NLP Infrastructure for the Global South
 ├── Pronunciation: /ˈliːlə/ (LEE-lah)
-├── Tagline: "Your language. Amplified by AI."
-├── Vibe: Academic rigor × South Asian cultural roots × open collaboration
+├── Tagline: "Language intelligence for the billions AI was never designed to serve."
+├── Vibe: Academic rigor × South Asian cultural roots × Global South solidarity × open collaboration
 │
 ├── Pipelines (XENI naming system):
 │   ├── BENI  → Bangla  Exploration & Native-language Intelligence (Bangladesh)
@@ -29,10 +29,10 @@ LILA Lab
 
 **Lila** (লীলা / लीला / লীলা) in Sanskrit, Bangla, Hindi, Nepali, and Assamese means *divine play, creative exploration, cosmic rhythm*. It captures:
 
-- **Exploration** — discovering how languages think about the world
+- **Exploration** — discovering how Global South languages think about the world
 - **Creativity** — building new tools at the intersection of linguistics and AI
 - **Playfulness** — the joy of scientific discovery
-- **South Asian roots** — the name belongs to the region the project serves
+- **South Asian roots** — the name belongs to the Global South region the project serves
 
 ### Why XENI?
 
@@ -55,7 +55,7 @@ The naming is **self-teaching**: a contributor who sees "BENI" and "AENI" instan
 | **Formality** | Professional but not academic-stuffy. Write like a senior researcher explaining to a curious peer |
 | **Audience** | Linguistic experts, NLP researchers, economists, data scientists, native speakers — all equally welcome |
 | **First-person** | Use "we" — LILA Lab is a collective, not a solo project |
-| **Cultural awareness** | Never "exoticize" low-resource languages. They are not "untapped" or "discovered." They are underserved by current technology. |
+| **Cultural awareness** | Never "exoticize" Global South languages. They are not "untapped" or "discovered." They are systematically underserved by current AI infrastructure. The Global South is not a data source — it is a partner in building the next frontier of intelligence. |
 | **Citations** | Always cite contributors, data sources, and prior work. Attribution is non-negotiable. |
 
 ### Voice Examples
@@ -63,7 +63,7 @@ The naming is **self-teaching**: a contributor who sees "BENI" and "AENI" instan
 | ✅ Do | ❌ Don't |
 |-------|----------|
 | "We built a pipeline to measure economic narratives in Bangla" | "We revolutionized NLP" |
-| "Your language is underserved by current LLMs. We can change that together." | "Your language is primitive according to AI" |
+| "Your language is part of the Global South's 4,000+ voices. We can build infrastructure for it together." | "Your language is primitive according to AI" |
 | "BENI achieves 88.2% accuracy on gold-standard human annotations" | "BENI crushes benchmarks" |
 | "This framework is designed for easy adaptation to new languages" | "One-click language support" |
 
@@ -105,7 +105,7 @@ The naming is **self-teaching**: a contributor who sees "BENI" and "AENI" instan
 | Light | White | `#FFFFFF` | Page background |
 | Accent | Coral | `#E76F51` | Warnings, new items, attention |
 
-*Rationale*: The palette is inspired by South Asian natural tones — river teal, harvest gold, desert sand. It feels regionally grounded without being stereotypical.
+*Rationale*: The palette is inspired by Global South natural tones — ocean teal connecting continents, harvest gold of equatorial sun, desert sand of the global belt. It evokes the regions we serve without being stereotypical.
 
 ---
 
@@ -128,7 +128,7 @@ The naming is **self-teaching**: a contributor who sees "BENI" and "AENI" instan
 | **X** | Short, punchy. Threads for substantive content. Visual-first (figures > text) |
 | **LinkedIn** | More narrative. Frame as "here's what we learned" stories. Tag collaborators |
 | **YouTube** | Conversational, walkthrough style. "Let me show you how this works" |
-| **Facebook** | Bangla-first content when targeting South Asia. Community announcements |
+| **Facebook** | Bangla-first content when targeting South Asia. Global South community announcements. Multilingual posts where possible |
 | **Substack** | Newsletter voice — "Dear fellow language explorers..." Longer-form reflection |
 | **Discord** | Casual, helpful. Answer questions, celebrate contributions, coordinate work |
 
@@ -138,9 +138,9 @@ The naming is **self-teaching**: a contributor who sees "BENI" and "AENI" instan
 
 | Platform | Primary Tags | Secondary Tags |
 |----------|-------------|----------------|
-| **X** | `#LILALab` `#LowResourceNLP` | `#BanglaNLP` `#LanguageTech` `#LILA_Lab` |
-| **LinkedIn** | `#LILALab` `#NLP` `#LowResourceLanguages` | `#ComputationalSocialScience` `#OpenResearch` |
-| **YouTube** | `LILA Lab` `low-resource NLP` | `Bangla NLP tutorial` `narrative economics` |
+| **X** | `#LILALab` `#GlobalSouthNLP` | `#BanglaNLP` `#LanguageTech` `#GlobalSouth` |
+| **LinkedIn** | `#LILALab` `#GlobalSouth` `#NLP` | `#ComputationalSocialScience` `#OpenResearch` `#LanguageInfrastructure` |
+| **YouTube** | `LILA Lab` `Global South NLP` | `Bangla NLP tutorial` `narrative economics` |
 
 ---
 
@@ -150,6 +150,6 @@ The naming is **self-teaching**: a contributor who sees "BENI" and "AENI" instan
 - [ ] Is the XENI naming correct? (BENI = Bangla, not generic)
 - [ ] Are all contributors credited?
 - [ ] Is the tone warm and precise (not hype)?
-- [ ] Are low-resource languages described as underserved, not primitive?
+- [ ] Are Global South languages described as underserved, not primitive? Is the "Global South" framing used instead of "low-resource" where appropriate?
 - [ ] Does this reference the repo as the source of truth?
 - [ ] Are all links included (GitHub, relevant DOI)?

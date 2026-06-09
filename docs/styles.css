@@ -45,7 +45,21 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
 .section-accent .section-sub { color: #FFFFFF; }
 .section-accent a { color: #FFDDD2; }
 .section-accent a:hover { color: #FFFFFF; }
-.section-quote { background: #FFDDD2; padding: 4rem 1.5rem; }
+.section-quote {
+  background: linear-gradient(135deg, #FFDDD2 0%, #FEF0E8 50%, #FFE4D6 100%);
+  padding: 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 300px at 10% 30%, rgba(0,109,119,0.04) 0%, transparent 70%),
+    radial-gradient(circle 400px at 90% 70%, rgba(226,149,120,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
 
 /* ── Navigation ── */
 .nav {
@@ -111,7 +125,14 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
   inset: 0;
   background:
     radial-gradient(ellipse 80% 60% at 20% 80%, rgba(226,149,120,0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(255,221,210,0.1) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(255,221,210,0.1) 0%, transparent 50%),
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.08) 0%, transparent 0%),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.08) 0%, transparent 0%),
+    radial-gradient(2px 2px at 50px 160px, rgba(255,255,255,0.08) 0%, transparent 0%),
+    radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.08) 0%, transparent 0%),
+    radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.08) 0%, transparent 0%),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.08) 0%, transparent 0%);
+  background-size: 200px 200px;
   pointer-events: none;
 }
 .hero-content { position: relative; text-align: center; max-width: 800px; }
@@ -361,6 +382,14 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
   background: #1A202C;
   color: #A0AEC0;
   padding: 3rem 1.5rem 1.5rem;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #006D77, #E29578, #FFDDD2, #E29578, #006D77);
 }
 .footer-inner { max-width: 1100px; margin: 0 auto; }
 .footer-main {
