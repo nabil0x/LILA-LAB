@@ -219,6 +219,101 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
 .xeni-label { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #006D77; }
 .xeni-desc { font-size: 0.9rem; color: #4A5568; line-height: 1.5; }
 
+/* ── XENI Naming System ── */
+.naming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.naming-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  transition: box-shadow 0.2s;
+}
+.naming-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.naming-level {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #006D77;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+.naming-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2D3748;
+}
+.naming-desc {
+  font-size: 0.9rem;
+  color: #4A5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.naming-pattern {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.naming-example {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #F7FAFC;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+}
+.naming-letter {
+  font-weight: 700;
+  color: #006D77;
+}
+.naming-eni {
+  font-weight: 700;
+  color: #006D77;
+}
+.naming-domain {
+  font-weight: 700;
+  color: #E29578;
+  margin-left: 0.25rem;
+}
+.naming-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #718096;
+  margin-left: auto;
+}
+.naming-cta {
+  font-size: 0.85rem;
+  color: #E29578;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.naming-summary {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #FFFAF7;
+  border: 1px solid #E29578;
+}
+.naming-summary p {
+  font-size: 0.9rem;
+  color: #4A5568;
+  line-height: 1.6;
+}
+.naming-summary strong { color: #006D77; }
+.naming-summary em { color: #E29578; font-style: normal; }
+
 /* ── Pipeline Showcase ── */
 .pipeline-showcase { display: flex; flex-direction: column; gap: 1rem; }
 .pipeline-card {
@@ -447,4 +542,7 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
   .contrib-grid { grid-template-columns: 1fr 1fr; }
   .channels-grid { grid-template-columns: 1fr 1fr; }
   .footer-main { grid-template-columns: 1fr; }
+  .naming-grid { grid-template-columns: 1fr; }
+  .naming-example { flex-wrap: wrap; }
+  .naming-label { margin-left: 0; margin-top: 0.25rem; }
 }
