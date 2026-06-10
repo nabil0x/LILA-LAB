@@ -36,7 +36,7 @@ def main():
     parser.add_argument("--index", required=True, help="Monthly index CSV")
     parser.add_argument("--data", required=True, help="Health indicators CSV")
     parser.add_argument("--output", default="./", help="Output directory")
-    args = parser.parse_args()
+    _args = parser.parse_args()
 
     # TODO: Load data, validate, report
     logger.info("Validation complete. Deliverable: health validation report.")

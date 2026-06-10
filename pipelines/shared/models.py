@@ -3,8 +3,6 @@
 Reusable pipeline factories for text classification.
 """
 
-from typing import Any
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.multiclass import OneVsRestClassifier
@@ -35,26 +33,28 @@ def build_tfidf_logreg(
     Returns:
         Scikit-learn Pipeline.
     """
-    return Pipeline([
-        (
-            "tfidf",
-            TfidfVectorizer(
-                max_features=max_features,
-                min_df=min_df,
-                ngram_range=ngram_range,
-                token_pattern=r"(?u)\b\w+\b",
-                sublinear_tf=True,
+    return Pipeline(
+        [
+            (
+                "tfidf",
+                TfidfVectorizer(
+                    max_features=max_features,
+                    min_df=min_df,
+                    ngram_range=ngram_range,
+                    token_pattern=r"(?u)\b\w+\b",
+                    sublinear_tf=True,
+                ),
             ),
-        ),
-        (
-            "clf",
-            OneVsRestClassifier(
-                LogisticRegression(
-                    max_iter=max_iter,
-                    class_weight=class_weight,
-                    solver=solver,
-                    random_state=seed,
-                )
+            (
+                "clf",
+                OneVsRestClassifier(
+                    LogisticRegression(
+                        max_iter=max_iter,
+                        class_weight=class_weight,
+                        solver=solver,
+                        random_state=seed,
+                    )
+                ),
             ),
-        ),
-    ])
+        ]
+    )

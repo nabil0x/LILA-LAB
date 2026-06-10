@@ -36,7 +36,7 @@ def main():
     parser = argparse.ArgumentParser(description="Build Health Discourse Index")
     parser.add_argument("--predictions", required=True, help="Article-level predictions CSV")
     parser.add_argument("--output", default="./", help="Output directory")
-    args = parser.parse_args()
+    _args = parser.parse_args()
 
     # TODO: Load predictions, build index, save output
     logger.info("Health index builder ready. Implement aggregation logic.")

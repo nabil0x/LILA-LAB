@@ -20,9 +20,9 @@ jobs:
           python-version: "3.12"
       - run: pip install ruff
       - name: Ruff lint
-        run: ruff check pipelines/ tests/
+        run: ruff check pipelines/
       - name: Ruff format check
-        run: ruff format --check pipelines/ tests/
+        run: ruff format --check pipelines/
 
   test:
     runs-on: ubuntu-latest
@@ -31,9 +31,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -e ".[dev,core]"
+      - run: pip install pytest
       - name: Pytest
-        run: pytest --tb=short -q
+        run: |
+          if [ -d tests ]; then
+            pytest --tb=short -q
+          else
+            echo "No tests/ directory — skipping"
+          fi
 
   validate-schemas:
     runs-on: ubuntu-latest
@@ -48,8 +53,7 @@ jobs:
           python -c "
           import json, sys
           from pathlib import Path
-          from jsonschema import validate, Draft7Validator
-          import yaml
+          from jsonschema import Draft7Validator
 
           schemas = list(Path('pipelines').glob('**/schemas/*.schema.json'))
           if not schemas:

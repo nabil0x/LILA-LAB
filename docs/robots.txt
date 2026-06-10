@@ -1,0 +1,19 @@
+# LILA Lab — allow all crawlers for social media previews
+User-agent: *
+Allow: /
+
+# Explicitly allow Facebook/WhatsApp/Instagram scraper
+User-agent: facebookexternalhit
+Allow: /
+
+# Explicitly allow Twitter/X scraper
+User-agent: Twitterbot
+Allow: /
+
+# Explicitly allow LinkedIn scraper
+User-agent: LinkedInBot
+Allow: /
+
+# Explicitly allow Slack scraper
+User-agent: Slackbot
+Allow: /

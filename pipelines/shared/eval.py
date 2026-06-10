@@ -7,8 +7,10 @@ from typing import Any
 
 from sklearn.metrics import (
     accuracy_score,
-    classification_report as sklearn_report,
     f1_score,
+)
+from sklearn.metrics import (
+    classification_report as sklearn_report,
 )
 
 

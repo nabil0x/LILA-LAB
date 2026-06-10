@@ -63,7 +63,9 @@ def read_csv_safe(path: Path) -> pd.DataFrame:
     raise ValueError(f"Could not read {path} with any supported encoding")
 
 
-def load_split(path: Path, delimiter: str = "\t", required_columns: list[str] | None = None) -> pd.DataFrame:
+def load_split(
+    path: Path, delimiter: str = "\t", required_columns: list[str] | None = None
+) -> pd.DataFrame:
     """Load a delimited data file with column validation.
 
     Args:

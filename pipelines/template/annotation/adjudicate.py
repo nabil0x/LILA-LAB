@@ -14,9 +14,7 @@ Deliverable:
 """
 
 import argparse
-import json
 import logging
-from pathlib import Path
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -56,8 +54,9 @@ def confidence_weighted(annotations: list[dict]) -> dict:
 def main():
     parser = argparse.ArgumentParser(description="Adjudication Pipeline")
     parser.add_argument("--input", required=True, help="Input annotations directory")
-    parser.add_argument("--method", default="majority",
-                        choices=["majority", "confidence", "human_review"])
+    parser.add_argument(
+        "--method", default="majority", choices=["majority", "confidence", "human_review"]
+    )
     parser.add_argument("--output", default="refset/", help="Output directory")
     args = parser.parse_args()
 

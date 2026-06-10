@@ -99,13 +99,19 @@ def fleiss_kappa(ratings: list[list[str]], labels: list[str] | None = None) -> d
     # Compute P_i (extent of agreement for subject i)
     p_items = []
     for row in matrix:
-        p_i = (sum(c * c for c in row) - n_raters) / (n_raters * (n_raters - 1)) if n_raters > 1 else 0.0
+        p_i = (
+            (sum(c * c for c in row) - n_raters) / (n_raters * (n_raters - 1))
+            if n_raters > 1
+            else 0.0
+        )
         p_items.append(p_i)
     p_bar = sum(p_items) / n_subjects
 
     # Compute p_j (proportion of all assignments to category j)
     total_assignments = n_subjects * n_raters
-    p_j = [sum(matrix[i][j] for i in range(n_subjects)) / total_assignments for j in range(n_labels)]
+    p_j = [
+        sum(matrix[i][j] for i in range(n_subjects)) / total_assignments for j in range(n_labels)
+    ]
 
     # Expected agreement
     pe = sum(p * p for p in p_j)
@@ -123,7 +129,9 @@ def fleiss_kappa(ratings: list[list[str]], labels: list[str] | None = None) -> d
     }
 
 
-def confusion_matrix(y_true: list[str], y_pred: list[str], labels: list[str] | None = None) -> dict[str, dict[str, int]]:
+def confusion_matrix(
+    y_true: list[str], y_pred: list[str], labels: list[str] | None = None
+) -> dict[str, dict[str, int]]:
     """Build a confusion matrix.
 
     Args:
@@ -144,7 +152,9 @@ def confusion_matrix(y_true: list[str], y_pred: list[str], labels: list[str] | N
     return matrix
 
 
-def classification_report(y_true: list[str], y_pred: list[str], labels: list[str] | None = None) -> dict[str, Any]:
+def classification_report(
+    y_true: list[str], y_pred: list[str], labels: list[str] | None = None
+) -> dict[str, Any]:
     """Compute per-class precision, recall, F1, and support.
 
     Args:
