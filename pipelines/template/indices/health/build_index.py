@@ -20,8 +20,16 @@ logger = logging.getLogger(__name__)
 
 
 def build_monthly_index(predictions):
-    """Aggregate article-level predictions into monthly health index."""
-    raise NotImplementedError("Implement health index aggregation")
+    """Aggregate article-level predictions into monthly health index.
+
+    TODO: Implement for your language:
+    - Group predictions by year-month
+    - Calculate mean probability per health topic per month
+    - Apply source-weighting normalization
+    - Produce monthly health index series
+    """
+    print("TODO: Implement build_monthly_index() for your health pipeline")
+    return []
 
 
 def main():

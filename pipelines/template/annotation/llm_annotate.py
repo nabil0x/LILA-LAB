@@ -37,15 +37,21 @@ def load_articles(input_path: str) -> list[dict]:
 
 
 def annotate_article(article: dict, schema: dict) -> dict:
-    """
-    Annotate a single article using LLM ensemble.
+    """Annotate a single article using LLM ensemble.
 
-    TODO: Implement multi-LLM annotation for your language.
-    - Configure Claude, GPT-4o, or local model APIs
-    - Design prompt templates using the schema
+    TODO: Implement for your language:
+    - Import and configure LLM clients from shared.llm.clients
+    - Design prompt templates for your schema
     - Handle your language's script and tokenization
+
+    Example:
+        from pipelines.shared.llm.clients import call_anthropic
+        from pipelines.shared.llm.parsing import parse_llm_response
+        response = call_anthropic(model="claude-3-haiku-20240307", ...)
+        return parse_llm_response(response)
     """
-    raise NotImplementedError("Implement LLM annotation for your language")
+    print("TODO: Implement annotate_article() for your language")
+    return {"id": article.get("id"), "status": "not_implemented"}
 
 
 def main():

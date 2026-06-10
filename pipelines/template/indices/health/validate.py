@@ -20,8 +20,15 @@ logger = logging.getLogger(__name__)
 
 
 def validate_index(index, health_data):
-    """Validate health narrative index against health outcome indicators."""
-    raise NotImplementedError("Implement health index validation")
+    """Validate health narrative index against health outcome indicators.
+
+    TODO: Implement for your language:
+    - Calculate Pearson/Spearman correlations with health indicators
+    - Lead/lag analysis
+    - First-differenced correlation
+    """
+    print("TODO: Implement validate_index() for your health pipeline")
+    return {}
 
 
 def main():

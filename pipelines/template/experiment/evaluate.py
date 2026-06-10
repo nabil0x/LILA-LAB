@@ -22,13 +22,23 @@ logger = logging.getLogger(__name__)
 
 
 def evaluate_model(model_path: str, test_path: str):
-    """Evaluate a trained model on test data."""
-    raise NotImplementedError("Implement model evaluation")
+    """Evaluate a trained model on test data.
+
+    TODO: Implement for your language:
+    - Load trained model from model_path
+    - Load test data from test_path
+    - Use: from pipelines.shared.eval import evaluate_model as eval_fn
+    - Save metrics report
+    """
+    print("TODO: Implement evaluate_model() for your language")
 
 
 def compare_models(results_dir: str):
-    """Compare multiple model performances."""
-    raise NotImplementedError("Implement model comparison")
+    """Compare multiple model performances.
+
+    TODO: Implement model comparison across TF-IDF, BERT, etc.
+    """
+    print("TODO: Implement compare_models() for your language")
 
 
 def main():

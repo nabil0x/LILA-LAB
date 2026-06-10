@@ -22,13 +22,17 @@ logger = logging.getLogger(__name__)
 
 
 def load_predictions(path: str):
-    """Load article-level predictions."""
-    raise NotImplementedError("Implement prediction loading from your experiment outputs")
+    """Load article-level predictions.
+
+    TODO: Load predictions CSV from your experiment outputs.
+    Expected columns: article_id, date, economic_relevance, probability, ...
+    """
+    print("TODO: Implement load_predictions() for your pipeline")
+    return []
 
 
 def build_monthly_index(predictions):
-    """
-    Aggregate article-level predictions into monthly index.
+    """Aggregate article-level predictions into monthly index.
 
     Steps:
     1. Group predictions by year-month
@@ -36,7 +40,8 @@ def build_monthly_index(predictions):
     3. Apply source-weighting normalization
     4. Produce monthly index series
     """
-    raise NotImplementedError("Implement monthly index aggregation")
+    print("TODO: Implement build_monthly_index() for your pipeline")
+    return []
 
 
 def main():

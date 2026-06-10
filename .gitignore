@@ -98,6 +98,9 @@ Thumbs.db
 .omo/run-continuation/
 
 # ── Environment ──
+**/.env
+**/.env.local
+**/.env.*.local
 .env
 .env.local
 .env.*.local

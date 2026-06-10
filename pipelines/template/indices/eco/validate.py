@@ -21,13 +21,17 @@ logger = logging.getLogger(__name__)
 
 
 def load_macro_data(path: str):
-    """Load macroeconomic indicators."""
-    raise NotImplementedError("Implement macroeconomic data loading")
+    """Load macroeconomic indicators.
+
+    TODO: Load CPI, FX rates, reserves, etc. from your data source.
+    Expected format: CSV with date column and indicator columns.
+    """
+    print("TODO: Implement load_macro_data() for your data source")
+    return []
 
 
 def validate_index(index, macro_data):
-    """
-    Validate narrative index against macroeconomic indicators.
+    """Validate narrative index against macroeconomic indicators.
 
     Calculates:
     - Pearson/Spearman correlation for each indicator
@@ -35,26 +39,14 @@ def validate_index(index, macro_data):
     - First-differenced correlation
     - Sub-period stability
     """
-    raise NotImplementedError("Implement index validation")
+    print("TODO: Implement validate_index() for your indicators")
+    return {}
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Validate Economic Narrative Index")
-    parser.add_argument("--index", required=True, help="Monthly index CSV")
-    parser.add_argument("--macro", required=True, help="Macroeconomic indicators CSV")
-    parser.add_argument("--output", default="./", help="Output directory")
-    args = parser.parse_args()
-
-    index = load_predictions(args.index)  # could be load_index
-    macro = load_macro_data(args.macro)
-    results = validate_index(index, macro)
-
-    logger.info("Validation complete. Deliverable: correlation report with significance.")
-
-
-# Fixed: load_predictions was incorrect for index data
 def load_predictions(path: str):
-    raise NotImplementedError("Implement index data loading")
+    """Load index data from CSV."""
+    print("TODO: Implement load_predictions() for your index format")
+    return []
 
 
 if __name__ == "__main__":

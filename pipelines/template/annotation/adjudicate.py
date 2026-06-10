@@ -23,20 +23,34 @@ logger = logging.getLogger(__name__)
 
 
 def load_annotations(input_dir: str) -> list[dict]:
-    """Load multi-annotator outputs."""
-    # TODO: Load annotation files and group by article
-    raise NotImplementedError("Implement annotation loading")
+    """Load multi-annotator outputs.
+
+    TODO: Implement for your language:
+    - Load annotation files from the input directory
+    - Group by article ID
+    - Return list of {article_id, annotator_id, annotations}
+    """
+    print("TODO: Implement load_annotations() for your language")
+    return []
 
 
 def majority_vote(annotations: list[dict]) -> dict:
-    """Resolve by majority voting."""
-    # TODO: Implement majority voting logic per field
-    raise NotImplementedError("Implement majority voting")
+    """Resolve by majority voting.
+
+    TODO: Implement majority voting logic per field.
+    Use: from pipelines.shared.stats.agreement import classification_report
+    """
+    print("TODO: Implement majority_vote() for your language")
+    return {}
 
 
 def confidence_weighted(annotations: list[dict]) -> dict:
-    """Resolve by confidence-weighted voting."""
-    raise NotImplementedError("Implement confidence-weighted voting")
+    """Resolve by confidence-weighted voting.
+
+    TODO: Implement confidence-weighted voting.
+    """
+    print("TODO: Implement confidence_weighted() for your language")
+    return {}
 
 
 def main():

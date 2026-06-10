@@ -1,0 +1,72 @@
+# LILA Lab CI — lint, test, validate
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff
+      - name: Ruff lint
+        run: ruff check pipelines/ tests/
+      - name: Ruff format check
+        run: ruff format --check pipelines/ tests/
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev,core]"
+      - name: Pytest
+        run: pytest --tb=short -q
+
+  validate-schemas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install jsonschema pyyaml
+      - name: Validate pipeline schemas
+        run: |
+          python -c "
+          import json, sys
+          from pathlib import Path
+          from jsonschema import validate, Draft7Validator
+          import yaml
+
+          schemas = list(Path('pipelines').glob('**/schemas/*.schema.json'))
+          if not schemas:
+              print('No schemas found — skipping')
+              sys.exit(0)
+
+          errors = []
+          for schema_path in schemas:
+              try:
+                  schema = json.loads(schema_path.read_text())
+                  Draft7Validator.check_schema(schema)
+                  print(f'  ✓ {schema_path.name}')
+              except Exception as e:
+                  errors.append(f'  ✗ {schema_path.name}: {e}')
+
+          if errors:
+              print('\\n'.join(errors))
+              sys.exit(1)
+          print(f'All {len(schemas)} schemas valid')
+          "

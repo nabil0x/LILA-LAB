@@ -21,13 +21,24 @@ logger = logging.getLogger(__name__)
 
 
 def train_tfidf(refset_path: str, output_path: str):
-    """Train TF-IDF + logistic regression baseline."""
-    raise NotImplementedError("Implement TF-IDF baseline training")
+    """Train TF-IDF + logistic regression baseline.
+
+    TODO: Implement for your language:
+    - Load annotated data from refset_path
+    - Use: from pipelines.shared.models import build_tfidf_logreg
+    - Use: from pipelines.shared.eval import evaluate_model
+    - Save trained model to output_path
+    """
+    print("TODO: Implement train_tfidf() for your language")
 
 
 def train_bert(refset_path: str, output_path: str):
-    """Fine-tune multilingual/BERT model for your language."""
-    raise NotImplementedError("Implement BERT fine-tuning")
+    """Fine-tune multilingual/BERT model for your language.
+
+    TODO: Implement BERT fine-tuning for your language.
+    Consider: XLM-RoBERTa, mBERT, or language-specific models.
+    """
+    print("TODO: Implement train_bert() for your language")
 
 
 def main():
