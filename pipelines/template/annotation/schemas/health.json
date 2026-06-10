@@ -1,0 +1,57 @@
+{
+  "domain": "health",
+  "version": "1.0",
+  "description": "Health discourse annotation schema — template for new domain",
+  "fields": [
+    {
+      "name": "health_relevance",
+      "type": "binary",
+      "values": ["Health", "Not Health"],
+      "description": "Whether the article primarily discusses health topics"
+    },
+    {
+      "name": "health_topic",
+      "type": "multiclass",
+      "values": [
+        "disease_outbreak",
+        "healthcare_access",
+        "vaccination",
+        "nutrition",
+        "maternal_health",
+        "mental_health",
+        "health_policy",
+        "traditional_medicine",
+        "other"
+      ],
+      "description": "Specific health domain the article addresses",
+      "conditional_on": "health_relevance == 'Health'"
+    },
+    {
+      "name": "narrative_force",
+      "type": "multiclass",
+      "values": [
+        "crisis",
+        "improvement",
+        "neglect",
+        "reform",
+        "awareness",
+        "uncertainty",
+        "resilience",
+        "neutral"
+      ],
+      "description": "Narrative framing — how the health situation is portrayed"
+    },
+    {
+      "name": "sentiment",
+      "type": "ordinal",
+      "values": ["negative", "neutral", "positive"],
+      "description": "Overall health discourse sentiment"
+    },
+    {
+      "name": "confidence",
+      "type": "ordinal",
+      "values": ["1", "2", "3"],
+      "description": "Annotator confidence: 1=guessing, 2=fairly sure, 3=certain"
+    }
+  ]
+}

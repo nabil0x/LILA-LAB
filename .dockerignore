@@ -1,0 +1,93 @@
+# ──────────────────────────────────────────────
+# LILA Lab — .dockerignore
+# Language Intelligence for Low-resource Applications
+# ──────────────────────────────────────────────
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+.benv/
+
+# ── Version control ──
+.git/
+.gitattributes
+.gitignore
+
+# ── Environment files (contain secrets) ──
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+
+# ── Large data files ──
+*.csv
+*.jsonl
+*.parquet
+*.sqlite
+*.sqlite3
+*.db
+*.joblib
+*.pth
+*.pt
+*.h5
+*.safetensors
+*.onnx
+
+# ── Data directories (keep local) ──
+data/
+datasets/
+
+# ── Project-specific ──
+.benchmarks/
+.agents/
+personal/
+distribution/
+
+# ── OS / editor files ──
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.nfs*
+
+# ── Archives and logs ──
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+*.log
+
+# ── Jupyter ──
+.ipynb_checkpoints/
+
+# ── LaTeX build artifacts ──
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.lof
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.run.xml
+*.bcf
+texput.log
+
+# ── Generated PDFs (source .tex is tracked) ──
+*.pdf
+
+# ── Model weights directories ──
+**/models/
+**/bnlp-resources/

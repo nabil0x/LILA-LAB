@@ -1,0 +1,366 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "LILA Lab" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e5]: LILA
+        - generic [ref=e6]: Lab
+      - generic [ref=e7]:
+        - link "Pipelines" [ref=e8] [cursor=pointer]:
+          - /url: "#pipelines"
+        - link "Research" [ref=e9] [cursor=pointer]:
+          - /url: "#research"
+        - link "Contribute" [ref=e10] [cursor=pointer]:
+          - /url: "#contribute"
+        - link "Community" [ref=e11] [cursor=pointer]:
+          - /url: "#community"
+        - link "GitHub ↗" [ref=e12] [cursor=pointer]:
+          - /url: https://github.com/LilaLABx/LILA-LAB
+  - banner [ref=e13]:
+    - generic [ref=e14]:
+      - heading "LILA Lab" [level=1] [ref=e15]:
+        - text: LILA
+        - generic [ref=e16]: Lab
+      - paragraph [ref=e17]:
+        - text: Your language. Your stories.
+        - text: Amplified by AI.
+      - paragraph [ref=e18]:
+        - text: The world speaks
+        - strong [ref=e19]: 7,000+ languages
+        - text: . NLP serves barely 20.
+        - text: We build language intelligence for the billions AI was never designed to serve.
+      - generic [ref=e20]:
+        - link "Contribute Your Language" [ref=e21] [cursor=pointer]:
+          - /url: "#contribute"
+        - link "Explore Pipelines" [ref=e22] [cursor=pointer]:
+          - /url: "#pipelines"
+        - link "Join Discord" [ref=e23] [cursor=pointer]:
+          - /url: https://discord.gg/TrrdKbky
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]: 🌍
+      - heading "XENI Pipelines" [level=3] [ref=e29]
+      - paragraph [ref=e30]:
+        - text: Every language gets its own XENI —
+        - strong [ref=e31]: "[X]"
+        - text: ploration &
+        - strong [ref=e32]: E
+        - text: Native-language
+        - strong [ref=e33]: I
+        - text: ntelligence. The first letter changes per language.
+    - generic [ref=e34]:
+      - generic [ref=e35]: 🔬
+      - heading "Proven in Bangla" [level=3] [ref=e36]
+      - paragraph [ref=e37]: 664K articles → LLM annotation → 91.7% accuracy → validated index correlating with CPI (r=−0.75). The pipeline works.
+    - generic [ref=e38]:
+      - generic [ref=e39]: 🤝
+      - heading "Open & Community-Owned" [level=3] [ref=e40]
+      - paragraph [ref=e41]: Every pipeline, dataset, and paper stays open source. Built by researchers, for researchers — wherever your language is spoken.
+  - generic [ref=e43]:
+    - heading "How the XENI System Works" [level=2] [ref=e44]
+    - paragraph [ref=e45]:
+      - text: The naming teaches itself on
+      - strong [ref=e46]: two axes
+      - text: — language and domain. Once you see the pattern, you instantly know how your language and research fit.
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]: Level 1
+        - heading "Language" [level=3] [ref=e50]
+        - paragraph [ref=e51]:
+          - text: See
+          - strong [ref=e52]: BENI
+          - text: and
+          - strong [ref=e53]: AENI
+          - text: "? The pattern is obvious:"
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]: B
+            - generic [ref=e57]: ENI
+            - generic [ref=e58]: = Bangla
+          - generic [ref=e59]:
+            - generic [ref=e60]: A
+            - generic [ref=e61]: ENI
+            - generic [ref=e62]: = Assamese
+          - generic [ref=e63]:
+            - generic [ref=e64]: "N"
+            - generic [ref=e65]: ENI
+            - generic [ref=e66]: = Nepali
+          - generic [ref=e67]:
+            - generic [ref=e68]: "Y"
+            - generic [ref=e69]: ENI
+            - generic [ref=e70]: = Yoruba
+          - generic [ref=e71]:
+            - generic [ref=e72]: "?"
+            - generic [ref=e73]: ENI
+            - generic [ref=e74]: = Your language
+        - paragraph [ref=e75]: Your language's initial goes here →
+      - generic [ref=e76]:
+        - generic [ref=e77]: Level 2
+        - heading "Domain" [level=3] [ref=e78]
+        - paragraph [ref=e79]:
+          - text: See
+          - strong [ref=e80]: BENI Economic Index
+          - text: and
+          - strong [ref=e81]: BENI Health Index
+          - text: "? Same pattern:"
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: BENI
+            - generic [ref=e85]: Economic
+            - generic [ref=e86]: = economic narratives
+          - generic [ref=e87]:
+            - generic [ref=e88]: BENI
+            - generic [ref=e89]: Health
+            - generic [ref=e90]: = health discourse
+          - generic [ref=e91]:
+            - generic [ref=e92]: BENI
+            - generic [ref=e93]: Climate
+            - generic [ref=e94]: = climate narratives
+          - generic [ref=e95]:
+            - generic [ref=e96]: AENI
+            - generic [ref=e97]: Economic
+            - generic [ref=e98]: = Assamese economics
+          - generic [ref=e99]:
+            - generic [ref=e100]: "[X]ENI"
+            - generic [ref=e101]: "[Domain]"
+            - generic [ref=e102]: = your research
+        - paragraph [ref=e103]: Your research domain goes here →
+    - paragraph [ref=e105]:
+      - strong [ref=e106]: The XENI suffix
+      - text: always refers to the
+      - emphasis [ref=e107]: pipeline
+      - text: (the language instrument). The domain is a plain-English qualifier on the index it produces. This keeps every XENI pronounceable while making the domain scope instantly readable.
+  - generic [ref=e109]:
+    - heading "The XENI Pipeline Family" [level=2] [ref=e110]
+    - paragraph [ref=e111]:
+      - text: Each pipeline is named
+      - strong [ref=e112]: "[Language initial] + ENI"
+      - text: . The pattern teaches itself.
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - generic [ref=e115]: B
+        - generic [ref=e116]:
+          - heading "BENI — Bangla" [level=3] [ref=e117]
+          - paragraph [ref=e118]:
+            - generic [ref=e119]: Active
+            - text: 265M speakers
+          - paragraph [ref=e120]: Economic narrative index for Bangla news. Classifies 664K+ articles with 91.7% accuracy. Validated against CPI, FX, reserves.
+          - code [ref=e122]: git clone https://github.com/LilaLABx/LILA-LAB cd pipelines/beni/experiment/beni_pilot/ python3 train.py --model-type tfidf
+      - generic [ref=e123]:
+        - generic [ref=e124]: A
+        - generic [ref=e125]:
+          - heading "AENI — Assamese" [level=3] [ref=e126]
+          - paragraph [ref=e127]:
+            - generic [ref=e128]: Seeking Contributors
+            - text: 15M speakers
+          - paragraph [ref=e129]: First NLP pipeline for Assamese economic narratives. Pipeline ready — needs native speakers for annotation.
+      - generic [ref=e130]:
+        - generic [ref=e131]: "N"
+        - generic [ref=e132]:
+          - heading "NENI — Nepali" [level=3] [ref=e133]
+          - paragraph [ref=e134]:
+            - generic [ref=e135]: Seeking Contributors
+            - text: 25M speakers
+          - paragraph [ref=e136]: Nepali economic narrative index. Ready for adaptation with native-language collaboration.
+      - generic [ref=e137]:
+        - generic [ref=e138]: S
+        - generic [ref=e139]:
+          - heading "SENI — Sylheti" [level=3] [ref=e140]
+          - paragraph [ref=e141]:
+            - generic [ref=e142]: Seeking Contributors
+            - text: 11M speakers
+          - paragraph [ref=e143]: Sylheti language narrative extraction. Currently no NLP infrastructure exists for this language.
+      - generic [ref=e144]:
+        - generic [ref=e145]: C
+        - generic [ref=e146]:
+          - heading "CENI — Chittagonian" [level=3] [ref=e147]
+          - paragraph [ref=e148]:
+            - generic [ref=e149]: Seeking Contributors
+            - text: 16M speakers
+          - paragraph [ref=e150]: Chittagonian narrative index. One of the most underserved languages in NLP relative to speaker count.
+      - generic [ref=e151]:
+        - generic [ref=e152]: "?"
+        - generic [ref=e153]:
+          - heading "YOUR Language Here" [level=3] [ref=e154]
+          - paragraph [ref=e155]:
+            - generic [ref=e156]: Be First
+          - paragraph [ref=e157]: The pipeline is language-agnostic. If you speak it, we can process it. Fork the repo, adapt, publish.
+          - link "Start Your XENI →" [ref=e158] [cursor=pointer]:
+            - /url: "#contribute"
+  - generic [ref=e160]:
+    - heading "LILA Technical Reports" [level=2] [ref=e161]
+    - paragraph [ref=e162]: A 6-paper research program on narrative measurement across underserved languages.
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - generic [ref=e165]: "#1"
+        - heading "Statistical Economics of Narrative" [level=3] [ref=e166]
+        - paragraph [ref=e167]: A quantitative framework for narrative-based economic analysis.
+        - generic [ref=e168]: Complete
+      - generic [ref=e169]:
+        - generic [ref=e170]: "#2"
+        - heading "Systematic Review of Economic Narrative Indices" [level=3] [ref=e171]
+        - paragraph [ref=e172]: Systematic review, replication study, and Bangla extension (2007–2025).
+        - generic [ref=e173]: Submitted to arXiv
+      - generic [ref=e174]:
+        - generic [ref=e175]: "#3"
+        - 'heading "Building BENI: A Replicable Pipeline" [level=3] [ref=e176]'
+        - paragraph [ref=e177]: From raw news to validated narrative index — the complete methodology.
+        - generic [ref=e178]: Active (Jul 2026)
+      - generic [ref=e179]:
+        - generic [ref=e180]: "#4"
+        - heading "Nowcasting Inflation with BENI" [level=3] [ref=e181]
+        - paragraph [ref=e182]: Local-language news as a high-frequency economic indicator.
+        - generic [ref=e183]: Planned (Aug 2026)
+      - generic [ref=e184]:
+        - generic [ref=e185]: "#5"
+        - heading "Text as Data in Social Science" [level=3] [ref=e186]
+        - paragraph [ref=e187]: "110-year survey of language-based methods: from content analysis to LLMs."
+        - generic [ref=e188]: Planned (Oct 2026)
+      - generic [ref=e189]:
+        - generic [ref=e190]: "#6"
+        - heading "LLMs as Measurement Devices" [level=3] [ref=e191]
+        - paragraph [ref=e192]: Framework for narrative extraction in low-resource languages.
+        - generic [ref=e193]: Proposed (Jan 2027)
+    - link "Browse All Reports →" [ref=e195] [cursor=pointer]:
+      - /url: https://github.com/LilaLABx/LILA-LAB/tree/main/technical-reports
+  - generic [ref=e197]:
+    - heading "Eight Ways to Contribute" [level=2] [ref=e198]
+    - paragraph [ref=e199]:
+      - text: Every contribution model leads to academic authorship.
+      - strong [ref=e200]: If you speak an underserved language, you are not a data source — you are a co-author.
+    - generic [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e203]: 🌍
+        - heading "Language Extension" [level=3] [ref=e204]
+        - paragraph [ref=e205]: Apply the pipeline to YOUR language. First-author paper.
+      - generic [ref=e206]:
+        - generic [ref=e207]: 🔬
+        - heading "Cross-Domain" [level=3] [ref=e208]
+        - paragraph [ref=e209]: Apply to health, climate, education. First-author paper.
+      - generic [ref=e210]:
+        - generic [ref=e211]: ⚙️
+        - heading "Methodological" [level=3] [ref=e212]
+        - paragraph [ref=e213]: Improve the classifier, reduce cost. Co-authorship.
+      - generic [ref=e214]:
+        - generic [ref=e215]: ✅
+        - heading "Replication" [level=3] [ref=e216]
+        - paragraph [ref=e217]: Independently verify results. Published replication report.
+      - generic [ref=e218]:
+        - generic [ref=e219]: 🗣️
+        - heading "Citizen Annotation" [level=3] [ref=e220]
+        - paragraph [ref=e221]: Label articles in your language. Acknowledgement in papers.
+      - generic [ref=e222]:
+        - generic [ref=e223]: 📊
+        - heading "Policy Brief" [level=3] [ref=e224]
+        - paragraph [ref=e225]: Analyze narratives for policy. Co-authorship.
+      - generic [ref=e226]:
+        - generic [ref=e227]: 🛠️
+        - heading "Infrastructure" [level=3] [ref=e228]
+        - paragraph [ref=e229]: Build dashboards, APIs, tools. Tool paper co-authorship.
+      - generic [ref=e230]:
+        - generic [ref=e231]: 📖
+        - heading "Education" [level=3] [ref=e232]
+        - paragraph [ref=e233]: Create tutorials, course modules. Educational paper co-authorship.
+    - link "Read the Full Framework →" [ref=e235] [cursor=pointer]:
+      - /url: https://github.com/LilaLABx/LILA-LAB/blob/main/COLLABORATION.md
+  - blockquote [ref=e238]:
+    - paragraph [ref=e239]: “"84% of NLP research is English-only. If your language isn't served, you're invisible in the data that shapes global decisions. We change that — one pipeline at a time."”
+    - generic [ref=e240]: — LILA Lab
+  - generic [ref=e242]:
+    - heading "Connect with LILA Lab" [level=2] [ref=e243]
+    - paragraph [ref=e244]: Follow LILA Lab across platforms — all coordinated from the repository. Join the movement for language infrastructure.
+    - generic [ref=e245]:
+      - link "🐦 X / Twitter @LILA_Lab →" [ref=e246] [cursor=pointer]:
+        - /url: https://x.com/LILA_Lab
+        - generic [ref=e247]: 🐦
+        - generic [ref=e248]: X / Twitter
+        - generic [ref=e249]: "@LILA_Lab"
+        - generic [ref=e250]: →
+      - link "💼 LinkedIn /company/lila-lab →" [ref=e251] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/lila-lab
+        - generic [ref=e252]: 💼
+        - generic [ref=e253]: LinkedIn
+        - generic [ref=e254]: /company/lila-lab
+        - generic [ref=e255]: →
+      - link "▶️ YouTube @LILA_Lab →" [ref=e256] [cursor=pointer]:
+        - /url: https://www.youtube.com/@LILA_Lab
+        - generic [ref=e257]: ▶️
+        - generic [ref=e258]: YouTube
+        - generic [ref=e259]: "@LILA_Lab"
+        - generic [ref=e260]: →
+      - link "💬 Discord discord.gg/TrrdKbky →" [ref=e261] [cursor=pointer]:
+        - /url: https://discord.gg/TrrdKbky
+        - generic [ref=e262]: 💬
+        - generic [ref=e263]: Discord
+        - generic [ref=e264]: discord.gg/TrrdKbky
+        - generic [ref=e265]: →
+      - link "📰 Substack lila.substack.com →" [ref=e266] [cursor=pointer]:
+        - /url: https://lila.substack.com
+        - generic [ref=e267]: 📰
+        - generic [ref=e268]: Substack
+        - generic [ref=e269]: lila.substack.com
+        - generic [ref=e270]: →
+      - link "⌨️ GitHub LilaLABx/LILA-LAB →" [ref=e271] [cursor=pointer]:
+        - /url: https://github.com/LilaLABx/LILA-LAB
+        - generic [ref=e272]: ⌨️
+        - generic [ref=e273]: GitHub
+        - generic [ref=e274]: LilaLABx/LILA-LAB
+        - generic [ref=e275]: →
+      - link "📄 OSF Open Science Framework →" [ref=e276] [cursor=pointer]:
+        - /url: https://osf.io/[project-id]
+        - generic [ref=e277]: 📄
+        - generic [ref=e278]: OSF
+        - generic [ref=e279]: Open Science Framework
+        - generic [ref=e280]: →
+      - link "🤗 Hugging Face nabil0x →" [ref=e281] [cursor=pointer]:
+        - /url: https://huggingface.co/nabil0x
+        - generic [ref=e282]: 🤗
+        - generic [ref=e283]: Hugging Face
+        - generic [ref=e284]: nabil0x
+        - generic [ref=e285]: →
+      - link "👤 Facebook LILALabResearch →" [ref=e286] [cursor=pointer]:
+        - /url: https://www.facebook.com/LILALabResearch
+        - generic [ref=e287]: 👤
+        - generic [ref=e288]: Facebook
+        - generic [ref=e289]: LILALabResearch
+        - generic [ref=e290]: →
+    - paragraph [ref=e291]:
+      - text: All channels are documented and coordinated from the
+      - link "Communications Center" [ref=e292] [cursor=pointer]:
+        - /url: https://github.com/LilaLABx/LILA-LAB/blob/main/COMMUNICATIONS.md
+      - text: .
+  - contentinfo [ref=e293]:
+    - generic [ref=e294]:
+      - generic [ref=e295]:
+        - generic [ref=e296]:
+          - heading "LILA Lab" [level=3] [ref=e297]
+          - paragraph [ref=e298]: Language Intelligence for Low-resource Applications
+        - generic [ref=e299]:
+          - heading "Navigate" [level=4] [ref=e300]
+          - link "Pipelines" [ref=e301] [cursor=pointer]:
+            - /url: "#pipelines"
+          - link "Research" [ref=e302] [cursor=pointer]:
+            - /url: "#research"
+          - link "Contribute" [ref=e303] [cursor=pointer]:
+            - /url: "#contribute"
+          - link "Community" [ref=e304] [cursor=pointer]:
+            - /url: "#community"
+        - generic [ref=e305]:
+          - heading "Repository" [level=4] [ref=e306]
+          - link "GitHub" [ref=e307] [cursor=pointer]:
+            - /url: https://github.com/LilaLABx/LILA-LAB
+          - link "Collaboration Guide" [ref=e308] [cursor=pointer]:
+            - /url: https://github.com/LilaLABx/LILA-LAB/blob/main/COLLABORATION.md
+          - link "Contributing Guide" [ref=e309] [cursor=pointer]:
+            - /url: https://github.com/LilaLABx/LILA-LAB/blob/main/CONTRIBUTING.md
+          - link "Communications Hub" [ref=e310] [cursor=pointer]:
+            - /url: https://github.com/LilaLABx/LILA-LAB/blob/main/COMMUNICATIONS.md
+        - generic [ref=e311]:
+          - heading "Contact" [level=4] [ref=e312]
+          - link "lila.lab0x@gmail.com" [ref=e313] [cursor=pointer]:
+            - /url: mailto:lila.lab0x@gmail.com
+          - link "ORCID" [ref=e314] [cursor=pointer]:
+            - /url: https://orcid.org/0009-0006-3561-045X
+      - generic [ref=e315]:
+        - paragraph [ref=e316]: "Code: MIT License · Data: CC BY 4.0 · Papers: © Ann Naser Nabil"
+        - paragraph [ref=e317]: Built from Dhaka, Bangladesh · Serving underserved languages worldwide

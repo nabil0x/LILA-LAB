@@ -9,7 +9,7 @@ This directory contains the infrastructure components that support LILA Lab's op
 | Component | Description | Status |
 |-----------|-------------|--------|
 | **Discord Bot** | Community management, onboarding, ticket system | ✅ Ready |
-| **Website** | Public-facing website (GitHub Pages) | 🔜 Planned |
+| **Website** | Public-facing website (GitHub Pages) | ✅ Deployed at lilalab.pro.bd |
 | **Scripts** | Utility scripts for deployment and maintenance | 🔜 Planned |
 
 ---
@@ -39,17 +39,17 @@ python bot.py
 
 ### Website
 
-The LILA Lab website will be hosted on GitHub Pages at `lila-lab.org`.
+The LILA Lab website is live at **[lilalab.pro.bd](https://lilalab.pro.bd/)** — deployed via GitHub Pages from `docs/`.
 
-**Planned Pages:**
-- Home — Lab overview and mission
-- Research — Paper series and publications
-- Pipelines — XENI pipeline showcase
-- Contribute — How to contribute
-- Team — Contributors and collaborators
-- Contact — Get in touch
+**Pages include:**
+- Hero with mission statement and BENI benchmark
+- XENI pipeline framework explainer
+- Pipeline showcase with active/planned status
+- Research paper series overview
+- Contribution grid with 8 models
+- Community and contact links
 
-**Status:** Not yet deployed. See `communications/P0_P1_COMMUNITY_SETUP.md`.
+**Source:** See `docs/` for HTML/CSS assets, `infrastructure/website/` for the dashboard app.
 
 ---
 
@@ -110,10 +110,10 @@ SMTP_PASSWORD=your_app_password
 
 ## Contributing to Infrastructure
 
-Infrastructure contributions are welcome! See `COLLABORATION.md` for the full framework.
+Infrastructure contributions are welcome! See [`COLLABORATION.md`](../COLLABORATION.md) for the full framework.
 
 **High-need areas:**
-- Website development (HTML/CSS/JS)
-- Discord bot features
-- Deployment automation
+- Dashboard deployment and enhancements
+- Discord bot features and cogs
+- CI/CD automation
 - Monitoring and analytics

@@ -62,10 +62,12 @@ This log is the source of truth for authorship and acknowledgement decisions.
 | `COLLABORATION.md` | **START HERE** — 8 research contribution models that lead to co-authorship |
 | `LINGUISTIC_CONTRIBUTION_GUIDE.md` | How linguistic experts can contribute native-language data |
 | `SUBREPOS.md` | How to link your independent repository as a git submodule |
+| `pipelines/template/` | **Pipeline template** — start here to bootstrap a new XENI pipeline for your language |
+| `pipelines/template/README.md` | Step-by-step instructions for copying and adapting the template |
+| `pipelines/template/experiment/train.py` | Training script scaffold (TF-IDF, BERT) |
+| `pipelines/template/annotation/llm_annotate.py` | LLM annotation pipeline scaffold |
 | `technical-reports/extensions/INDEX.md` | Registry of active research extensions |
 | `technical-reports/extensions/EXTENSION_TEMPLATE.md` | Template for proposing a language/domain + publishing a paper |
 | `technical-reports/extensions/REPLICATION_TEMPLATE.md` | Template for independently validating our results |
 | `technical-reports/CONTRIBUTING.md` | Standard workflows for all papers |
-| `technical-reports/paper2_systematic_review/CONTRIBUTING.md` | Paper 2 specific tasks |
-| `technical-reports/paper5_text_as_data_survey/CONTRIBUTING.md` | Paper 5 specific tasks |
 | `technical-reports/contributions/OWNERS.csv` | Who owns what |

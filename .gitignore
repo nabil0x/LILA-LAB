@@ -51,6 +51,14 @@ pipelines/beni/experiment/bnlp-resources/
 pipelines/beni/experiment/models/
 pipelines/beni/annotation/outputs/
 
+# BENI-specific — large CSV and JSON data (keep small config JSONs tracked)
+pipelines/beni/**/*.csv
+pipelines/beni/**/*.json
+
+# Dataset — large processed data only
+dataset/**/*.csv
+dataset/**/*.json
+
 # Data paper — large CSV/JSONL data files
 dataset/data/
 
@@ -65,10 +73,10 @@ archive/BENI_v1_data_paper_osf_dataset_upload.zip
 *.h5
 *.onnx
 
-# ── Large data files ──
-*.csv
+# ── Large data files / outputs (NOT config JSON/CSV) ──
+# Broad patterns only where data directories are deep;
+# small config/benchmark JSONs and CSVs should be tracked.
 *.jsonl
-*.json
 *.parquet
 *.sqlite
 *.sqlite3
@@ -96,6 +104,7 @@ Thumbs.db
 
 # ── Local tool/session state ──
 .omo/run-continuation/
+.playwright-mcp/
 
 # ── Environment ──
 **/.env

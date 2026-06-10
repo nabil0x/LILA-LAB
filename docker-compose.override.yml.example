@@ -1,0 +1,49 @@
+# ──────────────────────────────────────────────
+# LILA Lab — Docker Compose Override Example
+# Language Intelligence for Low-resource Applications
+# ──────────────────────────────────────────────
+# Copy this file to docker-compose.override.yml and fill in your values.
+# Docker Compose merges override files automatically at runtime.
+#
+# Setup:
+#   1. cp docker-compose.override.yml.example docker-compose.override.yml
+#   2. Edit docker-compose.override.yml with your API keys and data paths
+#   3. docker compose up
+#
+# Alternatively, set these as environment variables in your shell:
+#   export ANTHROPIC_API_KEY=sk-ant-...
+#   docker compose up
+#
+# The override file takes precedence over environment variables.
+
+services:
+  pipelines:
+    environment:
+      # ── LLM Provider API Keys ──
+      # Get these from your provider's console.
+      # Leave empty (or unset) if you do not use that provider.
+      - ANTHROPIC_API_KEY=sk-ant-your-anthropic-key
+      - OPENAI_API_KEY=sk-proj-your-openai-key
+      - GOOGLE_API_KEY=AIzaSyYourGoogleApiKey
+
+    volumes:
+      # ── Local Data Mounts ──
+      # Mount local directories so pipeline data persists on your host.
+      # Replace the example paths with your actual directories.
+      - /absolute/path/to/your/data:/app/data
+      - /absolute/path/to/your/outputs:/app/outputs
+      # Optional: mount the BENI pipeline data directory directly
+      # - ./pipelines/beni/data:/app/pipelines/beni/data
+
+  discord-bot:
+    # The Discord bot reads configuration from infrastructure/discord-bot/.env.
+    # Create that file by copying the example:
+    #   cp infrastructure/discord-bot/.env.example infrastructure/discord-bot/.env
+    # Then edit with your bot token and channel IDs.
+
+  jupyter:
+    ports:
+      - "8888:8888"
+    volumes:
+      - /absolute/path/to/your/data:/app/data
+      - /absolute/path/to/your/outputs:/app/outputs

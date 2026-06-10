@@ -1,0 +1,69 @@
+# ──────────────────────────────────────────────
+# LILA Lab — Docker Compose
+# Language Intelligence for Low-resource Applications
+# ──────────────────────────────────────────────
+# Usage:
+#   docker compose up                  Start all services
+#   docker compose up pipelines        Start only the pipelines service
+#   docker compose up discord-bot      Start only the Discord bot
+#   docker compose up jupyter          Start only the Jupyter notebook
+#
+# For API keys and local data paths, create docker-compose.override.yml
+# (see docker-compose.override.yml.example) or use a .env file.
+
+services:
+  # ── NLP Pipelines ──
+  pipelines:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - pipelines_data:/app/data
+      - pipelines_output:/app/outputs
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+    networks:
+      - lila-network
+    command: python3
+
+  # ── Discord Bot ──
+  discord-bot:
+    build:
+      context: ./infrastructure/discord-bot
+      dockerfile: Dockerfile
+    env_file:
+      - ./infrastructure/discord-bot/.env
+    networks:
+      - lila-network
+
+  # ── Jupyter Notebook (optional, for interactive research) ──
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - pipelines_data:/app/data
+      - pipelines_output:/app/outputs
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+    networks:
+      - lila-network
+    command: >
+      sh -c "pip install --no-cache-dir jupyter 2>/dev/null && \
+             jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser"
+
+volumes:
+  pipelines_data:
+    driver: local
+  pipelines_output:
+    driver: local
+
+networks:
+  lila-network:
+    driver: bridge

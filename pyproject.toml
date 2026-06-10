@@ -57,8 +57,12 @@ all = ["lila-lab[core,llm,dev]"]
 [tool.ruff]
 target-version = "py310"
 line-length = 100
+# Excluded directories are linted ad-hoc; beni/ is production code
+# using patterns incompatible with current ruleset. To lint it:
+#   ruff check pipelines/beni/ --no-cache --select E,W,F,I
 exclude = [
-    "pipelines/beni/**",  # proven production code — do not lint
+    "pipelines/beni/**",
+    "personal/",
 ]
 
 [tool.ruff.lint]

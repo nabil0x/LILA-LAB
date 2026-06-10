@@ -1,0 +1,1015 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+              - generic [ref=e53]: Search or jump to...
+              - img [ref=e55]
+            - link "Sign in" [ref=e59] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FLilaLABx%2FLILA-LAB
+            - link "Sign up" [ref=e60] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=LilaLABx%2FLILA-LAB
+            - button "Appearance settings" [ref=e63] [cursor=pointer]:
+              - img
+  - main [ref=e67]:
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - img [ref=e72]
+            - link "LilaLABx" [ref=e75] [cursor=pointer]:
+              - /url: /LilaLABx
+            - generic [ref=e76]: /
+            - strong [ref=e77]:
+              - link "LILA-LAB" [ref=e78] [cursor=pointer]:
+                - /url: /LilaLABx/LILA-LAB
+            - generic [ref=e79]: Public
+          - generic [ref=e80]:
+            - text: forked from
+            - link "nabil0x/LILA-LAB" [ref=e81] [cursor=pointer]:
+              - /url: /nabil0x/LILA-LAB
+        - generic [ref=e82]:
+          - list:
+            - listitem [ref=e83]:
+              - link "You must be signed in to change notification settings" [ref=e84] [cursor=pointer]:
+                - /url: /login?return_to=%2FLilaLABx%2FLILA-LAB
+                - img [ref=e85]
+                - text: Notifications
+            - listitem [ref=e87]:
+              - link "Fork 0" [ref=e88] [cursor=pointer]:
+                - /url: /login?return_to=%2FLilaLABx%2FLILA-LAB
+                - img [ref=e89]
+                - text: Fork
+                - generic "0" [ref=e91]
+            - listitem [ref=e92]:
+              - link "You must be signed in to star a repository" [ref=e94] [cursor=pointer]:
+                - /url: /login?return_to=%2FLilaLABx%2FLILA-LAB
+                - img [ref=e95]
+                - text: Star
+                - generic "0 users starred this repository" [ref=e97]: "0"
+      - navigation "Repository" [ref=e98]:
+        - list [ref=e99]:
+          - listitem [ref=e100]:
+            - link "Code" [ref=e101] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB
+              - img [ref=e102]
+              - generic [ref=e104]: Code
+          - listitem [ref=e105]:
+            - link "Issues 26" [ref=e106] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/issues
+              - img [ref=e107]
+              - generic [ref=e110]: Issues
+              - generic "26" [ref=e111]
+          - listitem [ref=e112]:
+            - link "Pull requests" [ref=e113] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/pulls
+              - img [ref=e114]
+              - generic [ref=e116]: Pull requests
+          - listitem [ref=e117]:
+            - link "Actions" [ref=e118] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/actions
+              - img [ref=e119]
+              - generic [ref=e121]: Actions
+          - listitem [ref=e122]:
+            - link "Projects" [ref=e123] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/projects
+              - img [ref=e124]
+              - generic [ref=e126]: Projects
+          - listitem [ref=e127]:
+            - link "Security and quality" [ref=e128] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/security
+              - img [ref=e129]
+              - generic [ref=e131]: Security and quality
+          - listitem [ref=e132]:
+            - link "Insights" [ref=e133] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/pulse
+              - img [ref=e134]
+              - generic [ref=e136]: Insights
+    - generic [ref=e149]:
+      - heading "LilaLABx/LILA-LAB" [level=1] [ref=e151]
+      - generic [ref=e152]:
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - button "main branch" [ref=e159] [cursor=pointer]:
+                - generic [ref=e160]:
+                  - generic [ref=e162]:
+                    - img [ref=e164]
+                    - generic [ref=e167]: main
+                  - generic:
+                    - img
+              - generic [ref=e168]:
+                - link "1 Branch" [ref=e169] [cursor=pointer]:
+                  - /url: /LilaLABx/LILA-LAB/branches
+                  - generic [ref=e170]:
+                    - generic:
+                      - img
+                    - generic [ref=e172]:
+                      - strong [ref=e173]: "1"
+                      - text: Branch
+                - link "0 Tags" [ref=e174] [cursor=pointer]:
+                  - /url: /LilaLABx/LILA-LAB/tags
+                  - generic [ref=e175]:
+                    - generic:
+                      - img
+                    - generic [ref=e177]:
+                      - strong [ref=e178]: "0"
+                      - text: Tags
+            - generic [ref=e179]:
+              - generic [ref=e183]:
+                - img [ref=e185]
+                - combobox "Go to file" [ref=e187]
+              - button "Code" [ref=e188] [cursor=pointer]:
+                - generic [ref=e189]:
+                  - generic:
+                    - img
+                  - generic [ref=e190]: Code
+                  - generic:
+                    - img
+          - generic [ref=e192]:
+            - text: This branch is
+            - link "2 commits ahead of" [ref=e193] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/compare/nabil0x%3ALILA-LAB%3Amain...main
+            - text: and
+            - link "1 commit behind" [ref=e194] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/compare/main...nabil0x%3ALILA-LAB%3Amain
+            - generic [ref=e195]: nabil0x/LILA-LAB:main
+            - text: .
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - heading "Folders and files" [level=2] [ref=e198]
+              - table "Folders and files" [ref=e199]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e200]:
+                  - 'row "Latest commit nabil0x commits by nabil0x feat(meta): add LinkedIn to hero CTAs and social media meta tags Open commit details success Commit 46807fb · Jun 10, 20268 minutes ago History 54 Commits" [ref=e201]':
+                    - 'cell "Latest commit nabil0x commits by nabil0x feat(meta): add LinkedIn to hero CTAs and social media meta tags Open commit details success Commit 46807fb · Jun 10, 20268 minutes ago History 54 Commits" [ref=e202]':
+                      - generic [ref=e203]:
+                        - heading "Latest commit" [level=2] [ref=e204]
+                        - generic [ref=e205]:
+                          - generic [ref=e207]:
+                            - link "nabil0x" [ref=e208] [cursor=pointer]:
+                              - /url: /nabil0x
+                              - img "nabil0x" [ref=e209]
+                            - link "commits by nabil0x" [ref=e210] [cursor=pointer]:
+                              - /url: /LilaLABx/LILA-LAB/commits?author=nabil0x
+                              - text: nabil0x
+                          - generic [ref=e211]:
+                            - 'link "feat(meta): add LinkedIn to hero CTAs and social media meta tags" [ref=e214] [cursor=pointer]':
+                              - /url: /LilaLABx/LILA-LAB/commit/46807fb3e0d64198c1070d9673ba97142914a672
+                            - button "Open commit details" [ref=e215] [cursor=pointer]:
+                              - img [ref=e216]
+                            - button "success" [ref=e218] [cursor=pointer]:
+                              - img [ref=e219]
+                        - generic [ref=e221]:
+                          - generic [ref=e223]:
+                            - link "Commit 46807fb" [ref=e224] [cursor=pointer]:
+                              - /url: /LilaLABx/LILA-LAB/commit/46807fb3e0d64198c1070d9673ba97142914a672
+                              - text: 46807fb
+                            - text: ·
+                            - generic "Jun 10, 2026, 9:18 PM GMT+6" [ref=e225]: Jun 10, 20268 minutes ago
+                          - generic [ref=e226]:
+                            - heading "History" [level=2] [ref=e227]
+                            - link "54 Commits" [ref=e228] [cursor=pointer]:
+                              - /url: /LilaLABx/LILA-LAB/commits/main/
+                              - generic [ref=e229]:
+                                - generic:
+                                  - img
+                                - generic [ref=e230]: 54 Commits
+                  - 'row ".github, (Directory) fix: CI — remove license classifier (PEP 639 conflict), install pytes… Jun 10, 20261 hour ago" [ref=e231]':
+                    - cell ".github, (Directory)" [ref=e232]:
+                      - generic [ref=e233]:
+                        - img [ref=e234]
+                        - link ".github, (Directory)" [ref=e239] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/.github
+                          - text: .github
+                    - 'cell "fix: CI — remove license classifier (PEP 639 conflict), install pytes…" [ref=e240]':
+                      - 'link "fix: CI — remove license classifier (PEP 639 conflict), install pytes…" [ref=e243] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/db0779844b4852bed345bb2d58f0eda8e84167d8
+                    - cell "Jun 10, 20261 hour ago" [ref=e244]:
+                      - generic [ref=e245]: Jun 10, 20261 hour ago
+                  - row ".omo/plans, (Directory) Remove all submission materials for IJF, including manuscript, cover … Jun 6, 20264 days ago" [ref=e246]:
+                    - cell ".omo/plans, (Directory)" [ref=e247]:
+                      - generic [ref=e248]:
+                        - img [ref=e249]
+                        - link ".omo/plans, (Directory)" [ref=e254] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/.omo/plans
+                          - text: .omo/plans
+                    - cell "Remove all submission materials for IJF, including manuscript, cover …" [ref=e255]:
+                      - link "Remove all submission materials for IJF, including manuscript, cover …" [ref=e258] [cursor=pointer]:
+                        - /url: /LilaLABx/LILA-LAB/commit/8af0c28c479925c7ee7f20741534a81aaef2f855
+                    - cell "Jun 6, 20264 days ago" [ref=e259]:
+                      - generic [ref=e260]: Jun 6, 20264 days ago
+                  - 'row "communications, (Directory) fix: add OG social preview image + update GitHub URLs to LilaLABx Jun 10, 20262 hours ago" [ref=e261]':
+                    - cell "communications, (Directory)" [ref=e262]:
+                      - generic [ref=e263]:
+                        - img [ref=e264]
+                        - link "communications, (Directory)" [ref=e269] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/communications
+                          - text: communications
+                    - 'cell "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e270]':
+                      - 'link "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e273] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/4d7b9b530cd3efd2b79c897061efffc471bef091
+                    - cell "Jun 10, 20262 hours ago" [ref=e274]:
+                      - generic [ref=e275]: Jun 10, 20262 hours ago
+                  - 'row "dataset, (Directory) fix: add OG social preview image + update GitHub URLs to LilaLABx Jun 10, 20262 hours ago" [ref=e276]':
+                    - cell "dataset, (Directory)" [ref=e277]:
+                      - generic [ref=e278]:
+                        - img [ref=e279]
+                        - link "dataset, (Directory)" [ref=e284] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/dataset
+                          - text: dataset
+                    - 'cell "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e285]':
+                      - 'link "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e288] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/4d7b9b530cd3efd2b79c897061efffc471bef091
+                    - cell "Jun 10, 20262 hours ago" [ref=e289]:
+                      - generic [ref=e290]: Jun 10, 20262 hours ago
+                  - 'row "docs, (Directory) feat(meta): add LinkedIn to hero CTAs and social media meta tags Jun 10, 20268 minutes ago" [ref=e291]':
+                    - cell "docs, (Directory)" [ref=e292]:
+                      - generic [ref=e293]:
+                        - img [ref=e294]
+                        - link "docs, (Directory)" [ref=e299] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/docs
+                          - text: docs
+                    - 'cell "feat(meta): add LinkedIn to hero CTAs and social media meta tags" [ref=e300]':
+                      - 'link "feat(meta): add LinkedIn to hero CTAs and social media meta tags" [ref=e303] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/46807fb3e0d64198c1070d9673ba97142914a672
+                    - cell "Jun 10, 20268 minutes ago" [ref=e304]:
+                      - generic [ref=e305]: Jun 10, 20268 minutes ago
+                  - 'row "infrastructure, (Directory) fix: add OG social preview image + update GitHub URLs to LilaLABx Jun 10, 20262 hours ago" [ref=e306]':
+                    - cell "infrastructure, (Directory)" [ref=e307]:
+                      - generic [ref=e308]:
+                        - img [ref=e309]
+                        - link "infrastructure, (Directory)" [ref=e314] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/infrastructure
+                          - text: infrastructure
+                    - 'cell "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e315]':
+                      - 'link "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e318] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/4d7b9b530cd3efd2b79c897061efffc471bef091
+                    - cell "Jun 10, 20262 hours ago" [ref=e319]:
+                      - generic [ref=e320]: Jun 10, 20262 hours ago
+                  - 'row "pipelines, (Directory) fix: CI — ruff format 4 files, exclude personal/ from pytest Jun 10, 20261 hour ago" [ref=e321]':
+                    - cell "pipelines, (Directory)" [ref=e322]:
+                      - generic [ref=e323]:
+                        - img [ref=e324]
+                        - link "pipelines, (Directory)" [ref=e329] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/tree/main/pipelines
+                          - text: pipelines
+                    - 'cell "fix: CI — ruff format 4 files, exclude personal/ from pytest" [ref=e330]':
+                      - 'link "fix: CI — ruff format 4 files, exclude personal/ from pytest" [ref=e333] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/f17673814fbe3d5141a0a8d6d2c0d8d1b585110e
+                    - cell "Jun 10, 20261 hour ago" [ref=e334]:
+                      - generic [ref=e335]: Jun 10, 20261 hour ago
+                  - 'row ".gitignore, (File) fix: infrastructure hardening — shared utils, CI, PR template, .env p… Jun 10, 20262 hours ago" [ref=e336]':
+                    - cell ".gitignore, (File)" [ref=e337]:
+                      - generic [ref=e338]:
+                        - img [ref=e339]
+                        - link ".gitignore, (File)" [ref=e344] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/.gitignore
+                          - text: .gitignore
+                    - 'cell "fix: infrastructure hardening — shared utils, CI, PR template, .env p…" [ref=e345]':
+                      - 'link "fix: infrastructure hardening — shared utils, CI, PR template, .env p…" [ref=e348] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/80bba943993fa8a0e17d9bbf5613cde5da76c4b0
+                    - cell "Jun 10, 20262 hours ago" [ref=e349]:
+                      - generic [ref=e350]: Jun 10, 20262 hours ago
+                  - 'row "CITATION.cff, (File) fix: add OG social preview image + update GitHub URLs to LilaLABx Jun 10, 20262 hours ago" [ref=e351]':
+                    - cell "CITATION.cff, (File)" [ref=e352]:
+                      - generic [ref=e353]:
+                        - img [ref=e354]
+                        - link "CITATION.cff, (File)" [ref=e359] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/CITATION.cff
+                          - text: CITATION.cff
+                    - 'cell "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e360]':
+                      - 'link "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e363] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/4d7b9b530cd3efd2b79c897061efffc471bef091
+                    - cell "Jun 10, 20262 hours ago" [ref=e364]:
+                      - generic [ref=e365]: Jun 10, 20262 hours ago
+                  - 'row "CODE_OF_CONDUCT.md, (File) docs: update path references for LILA Lab folder rename Jun 10, 202618 hours ago" [ref=e366]':
+                    - cell "CODE_OF_CONDUCT.md, (File)" [ref=e367]:
+                      - generic [ref=e368]:
+                        - img [ref=e369]
+                        - link "CODE_OF_CONDUCT.md, (File)" [ref=e374] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/CODE_OF_CONDUCT.md
+                          - text: CODE_OF_CONDUCT.md
+                    - 'cell "docs: update path references for LILA Lab folder rename" [ref=e375]':
+                      - 'link "docs: update path references for LILA Lab folder rename" [ref=e378] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/59f8d80e24d15de49de91267450354130fc7f367
+                    - cell "Jun 10, 202618 hours ago" [ref=e379]:
+                      - generic [ref=e380]: Jun 10, 202618 hours ago
+                  - 'row "COLLABORATION.md, (File) fix: add OG social preview image + update GitHub URLs to LilaLABx Jun 10, 20262 hours ago" [ref=e381]':
+                    - cell "COLLABORATION.md, (File)" [ref=e382]:
+                      - generic [ref=e383]:
+                        - img [ref=e384]
+                        - link "COLLABORATION.md, (File)" [ref=e389] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/COLLABORATION.md
+                          - text: COLLABORATION.md
+                    - 'cell "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e390]':
+                      - 'link "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e393] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/4d7b9b530cd3efd2b79c897061efffc471bef091
+                    - cell "Jun 10, 20262 hours ago" [ref=e394]:
+                      - generic [ref=e395]: Jun 10, 20262 hours ago
+                  - 'row "COMMUNICATIONS.md, (File) docs: update communications center rename status Jun 10, 202616 hours ago" [ref=e396]':
+                    - cell "COMMUNICATIONS.md, (File)" [ref=e397]:
+                      - generic [ref=e398]:
+                        - img [ref=e399]
+                        - link "COMMUNICATIONS.md, (File)" [ref=e404] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/COMMUNICATIONS.md
+                          - text: COMMUNICATIONS.md
+                    - 'cell "docs: update communications center rename status" [ref=e405]':
+                      - 'link "docs: update communications center rename status" [ref=e408] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/96b36974954e0688d3b04bc8e5863a52b2729ec8
+                    - cell "Jun 10, 202616 hours ago" [ref=e409]:
+                      - generic [ref=e410]: Jun 10, 202616 hours ago
+                  - 'row "CONTRIBUTING.md, (File) docs: rebrand root-level attribution to LILA Lab Jun 10, 202616 hours ago" [ref=e411]':
+                    - cell "CONTRIBUTING.md, (File)" [ref=e412]:
+                      - generic [ref=e413]:
+                        - img [ref=e414]
+                        - link "CONTRIBUTING.md, (File)" [ref=e419] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/CONTRIBUTING.md
+                          - text: CONTRIBUTING.md
+                    - 'cell "docs: rebrand root-level attribution to LILA Lab" [ref=e420]':
+                      - 'link "docs: rebrand root-level attribution to LILA Lab" [ref=e423] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/6e46acbd624e0361b2cd07b92a7a8e5b95192e41
+                    - cell "Jun 10, 202616 hours ago" [ref=e424]:
+                      - generic [ref=e425]: Jun 10, 202616 hours ago
+                  - 'row "DISTRIBUTION_STRATEGY.md, (File) fix: add OG social preview image + update GitHub URLs to LilaLABx Jun 10, 20262 hours ago" [ref=e426]':
+                    - cell "DISTRIBUTION_STRATEGY.md, (File)" [ref=e427]:
+                      - generic [ref=e428]:
+                        - img [ref=e429]
+                        - link "DISTRIBUTION_STRATEGY.md, (File)" [ref=e434] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/DISTRIBUTION_STRATEGY.md
+                          - text: DISTRIBUTION_STRATEGY.md
+                    - 'cell "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e435]':
+                      - 'link "fix: add OG social preview image + update GitHub URLs to LilaLABx" [ref=e438] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/4d7b9b530cd3efd2b79c897061efffc471bef091
+                    - cell "Jun 10, 20262 hours ago" [ref=e439]:
+                      - generic [ref=e440]: Jun 10, 20262 hours ago
+                  - 'row "LICENSE, (File) docs: update path references for LILA Lab folder rename Jun 10, 202618 hours ago" [ref=e441]':
+                    - cell "LICENSE, (File)" [ref=e442]:
+                      - generic [ref=e443]:
+                        - img [ref=e444]
+                        - link "LICENSE, (File)" [ref=e449] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/LICENSE
+                          - text: LICENSE
+                    - 'cell "docs: update path references for LILA Lab folder rename" [ref=e450]':
+                      - 'link "docs: update path references for LILA Lab folder rename" [ref=e453] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/59f8d80e24d15de49de91267450354130fc7f367
+                    - cell "Jun 10, 202618 hours ago" [ref=e454]:
+                      - generic [ref=e455]: Jun 10, 202618 hours ago
+                  - 'row "LINGUISTIC_CONTRIBUTION_GUIDE.md, (File) docs: update path references for LILA Lab folder rename Jun 10, 202618 hours ago" [ref=e456]':
+                    - cell "LINGUISTIC_CONTRIBUTION_GUIDE.md, (File)" [ref=e457]:
+                      - generic [ref=e458]:
+                        - img [ref=e459]
+                        - link "LINGUISTIC_CONTRIBUTION_GUIDE.md, (File)" [ref=e464] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/LINGUISTIC_CONTRIBUTION_GUIDE.md
+                          - text: LINGUISTIC_CONTRIBUTION_GUIDE.md
+                    - 'cell "docs: update path references for LILA Lab folder rename" [ref=e465]':
+                      - 'link "docs: update path references for LILA Lab folder rename" [ref=e468] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/59f8d80e24d15de49de91267450354130fc7f367
+                    - cell "Jun 10, 202618 hours ago" [ref=e469]:
+                      - generic [ref=e470]: Jun 10, 202618 hours ago
+                  - 'row "README.md, (File) docs: fix directory tree in README and restructuring plan Jun 10, 202616 hours ago" [ref=e471]':
+                    - cell "README.md, (File)" [ref=e472]:
+                      - generic [ref=e473]:
+                        - img [ref=e474]
+                        - link "README.md, (File)" [ref=e479] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/README.md
+                          - text: README.md
+                    - 'cell "docs: fix directory tree in README and restructuring plan" [ref=e480]':
+                      - 'link "docs: fix directory tree in README and restructuring plan" [ref=e483] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/ad78b848e97ae79a791d2f4163c9d2786cfd0a05
+                    - cell "Jun 10, 202616 hours ago" [ref=e484]:
+                      - generic [ref=e485]: Jun 10, 202616 hours ago
+                  - 'row "RESTRUCTURE_PLAN.md, (File) docs: fix directory tree in README and restructuring plan Jun 10, 202616 hours ago" [ref=e486]':
+                    - cell "RESTRUCTURE_PLAN.md, (File)" [ref=e487]:
+                      - generic [ref=e488]:
+                        - img [ref=e489]
+                        - link "RESTRUCTURE_PLAN.md, (File)" [ref=e494] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/RESTRUCTURE_PLAN.md
+                          - text: RESTRUCTURE_PLAN.md
+                    - 'cell "docs: fix directory tree in README and restructuring plan" [ref=e495]':
+                      - 'link "docs: fix directory tree in README and restructuring plan" [ref=e498] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/ad78b848e97ae79a791d2f4163c9d2786cfd0a05
+                    - cell "Jun 10, 202616 hours ago" [ref=e499]:
+                      - generic [ref=e500]: Jun 10, 202616 hours ago
+                  - 'row "SUBREPOS.md, (File) docs: update path references for LILA Lab folder rename Jun 10, 202618 hours ago" [ref=e501]':
+                    - cell "SUBREPOS.md, (File)" [ref=e502]:
+                      - generic [ref=e503]:
+                        - img [ref=e504]
+                        - link "SUBREPOS.md, (File)" [ref=e509] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/SUBREPOS.md
+                          - text: SUBREPOS.md
+                    - 'cell "docs: update path references for LILA Lab folder rename" [ref=e510]':
+                      - 'link "docs: update path references for LILA Lab folder rename" [ref=e513] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/59f8d80e24d15de49de91267450354130fc7f367
+                    - cell "Jun 10, 202618 hours ago" [ref=e514]:
+                      - generic [ref=e515]: Jun 10, 202618 hours ago
+                  - 'row "pyproject.toml, (File) fix: CI — remove license classifier (PEP 639 conflict), install pytes… Jun 10, 20261 hour ago" [ref=e516]':
+                    - cell "pyproject.toml, (File)" [ref=e517]:
+                      - generic [ref=e518]:
+                        - img [ref=e519]
+                        - link "pyproject.toml, (File)" [ref=e524] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/pyproject.toml
+                          - text: pyproject.toml
+                    - 'cell "fix: CI — remove license classifier (PEP 639 conflict), install pytes…" [ref=e525]':
+                      - 'link "fix: CI — remove license classifier (PEP 639 conflict), install pytes…" [ref=e528] [cursor=pointer]':
+                        - /url: /LilaLABx/LILA-LAB/commit/db0779844b4852bed345bb2d58f0eda8e84167d8
+                    - cell "Jun 10, 20261 hour ago" [ref=e529]:
+                      - generic [ref=e530]: Jun 10, 20261 hour ago
+            - generic [ref=e532]:
+              - generic [ref=e533]:
+                - heading "Repository files navigation" [level=2] [ref=e534]
+                - navigation "Repository files" [ref=e535]:
+                  - list [ref=e536]:
+                    - listitem [ref=e537]:
+                      - link "README" [ref=e538] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e540]
+                        - generic [ref=e542]: README
+                    - listitem [ref=e543]:
+                      - link "Code of conduct" [ref=e544] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e546]
+                        - generic [ref=e548]: Code of conduct
+                    - listitem [ref=e549]:
+                      - link "Contributing" [ref=e550] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e552]
+                        - generic [ref=e554]: Contributing
+                    - listitem [ref=e555]:
+                      - link "License" [ref=e556] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e558]
+                        - generic [ref=e560]: License
+                - button "Outline" [ref=e561] [cursor=pointer]:
+                  - img [ref=e562]
+              - article [ref=e565]:
+                - generic [ref=e566]:
+                  - heading "LILA Lab" [level=1] [ref=e567]
+                  - 'link "Permalink: LILA Lab" [ref=e568] [cursor=pointer]':
+                    - /url: "#lila-lab"
+                    - img [ref=e569]
+                - generic [ref=e571]:
+                  - heading "Language Intelligence for Low-resource Applications" [level=2] [ref=e572]
+                  - 'link "Permalink: Language Intelligence for Low-resource Applications" [ref=e573] [cursor=pointer]':
+                    - /url: "#language-intelligence-for-low-resource-applications"
+                    - img [ref=e574]
+                - generic [ref=e576]:
+                  - heading "Your language. Your stories. Amplified by AI." [level=3] [ref=e577]
+                  - 'link "Permalink: Your language. Your stories. Amplified by AI." [ref=e578] [cursor=pointer]':
+                    - /url: "#your-language-your-stories-amplified-by-ai"
+                    - img [ref=e579]
+                - blockquote [ref=e581]:
+                  - paragraph [ref=e582]:
+                    - text: 84% of NLP research is in English. 56% is US-focused.
+                    - strong [ref=e583]: 0% is Bangla. 0% is Assamese. 0% is Sylheti. 0% is Chittagonian.
+                  - paragraph [ref=e584]: We are building the infrastructure that lets every language participate in the LLM revolution — starting with South Asia.
+                - separator [ref=e585]
+                - generic [ref=e586]:
+                  - heading "Repository Structure" [level=2] [ref=e587]
+                  - 'link "Permalink: Repository Structure" [ref=e588] [cursor=pointer]':
+                    - /url: "#repository-structure"
+                    - img [ref=e589]
+                - paragraph [ref=e591]:
+                  - text: This repository is the
+                  - strong [ref=e592]: central hub
+                  - text: for LILA Lab — a research collective building NLP infrastructure for languages underserved by current AI.
+                - generic [ref=e593]:
+                  - code [ref=e595]: "lila-lab/ │ ├── 📁 pipelines/ # XENI Pipeline Collection │ ├── beni/ # Bangla (active) │ ├── aeni/ # Assamese (planned) │ ├── neni/ # Nepali (planned) │ └── shared/ # Shared utilities │ ├── 📁 technical-reports/ # Research Papers (6-paper series) │ ├── paper1_statistical_economics/ │ ├── paper2_systematic_review/ │ ├── paper3_beni_method/ │ ├── paper4_beni_nowcasting/ │ ├── paper5_text_as_data_survey/ │ ├── paper6_llm_narrative_extraction/ │ ├── contributions/ # Contributor records │ └── extensions/ # Extension proposals │ ├── 📁 dataset/ # Datasets │ ├── beni-v1/ # BENI v1 dataset │ ├── raw/ # Upstream data │ └── processed/ # Processed datasets │ ├── 📁 communications/ # Multi-channel command center │ ├── CHANNELS.md │ ├── BRAND_GUIDELINES.md │ ├── SOCIAL_MEDIA_STRATEGY.md │ ├── COMMUNITY.md │ ├── CONTENT_CALENDAR.md │ └── templates/ │ ├── 📁 infrastructure/ # Infrastructure & Tools │ ├── discord-bot/ # Discord bot │ ├── website/ # Website source │ └── scripts/ # Utility scripts │ └── 📁 docs/ # Documentation ├── pipelines/ ├── research/ └── assets/"
+                  - button "Copy code to clipboard" [ref=e597] [cursor=pointer]:
+                    - img [ref=e598]
+                - separator [ref=e601]
+                - generic [ref=e602]:
+                  - heading "Quick Start" [level=2] [ref=e603]
+                  - 'link "Permalink: Quick Start" [ref=e604] [cursor=pointer]':
+                    - /url: "#quick-start"
+                    - img [ref=e605]
+                - generic [ref=e607]:
+                  - heading "For Linguistic Contributors" [level=3] [ref=e608]
+                  - 'link "Permalink: For Linguistic Contributors" [ref=e609] [cursor=pointer]':
+                    - /url: "#for-linguistic-contributors"
+                    - img [ref=e610]
+                - generic [ref=e612]:
+                  - generic [ref=e613]:
+                    - generic [ref=e614]: "# 1. Read the guide"
+                    - text: cat LINGUISTIC_CONTRIBUTION_GUIDE.md
+                    - generic [ref=e615]: "# 2. Check what languages are most needed"
+                    - text: ls technical-reports/extensions/INDEX.md
+                    - generic [ref=e616]: "# 3. Register as a contributor"
+                    - generic [ref=e617]: "# Use /register command in Discord or email lila.lab0x@gmail.com"
+                  - button "Copy code to clipboard" [ref=e619] [cursor=pointer]:
+                    - img [ref=e620]
+                - generic [ref=e623]:
+                  - heading "For Researchers" [level=3] [ref=e624]
+                  - 'link "Permalink: For Researchers" [ref=e625] [cursor=pointer]':
+                    - /url: "#for-researchers"
+                    - img [ref=e626]
+                - generic [ref=e628]:
+                  - generic [ref=e629]:
+                    - generic [ref=e630]: "# 1. Explore the BENI pipeline"
+                    - text: cd pipelines/beni/
+                    - generic [ref=e631]: "# 2. Run the baseline classifier"
+                    - text: python3 experiment/beni_pilot/train.py --task economic --model-type tfidf
+                    - generic [ref=e632]: "# 3. Build the narrative index"
+                    - text: python3 experiment/beni_pilot/build_index.py --model-type tfidf
+                  - button "Copy code to clipboard" [ref=e634] [cursor=pointer]:
+                    - img [ref=e635]
+                - generic [ref=e638]:
+                  - heading "For Developers" [level=3] [ref=e639]
+                  - 'link "Permalink: For Developers" [ref=e640] [cursor=pointer]':
+                    - /url: "#for-developers"
+                    - img [ref=e641]
+                - generic [ref=e643]:
+                  - generic [ref=e644]:
+                    - generic [ref=e645]: "# 1. Set up the Discord bot"
+                    - text: cd infrastructure/discord-bot/ cp .env.example .env pip install -r requirements.txt python bot.py
+                    - generic [ref=e646]: "# 2. Contribute to the website"
+                    - text: cd infrastructure/website/
+                    - generic [ref=e647]: "# Edit index.html, styles.css"
+                  - button "Copy code to clipboard" [ref=e649] [cursor=pointer]:
+                    - img [ref=e650]
+                - separator [ref=e653]
+                - generic [ref=e654]:
+                  - heading "What We Have Already Built" [level=2] [ref=e655]
+                  - 'link "Permalink: What We Have Already Built" [ref=e656] [cursor=pointer]':
+                    - /url: "#what-we-have-already-built"
+                    - img [ref=e657]
+                - paragraph [ref=e659]:
+                  - text: A complete, production-tested pipeline family. The first XENI pipeline —
+                  - strong [ref=e660]: BENI
+                  - text: "— proves the framework works:"
+                - generic [ref=e661]:
+                  - code [ref=e663]: Raw Bangla news articles (664,000+) → LLM annotation (Claude, GPT-4o ensemble) → Multi-model classification (TF-IDF, BanglaBERT) → BENI Economic Index (monthly narrative index) → Macroeconomic validation (CPI, FX, reserves) → Published papers + open-source code
+                  - button "Copy code to clipboard" [ref=e665] [cursor=pointer]:
+                    - img [ref=e666]
+                - paragraph [ref=e669]:
+                  - strong [ref=e670]: BENI is the pipeline. The BENI Economic Index is its first validated output. The same instrument can now produce health, climate, education, and other domain indices.
+                - paragraph [ref=e671]:
+                  - strong [ref=e672]: Proven in Bangla (265M speakers). Ready for your language and domain.
+                - table [ref=e674]:
+                  - rowgroup [ref=e675]:
+                    - row "Benchmark Result" [ref=e676]:
+                      - columnheader "Benchmark" [ref=e677]
+                      - columnheader "Result" [ref=e678]
+                  - rowgroup [ref=e679]:
+                    - row "Classification accuracy 91.7% (TF-IDF)" [ref=e680]:
+                      - cell "Classification accuracy" [ref=e681]
+                      - cell "91.7% (TF-IDF)" [ref=e682]
+                    - row "Monthly index built 79 months (2014–2020)" [ref=e683]:
+                      - cell "Monthly index built" [ref=e684]
+                      - cell "79 months (2014–2020)" [ref=e685]
+                    - row "Level correlation with CPI r = −0.75 (p < 0.001)" [ref=e686]:
+                      - cell "Level correlation with CPI" [ref=e687]
+                      - cell "r = −0.75 (p < 0.001)" [ref=e688]
+                    - row "Level correlation with FX r = −0.72 (p < 0.001)" [ref=e689]:
+                      - cell "Level correlation with FX" [ref=e690]
+                      - cell "r = −0.72 (p < 0.001)" [ref=e691]
+                    - row "Papers published 2 submitted, 4 in pipeline" [ref=e692]:
+                      - cell "Papers published" [ref=e693]
+                      - cell "2 submitted, 4 in pipeline" [ref=e694]
+                - separator [ref=e695]
+                - generic [ref=e696]:
+                  - heading "Eight Ways to Contribute" [level=2] [ref=e697]
+                  - 'link "Permalink: Eight Ways to Contribute" [ref=e698] [cursor=pointer]':
+                    - /url: "#eight-ways-to-contribute"
+                    - img [ref=e699]
+                - table [ref=e702]:
+                  - rowgroup [ref=e703]:
+                    - row "Contribution Model What You Do What You Get" [ref=e704]:
+                      - columnheader "Contribution Model" [ref=e705]
+                      - columnheader "What You Do" [ref=e706]
+                      - columnheader "What You Get" [ref=e707]
+                  - rowgroup [ref=e708]:
+                    - row "🌍 Language Extension Apply the pipeline to YOUR language First-author paper" [ref=e709]:
+                      - cell "🌍 Language Extension" [ref=e710]:
+                        - text: 🌍
+                        - strong [ref=e711]: Language Extension
+                      - cell "Apply the pipeline to YOUR language" [ref=e712]
+                      - cell "First-author paper" [ref=e713]
+                    - row "🔬 Cross-Domain Extension Apply to health, climate, education First-author paper" [ref=e714]:
+                      - cell "🔬 Cross-Domain Extension" [ref=e715]:
+                        - text: 🔬
+                        - strong [ref=e716]: Cross-Domain Extension
+                      - cell "Apply to health, climate, education" [ref=e717]
+                      - cell "First-author paper" [ref=e718]
+                    - row "⚙️ Methodological Improve classifier, reduce cost Co-authorship" [ref=e719]:
+                      - cell "⚙️ Methodological" [ref=e720]:
+                        - text: ⚙️
+                        - strong [ref=e721]: Methodological
+                      - cell "Improve classifier, reduce cost" [ref=e722]
+                      - cell "Co-authorship" [ref=e723]
+                    - row "✅ Replication Independently verify results Replication report" [ref=e724]:
+                      - cell "✅ Replication" [ref=e725]:
+                        - text: ✅
+                        - strong [ref=e726]: Replication
+                      - cell "Independently verify results" [ref=e727]
+                      - cell "Replication report" [ref=e728]
+                    - row "🗣️ Citizen Annotation Label articles in your language Acknowledgment" [ref=e729]:
+                      - cell "🗣️ Citizen Annotation" [ref=e730]:
+                        - text: 🗣️
+                        - strong [ref=e731]: Citizen Annotation
+                      - cell "Label articles in your language" [ref=e732]
+                      - cell "Acknowledgment" [ref=e733]
+                    - row "📊 Policy Brief Analyze narratives for policy Co-authorship" [ref=e734]:
+                      - cell "📊 Policy Brief" [ref=e735]:
+                        - text: 📊
+                        - strong [ref=e736]: Policy Brief
+                      - cell "Analyze narratives for policy" [ref=e737]
+                      - cell "Co-authorship" [ref=e738]
+                    - row "🛠️ Infrastructure Build dashboards, APIs, tools Tool paper co-authorship" [ref=e739]:
+                      - cell "🛠️ Infrastructure" [ref=e740]:
+                        - text: 🛠️
+                        - strong [ref=e741]: Infrastructure
+                      - cell "Build dashboards, APIs, tools" [ref=e742]
+                      - cell "Tool paper co-authorship" [ref=e743]
+                    - row "📖 Education Create tutorials, course modules Educational paper" [ref=e744]:
+                      - cell "📖 Education" [ref=e745]:
+                        - text: 📖
+                        - strong [ref=e746]: Education
+                      - cell "Create tutorials, course modules" [ref=e747]
+                      - cell "Educational paper" [ref=e748]
+                - paragraph [ref=e749]:
+                  - strong [ref=e750]: "→ Full framework:"
+                  - link "COLLABORATION.md" [ref=e751] [cursor=pointer]:
+                    - /url: /LilaLABx/LILA-LAB/blob/main/COLLABORATION.md
+                    - code [ref=e752]: COLLABORATION.md
+                - separator [ref=e753]
+                - generic [ref=e754]:
+                  - heading "Communications Center" [level=2] [ref=e755]
+                  - 'link "Permalink: Communications Center" [ref=e756] [cursor=pointer]':
+                    - /url: "#communications-center"
+                    - img [ref=e757]
+                - paragraph [ref=e759]:
+                  - text: This repository is the
+                  - strong [ref=e760]: command center
+                  - text: for LILA Lab's entire multi-channel presence.
+                - table [ref=e762]:
+                  - rowgroup [ref=e763]:
+                    - row "Channel Layer Channels Managed In" [ref=e764]:
+                      - columnheader "Channel Layer" [ref=e765]
+                      - columnheader "Channels" [ref=e766]
+                      - columnheader "Managed In" [ref=e767]
+                  - rowgroup [ref=e768]:
+                    - row "🐦 Social X (@LILA_Lab), LinkedIn, YouTube, Facebook communications/SOCIAL_MEDIA_STRATEGY.md" [ref=e769]:
+                      - cell "🐦 Social" [ref=e770]:
+                        - text: 🐦
+                        - strong [ref=e771]: Social
+                      - cell "X (@LILA_Lab), LinkedIn, YouTube, Facebook" [ref=e772]:
+                        - text: X (
+                        - code [ref=e773]: "@LILA_Lab"
+                        - text: ), LinkedIn, YouTube, Facebook
+                      - cell "communications/SOCIAL_MEDIA_STRATEGY.md" [ref=e774]:
+                        - link "communications/SOCIAL_MEDIA_STRATEGY.md" [ref=e775] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/communications/SOCIAL_MEDIA_STRATEGY.md
+                          - code [ref=e776]: communications/SOCIAL_MEDIA_STRATEGY.md
+                    - row "📄 Research GitHub, OSF, Zenodo, Hugging Face, arXiv communications/RESEARCH_PLATFORMS.md" [ref=e777]:
+                      - cell "📄 Research" [ref=e778]:
+                        - text: 📄
+                        - strong [ref=e779]: Research
+                      - cell "GitHub, OSF, Zenodo, Hugging Face, arXiv" [ref=e780]
+                      - cell "communications/RESEARCH_PLATFORMS.md" [ref=e781]:
+                        - link "communications/RESEARCH_PLATFORMS.md" [ref=e782] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/communications/RESEARCH_PLATFORMS.md
+                          - code [ref=e783]: communications/RESEARCH_PLATFORMS.md
+                    - row "💬 Community Discord, email, monthly lab calls communications/COMMUNITY.md" [ref=e784]:
+                      - cell "💬 Community" [ref=e785]:
+                        - text: 💬
+                        - strong [ref=e786]: Community
+                      - cell "Discord, email, monthly lab calls" [ref=e787]
+                      - cell "communications/COMMUNITY.md" [ref=e788]:
+                        - link "communications/COMMUNITY.md" [ref=e789] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/communications/COMMUNITY.md
+                          - code [ref=e790]: communications/COMMUNITY.md
+                    - row "🎨 Brand LILA+XENI naming, voice, visual identity communications/BRAND_GUIDELINES.md" [ref=e791]:
+                      - cell "🎨 Brand" [ref=e792]:
+                        - text: 🎨
+                        - strong [ref=e793]: Brand
+                      - cell "LILA+XENI naming, voice, visual identity" [ref=e794]
+                      - cell "communications/BRAND_GUIDELINES.md" [ref=e795]:
+                        - link "communications/BRAND_GUIDELINES.md" [ref=e796] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/communications/BRAND_GUIDELINES.md
+                          - code [ref=e797]: communications/BRAND_GUIDELINES.md
+                    - row "📅 Calendar Scheduled posts, paper releases communications/CONTENT_CALENDAR.md" [ref=e798]:
+                      - cell "📅 Calendar" [ref=e799]:
+                        - text: 📅
+                        - strong [ref=e800]: Calendar
+                      - cell "Scheduled posts, paper releases" [ref=e801]
+                      - cell "communications/CONTENT_CALENDAR.md" [ref=e802]:
+                        - link "communications/CONTENT_CALENDAR.md" [ref=e803] [cursor=pointer]:
+                          - /url: /LilaLABx/LILA-LAB/blob/main/communications/CONTENT_CALENDAR.md
+                          - code [ref=e804]: communications/CONTENT_CALENDAR.md
+                - paragraph [ref=e805]:
+                  - strong [ref=e806]: "→ Full hub:"
+                  - link "COMMUNICATIONS.md" [ref=e807] [cursor=pointer]:
+                    - /url: /LilaLABx/LILA-LAB/blob/main/COMMUNICATIONS.md
+                    - code [ref=e808]: COMMUNICATIONS.md
+                - separator [ref=e809]
+                - generic [ref=e810]:
+                  - heading "Research Papers" [level=2] [ref=e811]
+                  - 'link "Permalink: Research Papers" [ref=e812] [cursor=pointer]':
+                    - /url: "#research-papers"
+                    - img [ref=e813]
+                - table [ref=e816]:
+                  - rowgroup [ref=e817]:
+                    - row "Paper Title Status" [ref=e818]:
+                      - columnheader "Paper" [ref=e819]
+                      - columnheader "Title" [ref=e820]
+                      - columnheader "Status" [ref=e821]
+                  - rowgroup [ref=e822]:
+                    - row "1 Statistical Economics of Narrative ✅ Complete" [ref=e823]:
+                      - cell "1" [ref=e824]:
+                        - strong [ref=e825]: "1"
+                      - cell "Statistical Economics of Narrative" [ref=e826]
+                      - cell "✅ Complete" [ref=e827]
+                    - 'row "2 Economic Narrative Indices: Systematic Review ✅ Submitted" [ref=e828]':
+                      - cell "2" [ref=e829]:
+                        - strong [ref=e830]: "2"
+                      - 'cell "Economic Narrative Indices: Systematic Review" [ref=e831]'
+                      - cell "✅ Submitted" [ref=e832]
+                    - row "3 Building BENI Pipeline 🔄 Active (July 2026)" [ref=e833]:
+                      - cell "3" [ref=e834]:
+                        - strong [ref=e835]: "3"
+                      - cell "Building BENI Pipeline" [ref=e836]
+                      - cell "🔄 Active (July 2026)" [ref=e837]
+                    - row "4 Nowcasting Inflation with BENI 📋 Planned (Aug 2026)" [ref=e838]:
+                      - cell "4" [ref=e839]:
+                        - strong [ref=e840]: "4"
+                      - cell "Nowcasting Inflation with BENI" [ref=e841]
+                      - cell "📋 Planned (Aug 2026)" [ref=e842]
+                    - row "5 Text as Data in Social Science 📋 Planned (Oct 2026)" [ref=e843]:
+                      - cell "5" [ref=e844]:
+                        - strong [ref=e845]: "5"
+                      - cell "Text as Data in Social Science" [ref=e846]
+                      - cell "📋 Planned (Oct 2026)" [ref=e847]
+                    - row "6 LLMs as Measurement Devices 💡 Proposed (Jan 2027)" [ref=e848]:
+                      - cell "6" [ref=e849]:
+                        - strong [ref=e850]: "6"
+                      - cell "LLMs as Measurement Devices" [ref=e851]
+                      - cell "💡 Proposed (Jan 2027)" [ref=e852]
+                - paragraph [ref=e853]:
+                  - strong [ref=e854]: "→ Full details:"
+                  - link "technical-reports/README.md" [ref=e855] [cursor=pointer]:
+                    - /url: /LilaLABx/LILA-LAB/blob/main/technical-reports/README.md
+                    - code [ref=e856]: technical-reports/README.md
+                - separator [ref=e857]
+                - generic [ref=e858]:
+                  - heading "Data Sources" [level=2] [ref=e859]
+                  - 'link "Permalink: Data Sources" [ref=e860] [cursor=pointer]':
+                    - /url: "#data-sources"
+                    - img [ref=e861]
+                - table [ref=e864]:
+                  - rowgroup [ref=e865]:
+                    - row "Dataset Language Size License" [ref=e866]:
+                      - columnheader "Dataset" [ref=e867]
+                      - columnheader "Language" [ref=e868]
+                      - columnheader "Size" [ref=e869]
+                      - columnheader "License" [ref=e870]
+                  - rowgroup [ref=e871]:
+                    - row "Potrika Bangla News Bangla 3.3 GB CC BY 4.0" [ref=e872]:
+                      - cell "Potrika Bangla News" [ref=e873]
+                      - cell "Bangla" [ref=e874]
+                      - cell "3.3 GB" [ref=e875]
+                      - cell "CC BY 4.0" [ref=e876]
+                    - row "BENI v1 Bangla — CC BY 4.0" [ref=e877]:
+                      - cell "BENI v1" [ref=e878]
+                      - cell "Bangla" [ref=e879]
+                      - cell "—" [ref=e880]
+                      - cell "CC BY 4.0" [ref=e881]
+                - paragraph [ref=e882]:
+                  - strong [ref=e883]: YOUR LANGUAGE HERE
+                  - text: — submit via the linguistic contribution guide.
+                - separator [ref=e884]
+                - generic [ref=e885]:
+                  - heading "Contact" [level=2] [ref=e886]
+                  - 'link "Permalink: Contact" [ref=e887] [cursor=pointer]':
+                    - /url: "#contact"
+                    - img [ref=e888]
+                - paragraph [ref=e890]:
+                  - strong [ref=e891]: "Maintainer:"
+                  - text: Ann Naser Nabil — Department of Economics, Jahangirnagar University
+                - list [ref=e892]:
+                  - listitem [ref=e893]:
+                    - text: "Email:"
+                    - link "lila.lab0x@gmail.com" [ref=e894] [cursor=pointer]:
+                      - /url: mailto:lila.lab0x@gmail.com
+                  - listitem [ref=e895]:
+                    - text: "ORCID:"
+                    - link "0009-0006-3561-045X" [ref=e896] [cursor=pointer]:
+                      - /url: https://orcid.org/0009-0006-3561-045X
+                  - listitem [ref=e897]:
+                    - text: "GitHub:"
+                    - link "nabil0x" [ref=e898] [cursor=pointer]:
+                      - /url: https://github.com/nabil0x
+                  - listitem [ref=e899]:
+                    - text: "Discord:"
+                    - link "discord.gg/TrrdKbky" [ref=e900] [cursor=pointer]:
+                      - /url: https://discord.gg/TrrdKbky
+                - separator [ref=e901]
+                - generic [ref=e902]:
+                  - heading "License" [level=2] [ref=e903]
+                  - 'link "Permalink: License" [ref=e904] [cursor=pointer]':
+                    - /url: "#license"
+                    - img [ref=e905]
+                - list [ref=e907]:
+                  - listitem [ref=e908]:
+                    - strong [ref=e909]: Code
+                    - text: ": MIT License"
+                  - listitem [ref=e910]:
+                    - strong [ref=e911]: Data
+                    - text: ": CC BY 4.0 (unless otherwise specified)"
+                  - listitem [ref=e912]:
+                    - strong [ref=e913]: Papers
+                    - text: ": © Ann Naser Nabil"
+                  - listitem [ref=e914]:
+                    - strong [ref=e915]: Contributions
+                    - text: ": Attributed to contributor, shared under CC BY 4.0"
+        - generic [ref=e919]:
+          - generic [ref=e922]:
+            - heading "About" [level=2] [ref=e923]
+            - paragraph [ref=e924]: LILA Lab — Language Intelligence for Low-resource Applications. Collaborative platform for building AI infrastructure for underserved languages.
+            - generic [ref=e925]:
+              - img [ref=e926]
+              - link "lilalab.pro.bd/" [ref=e929] [cursor=pointer]:
+                - /url: https://lilalab.pro.bd/
+            - heading "Resources" [level=3] [ref=e930]
+            - link "Readme" [ref=e932] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+              - img [ref=e933]
+              - text: Readme
+            - heading "License" [level=3] [ref=e935]
+            - link "MIT license" [ref=e937] [cursor=pointer]:
+              - /url: "#MIT-1-ov-file"
+              - img [ref=e938]
+              - text: MIT license
+            - heading "Code of conduct" [level=3] [ref=e940]
+            - link "Code of conduct" [ref=e942] [cursor=pointer]:
+              - /url: "#coc-ov-file"
+              - img [ref=e943]
+              - text: Code of conduct
+            - heading "Contributing" [level=3] [ref=e945]
+            - link "Contributing" [ref=e947] [cursor=pointer]:
+              - /url: "#contributing-ov-file"
+              - img [ref=e948]
+              - text: Contributing
+            - heading "Citation" [level=3] [ref=e950]
+            - button "Cite this repository" [ref=e952] [cursor=pointer]:
+              - generic [ref=e954]:
+                - img [ref=e955]
+                - text: Cite this repository
+            - link "Activity" [ref=e959] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/activity
+              - img [ref=e960]
+              - text: Activity
+            - link "Custom properties" [ref=e963] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/custom-properties
+              - img [ref=e964]
+              - text: Custom properties
+            - heading "Stars" [level=3] [ref=e966]
+            - link "0 stars" [ref=e968] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/stargazers
+              - img [ref=e969]
+              - strong [ref=e971]: "0"
+              - text: stars
+            - heading "Watchers" [level=3] [ref=e972]
+            - link "0 watching" [ref=e974] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/watchers
+              - img [ref=e975]
+              - strong [ref=e977]: "0"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e978]
+            - link "0 forks" [ref=e980] [cursor=pointer]:
+              - /url: /LilaLABx/LILA-LAB/forks
+              - img [ref=e981]
+              - strong [ref=e983]: "0"
+              - text: forks
+            - link "Report repository" [ref=e985] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FLilaLABx%2FLILA-LAB&report=LilaLABx+%28user%29
+          - generic [ref=e987]:
+            - heading "Releases" [level=2] [ref=e988]:
+              - link "Releases" [ref=e989] [cursor=pointer]:
+                - /url: /LilaLABx/LILA-LAB/releases
+            - generic [ref=e990]: No releases published
+          - generic [ref=e992]:
+            - heading "Packages" [level=2] [ref=e993]:
+              - link "Packages" [ref=e994] [cursor=pointer]:
+                - /url: /orgs/LilaLABx/packages?repo_name=LILA-LAB
+            - generic [ref=e995]: No packages published
+          - generic [ref=e997]:
+            - heading "Contributors" [level=2] [ref=e998]:
+              - link "Contributors" [ref=e999] [cursor=pointer]:
+                - /url: /LilaLABx/LILA-LAB/graphs/contributors
+            - generic [ref=e1000]: No contributors
+          - generic [ref=e1002]:
+            - heading "Languages" [level=2] [ref=e1003]
+            - list [ref=e1013]:
+              - listitem [ref=e1014]:
+                - generic [ref=e1015]:
+                  - img [ref=e1016]
+                  - generic [ref=e1018]: Python
+                  - generic [ref=e1019]: 50.2%
+              - listitem [ref=e1020]:
+                - generic [ref=e1021]:
+                  - img [ref=e1022]
+                  - generic [ref=e1024]: HTML
+                  - generic [ref=e1025]: 40.0%
+              - listitem [ref=e1026]:
+                - generic [ref=e1027]:
+                  - img [ref=e1028]
+                  - generic [ref=e1030]: TeX
+                  - generic [ref=e1031]: 7.0%
+              - listitem [ref=e1032]:
+                - generic [ref=e1033]:
+                  - img [ref=e1034]
+                  - generic [ref=e1036]: JavaScript
+                  - generic [ref=e1037]: 1.3%
+              - listitem [ref=e1038]:
+                - generic [ref=e1039]:
+                  - img [ref=e1040]
+                  - generic [ref=e1042]: CSS
+                  - generic [ref=e1043]: 1.3%
+              - listitem [ref=e1044]:
+                - generic [ref=e1045]:
+                  - img [ref=e1046]
+                  - generic [ref=e1048]: Shell
+                  - generic [ref=e1049]: 0.1%
+              - listitem [ref=e1050]:
+                - generic [ref=e1051]:
+                  - img [ref=e1052]
+                  - generic [ref=e1054]: Dockerfile
+                  - generic [ref=e1055]: 0.1%
+  - contentinfo [ref=e1057]:
+    - heading "Footer" [level=2] [ref=e1058]
+    - generic [ref=e1059]:
+      - generic [ref=e1060]:
+        - link "GitHub Homepage" [ref=e1061] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e1062]
+        - generic [ref=e1064]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e1065]:
+        - heading "Footer navigation" [level=3] [ref=e1066]
+        - list "Footer navigation" [ref=e1067]:
+          - listitem [ref=e1068]:
+            - link "Terms" [ref=e1069] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e1070]:
+            - link "Privacy" [ref=e1071] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e1072]:
+            - link "Security" [ref=e1073] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e1074]:
+            - link "Status" [ref=e1075] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e1076]:
+            - link "Community" [ref=e1077] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e1078]:
+            - link "Docs" [ref=e1079] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e1080]:
+            - link "Contact" [ref=e1081] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e1082]:
+            - button "Manage cookies" [ref=e1084] [cursor=pointer]
+          - listitem [ref=e1085]:
+            - button "Do not share my personal information" [ref=e1087] [cursor=pointer]
